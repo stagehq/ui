@@ -2,7 +2,7 @@
 
 import React from "react";
 
-interface PillProps {
+export interface PillProps {
   name: string;
 }
 
