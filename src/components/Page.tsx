@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Header } from "./Header";
+import { PageHeader } from "./PageHeader";
 
 type User = {
   image: string;
@@ -17,8 +17,10 @@ export const Page: React.VFC = () => {
 
   return (
     <article>
-      <Header
-        profile={user}
+      <PageHeader
+        title={user.name}
+        description={user.description}
+        image={user.image}
         lightMode={false}
         toggleLightMode={() => {
           setUser((prev) => ({ ...prev, name: "John Doe" }));

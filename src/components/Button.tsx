@@ -16,8 +16,9 @@ export const Button = ({ primary, icon, text, link, onClick }: ButtonProps) => {
     <button
       type="button"
       className={clsx(
-        "h-10 font-semibold text-base w-full rounded-lg", 
-        primary ? "bg-zinc-800 text-zinc-100" : "bg-zinc-50 text-zinc-800")} 
+        "h-10 font-semibold text-base w-full rounded-lg",
+        primary ? "bg-zinc-800 text-zinc-100" : "bg-zinc-50 text-zinc-800"
+      )}
     >
       {text}
     </button>

@@ -13,11 +13,11 @@ const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
-  text: "Primary Button"
+  text: "Primary Button",
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
   primary: false,
-  text: "Secondary Button"
+  text: "Secondary Button",
 };
