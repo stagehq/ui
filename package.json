@@ -29,6 +29,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "lint": "npx prettier --check . && npx eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint-fix": "npx prettier --write . && npx eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
   },
