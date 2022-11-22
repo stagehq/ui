@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-interface SectionProps {
+export interface SectionProps {
   title: string;
   icon: string;
   link: string;

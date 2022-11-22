@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-interface CardProps {
+export interface CardProps {
   title: string;
   description: string;
   image: string;
@@ -10,7 +10,7 @@ interface CardProps {
   };
 }
 
-const Card: FC<CardProps> = ({ title, description, image, button }) => {
+export const Card: FC<CardProps> = ({ title, description, image, button }) => {
   return (
     <div className="card">
       <img src={image} alt="card" />
@@ -22,5 +22,3 @@ const Card: FC<CardProps> = ({ title, description, image, button }) => {
     </div>
   );
 };
-
-export default Card;

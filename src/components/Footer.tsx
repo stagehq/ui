@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-interface FooterProps {
+export interface FooterProps {
   socialMedia: {
     facebook: string;
     twitter: string;
