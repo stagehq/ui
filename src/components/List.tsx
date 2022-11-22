@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC } from "react";
 
 export interface ListProps {
   list: {
@@ -19,8 +19,8 @@ export const List: FC<ListProps> = ({ list }) => {
         <div className="card" key={item.title}>
           <h1 className="text-xl font-semibold">{item.title}</h1>
           <p className="text-sm font-normal">{item.description}</p>
-          <a href={item.button ? item.button.link : ''}>
-            <button>{item.button ? item.button.text : ''}</button>
+          <a href={item.button ? item.button.link : ""}>
+            <button>{item.button ? item.button.text : ""}</button>
           </a>
           <p>{item.date}</p>
         </div>

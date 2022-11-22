@@ -1,11 +1,13 @@
-import { FC } from 'react';
+import { FC } from "react";
 
 export interface HeaderProps {
-  profile: {
-    image: string;
-    name: string;
-    description: string;
-  } | undefined;
+  profile:
+    | {
+        image: string;
+        name: string;
+        description: string;
+      }
+    | undefined;
   lightMode: boolean;
   toggleLightMode: () => void;
 }
@@ -22,12 +24,7 @@ export const Header: FC<HeaderProps> = ({ profile, lightMode, toggleLightMode })
       )}
       <div className="light-mode">
         <i className="fas fa-moon"></i>
-        <input
-          type="checkbox"
-          id="light-mode"
-          checked={lightMode}
-          onChange={toggleLightMode}
-        />
+        <input type="checkbox" id="light-mode" checked={lightMode} onChange={toggleLightMode} />
         <label htmlFor="light-mode"></label>
         <i className="fas fa-sun"></i>
       </div>

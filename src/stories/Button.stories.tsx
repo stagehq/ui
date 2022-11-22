@@ -1,10 +1,10 @@
 // Button Story
 
-import { Story, Meta } from '@storybook/react/types-6-0';
-import { Button, ButtonProps } from '../components/Button';
+import { Story, Meta } from "@storybook/react/types-6-0";
+import { Button, ButtonProps } from "../components/Button";
 
 export default {
-  title: 'UI/Button',
+  title: "UI/Button",
   component: Button,
 } as Meta;
 

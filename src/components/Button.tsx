@@ -12,16 +12,13 @@ export interface ButtonProps {
  */
 export const Button = ({
   primary = true,
-  icon = 'test',
-  text = 'Button Text',
-  link = 'https://getstage.app',
+  icon = "test",
+  text = "Button Text",
+  link = "https://getstage.app",
   ...props
 }: ButtonProps) => {
   return (
-    <button
-      type="button"
-      {...props}
-    >
+    <button type="button" {...props}>
       {text}
     </button>
   );
