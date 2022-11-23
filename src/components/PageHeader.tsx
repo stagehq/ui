@@ -11,9 +11,9 @@ export interface PageHeaderProps {
 export const PageHeader: FC<PageHeaderProps> = ({ title, description, image, lightMode, toggleLightMode }) => {
   return (
     <div className="flex flex-col justify-start items-start gap-[54px]">
-      <div className="flex justify-end items-start self-stretch flex-grow-0 flex-shrink-0 gap-2">
+      <div className="flex justify-end items-start self-stretch gap-2">
         <div
-          className="flex justify-start items-start flex-grow-0 flex-shrink-0 relative gap-2 p-2 rounded-[20px] bg-white border border-[#e9e9e9]"
+          className="flex justify-start items-start relative gap-2 p-2 rounded-full bg-white border border-[#e9e9e9]"
           style={{ boxShadow: "0px 2px 4px 0 rgba(0,0,0,0.05)" }}
           onClick={toggleLightMode}
         >
@@ -23,7 +23,7 @@ export const PageHeader: FC<PageHeaderProps> = ({ title, description, image, lig
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="flex-grow-0 flex-shrink-0 w-6 h-6 relative"
+            className="w-6 h-6 relative"
             preserveAspectRatio="none"
           >
             <path
@@ -36,10 +36,10 @@ export const PageHeader: FC<PageHeaderProps> = ({ title, description, image, lig
           </svg>
         </div>
       </div>
-      <div className="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-5">
-        <img src={image} className="flex-grow-0 flex-shrink-0 w-16 h-16 rounded-[32px] object-cover" />
-        <p className="flex-grow-0 flex-shrink-0 w-auto text-2xl font-bold text-left text-black">{title}</p>
-        <p className="flex-grow-0 flex-shrink-0 w-auto text-sm text-left text-zinc-600">{description}</p>
+      <div className="flex flex-col justify-start items-start self-stretch relative gap-5">
+        <img src={image} className="w-16 h-16 rounded-full object-cover" />
+        <p className="w-auto text-2xl font-bold text-left text-black">{title}</p>
+        <p className="w-auto text-sm text-left text-zinc-600">{description}</p>
       </div>
     </div>
   );
