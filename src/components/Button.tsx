@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import * as Heroicons from '@heroicons/react/24/outline';
+import { DynamicIcon } from "./DynamicIcon";
 type Icons = keyof typeof Heroicons
 export interface ButtonProps {
   primary?: boolean;
@@ -7,15 +8,6 @@ export interface ButtonProps {
   text: string;
   link: string;
 }
-
-interface DynamicIconProp {
-  name: Icons
-}
-
-const DynamicIcon = ({ name }: DynamicIconProp) => {
-  const IconComponent = Heroicons[name];
-  return <IconComponent />;
-};
 
 export const Button = ({ primary, icon, text, link }: ButtonProps) => {
   return (
@@ -26,9 +18,7 @@ export const Button = ({ primary, icon, text, link }: ButtonProps) => {
           primary ? "bg-zinc-800 text-zinc-100" : "bg-zinc-50 text-zinc-800")} 
       >
         {text}
-        {icon && <div className={clsx("w-6 h-6", primary ? "text-zinc-300" : "text-zinc-600")}>
-          <DynamicIcon name={icon}/>
-        </div>}
+        {icon && <DynamicIcon name={icon} light={primary ? false : true}/>}
       </a>
   );
 };
