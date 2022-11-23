@@ -1,18 +1,19 @@
 import Action from "./Action";
 import { Icon, IconEnum } from "./Icon";
+import { ButtonProps } from "./Action/Button";
 
 export type CardEnum = "Stacked" | "Horizontal" | "Small" | "Full";
-
 export interface CardProps {
   title: string;
   subtitle?: string;
   image?: string;
   icon?: IconEnum;
   type: CardEnum;
+  action?: React.ReactElement<ButtonProps>
 }
 
-export const Card = ({ title, subtitle, image, icon, type }: CardProps) => {
-  if (type === "Stacked") {
+export const Card = ({ title, subtitle, image, icon, type, action }: CardProps) => {
+  if(type === "Stacked"){
     return (
       <div className="flex flex-col items-start w-full relative overflow-hidden rounded-2xl border border-zinc-100">
         {image && (
@@ -32,8 +33,8 @@ export const Card = ({ title, subtitle, image, icon, type }: CardProps) => {
             </div>
             <p className="w-full text-sm text-zinc-600">{subtitle}</p>
           </div>
+          {action && action}
         </div>
-        <Action.Button text="Action Button" link="www.google.com" />
       </div>
     );
   } else {
