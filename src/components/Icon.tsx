@@ -4,12 +4,12 @@ export type IconEnum = keyof typeof Heroicons
 
 export interface IconProps {
   name: IconEnum
-  light: boolean
+  onLightBg: boolean
 }
 
-export const Icon = ({ name, light }: IconProps) => {
+export const Icon = ({ name, onLightBg }: IconProps) => {
   const IconComponent = Heroicons[name];
-  return <div className={clsx("w-6 h-6", light ? "text-zinc-600" : "text-zinc-300")}>
+  return <div className={clsx("w-6 h-6", onLightBg ? "text-zinc-600" : "text-zinc-300")}>
       <IconComponent />
     </div>;
 };

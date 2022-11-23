@@ -17,7 +17,7 @@ export const Button = ({ primary, icon, text, link }: ButtonProps) => {
           primary ? "bg-zinc-800 text-zinc-100" : "bg-zinc-50 text-zinc-800")} 
       >
         {text}
-        {icon && <Icon name={icon} light={primary ? false : true}/>}
+        {icon && <Icon name={icon} onLightBg={primary ? false : true}/>}
       </a>
   );
 };
