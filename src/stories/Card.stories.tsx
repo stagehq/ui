@@ -16,6 +16,5 @@ Stacked.args = {
   subtitle: "Subtitle",
   image: "https://source.unsplash.com/1000x500/?universe",
   icon: "ArchiveBoxXMarkIcon",
-  count: "230",
   type: "Stacked"
 };
