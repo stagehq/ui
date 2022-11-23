@@ -38,8 +38,8 @@ export const PageHeader: FC<PageHeaderProps> = ({ title, description, image, lig
       </div>
       <div className="flex flex-col justify-start items-start self-stretch relative gap-5">
         <img src={image} className="w-16 h-16 rounded-full object-cover" />
-        <p className="w-auto text-2xl font-bold text-left text-black">{title}</p>
-        <p className="w-auto text-sm text-left text-zinc-600">{description}</p>
+        <h1 className="w-auto text-2xl font-bold text-left text-black">{title}</h1>
+        <h2 className="w-auto text-sm text-left text-zinc-600">{description}</h2>
       </div>
     </div>
   );
