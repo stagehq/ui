@@ -3,7 +3,7 @@ import { Story, Meta } from "@storybook/react/types-6-0";
 import { Pill, PillProps } from "../components/Pill";
 
 export default {
-  title: "UI/Pill",
+  title: "Private/Pill",
   component: Pill,
 } as Meta;
 
