@@ -13,11 +13,11 @@ const Template: Story<IconProps> = (args) => <Icon {...args} />;
 export const Example1 = Template.bind({});
 Example1.args = {
   name: "BanknotesIcon",
-  onLightBg: true
+  color: "light",
 };
 
 export const Example2 = Template.bind({});
 Example2.args = {
   name: "AdjustmentsVerticalIcon",
-  onLightBg: true
+  color: "dark",
 };

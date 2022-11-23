@@ -24,7 +24,7 @@ export const Card = ({ title, subtitle, image, icon, type }: CardProps) => {
           <div className="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 relative gap-3">
             <div className="flex w-full gap-2">
               {icon && <div className="flex-none">
-                <Icon name={icon} onLightBg={true}/>
+                <Icon name={icon} color="dark" />
               </div>}
               <p className="grow text-base font-semibold text-left text-zinc-900">
                 {title}

@@ -17,6 +17,10 @@ Default.args = {
   title: "A bright view in the wide universe",
   subtitle: "I once flew to the moon and back with a single rocket engine",
   additional: "This is a List",
-  count: "324",
+  count: {
+    value: 324,
+    icon: "StarIcon",
+  },
+  index: 1,
   image: "https://source.unsplash.com/1000x500/?universe",
 };
