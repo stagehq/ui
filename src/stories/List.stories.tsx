@@ -2,14 +2,14 @@
 
 import { Story, Meta } from "@storybook/react/types-6-0";
 
-import { ListItem, ListItemProps } from "../components/List";
+import { Item, ItemProps } from "../components/List/Item";
 
 export default {
   title: "UI/List/Item",
-  component: ListItem,
+  component: Item,
 } as Meta;
 
-const Template: Story<ListItemProps> = (args) => <ListItem {...args} />;
+const Template: Story<ItemProps> = (args) => <Item {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
