@@ -1,10 +1,9 @@
 import clsx from "clsx";
-import * as Heroicons from '@heroicons/react/24/outline';
-import { Icon } from "./Icon";
-type Icons = keyof typeof Heroicons
+import { Icon, IconEnum } from "./Icon";
+
 export interface ButtonProps {
   primary?: boolean;
-  icon?: Icons;
+  icon?: IconEnum;
   text: string;
   link: string;
 }

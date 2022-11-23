@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 import * as Heroicons from '@heroicons/react/24/outline';
-type Icons = keyof typeof Heroicons
+export type IconEnum = keyof typeof Heroicons
 
 export interface IconProps {
-  name: Icons
+  name: IconEnum
   light: boolean
 }
 
