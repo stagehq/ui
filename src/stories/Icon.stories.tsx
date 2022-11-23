@@ -1,14 +1,14 @@
 // Icon Story
 
 import { Story, Meta } from "@storybook/react/types-6-0";
-import { DynamicIcon, DynamicIconProps } from "../components/DynamicIcon";
+import { Icon, IconProps } from "../components/Icon";
 
 export default {
-  title: "PRIVATE/DynamicIcon",
-  component: DynamicIcon,
+  title: "PRIVATE/Icon",
+  component: Icon,
 } as Meta;
 
-const Template: Story<DynamicIconProps> = (args) => <DynamicIcon {...args} />;
+const Template: Story<IconProps> = (args) => <Icon {...args} />;
 
 export const Example1 = Template.bind({});
 Example1.args = {

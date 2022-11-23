@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import * as Heroicons from '@heroicons/react/24/outline';
-import { DynamicIcon } from "./DynamicIcon";
+import { Icon } from "./Icon";
 type Icons = keyof typeof Heroicons
 export interface ButtonProps {
   primary?: boolean;
@@ -18,7 +18,7 @@ export const Button = ({ primary, icon, text, link }: ButtonProps) => {
           primary ? "bg-zinc-800 text-zinc-100" : "bg-zinc-50 text-zinc-800")} 
       >
         {text}
-        {icon && <DynamicIcon name={icon} light={primary ? false : true}/>}
+        {icon && <Icon name={icon} light={primary ? false : true}/>}
       </a>
   );
 };
