@@ -9,5 +9,5 @@ export interface ButtonProps {
 }
 
 export const Button = ({ primary, icon, text, link }: ButtonProps) => {
-  return <HocButton {...{ primary, icon, text, link }}/>
+  return <HocButton {...{ primary, icon, text, link }} />;
 };

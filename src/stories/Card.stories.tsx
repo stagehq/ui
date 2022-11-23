@@ -11,12 +11,42 @@ export default {
 
 const Template: Story<CardProps> = (args) => <Card {...args} />;
 
-export const Stacked = Template.bind({});
-Stacked.args = {
+export const Vertical = Template.bind({});
+Vertical.args = {
   title: "Title",
   subtitle: "Subtitle",
-  image: "https://source.unsplash.com/1000x500/?universe",
+  image: "https://source.unsplash.com/1000x500/?gradient&backgrounds",
   icon: "ArchiveBoxXMarkIcon",
-  type: "Stacked",
-  action: <Action.Button text="Action Button" link="www.google.com"/>
+  type: "vertical",
+  action: <Action.Button text="Action Button" link="www.google.com" />,
+};
+
+export const Horizontal = Template.bind({});
+Horizontal.args = {
+  title: "Title",
+  subtitle: "Subtitle",
+  image: "https://source.unsplash.com/500x500/?gradient&backgrounds",
+  icon: "ArchiveBoxXMarkIcon",
+  type: "horizontal",
+  action: <Action.Button text="Action Button" link="www.google.com" />,
+};
+
+export const Small = Template.bind({});
+Small.args = {
+  title: "Title",
+  subtitle: "Subtitle",
+  image: "https://source.unsplash.com/500x500/?gradient&backgrounds",
+  icon: "ArchiveBoxXMarkIcon",
+  type: "small",
+  action: <Action.Button text="Action Button" link="www.google.com" />,
+};
+
+export const Big = Template.bind({});
+Big.args = {
+  title: "Title",
+  subtitle: "Subtitle",
+  image: "https://source.unsplash.com/1000x500/?gradient&backgrounds",
+  icon: "ArchiveBoxXMarkIcon",
+  type: "big",
+  action: <Action.Button text="Action Button" link="www.google.com" />,
 };
