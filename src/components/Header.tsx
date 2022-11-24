@@ -11,7 +11,7 @@ export interface HeaderProps {
 
 export const Header: FC<HeaderProps> = ({ title, subtitle, icon, action }) => {
   return (
-    <div className="flex flex-col items-start gap-3">
+    <div className="flex flex-col items-start gap-3 w-full">
       <div className="flex items-center self-stretch gap-4">
         {icon && (
           <div

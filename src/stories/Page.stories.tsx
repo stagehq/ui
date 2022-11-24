@@ -7,7 +7,7 @@ import { Page, PageProps } from "../components/Page";
 import { Pills } from "../components/Pills";
 import { Section } from "../components/Section";
 import { Seperator } from "../components/Seperator";
-import { blogPosts, experience, music, openSource, personal, projects, university } from "./_data";
+import { blogPosts, experience, music, openSource, personal, projects, spotify, university } from "./_data";
 
 export default {
   title: "Private/Page",
@@ -41,7 +41,13 @@ Default.args = {
         />
         <List>
           {blogPosts.map((post) => (
-            <List.Item type={post.type} title={post.title} additional={post.additional} subtitle={post.subtitle} />
+            <List.Item
+              type={post.type}
+              title={post.title}
+              additional={post.additional}
+              subtitle={post.subtitle}
+              actions={<Action.Link url="https://google.com" text="Read article" />}
+            />
           ))}
         </List>
       </Section>
@@ -94,7 +100,7 @@ Default.args = {
           />
         </Cards>
         <List>
-          {music.map((album, index) => (
+          {spotify.map((album, index) => (
             <List.Item
               index={index + 1}
               type={album.type}
@@ -131,21 +137,21 @@ Default.args = {
               subtitle={job.title}
               additional={job.additional}
               image={job.image}
-              />
+            />
           ))}
-          </List>
-          <Seperator />
-          <List>
-            {university.map((job) => (
-              <List.Item
-                type={job.type}
-                title={job.title}
-                subtitle={job.subtitle}  
-                additional={job.additional}
-                image={job.image}
-                />
-              ))}  
-          </List>            
+        </List>
+        <Seperator />
+        <List>
+          {university.map((job) => (
+            <List.Item
+              type={job.type}
+              title={job.title}
+              subtitle={job.subtitle}
+              additional={job.additional}
+              image={job.image}
+            />
+          ))}
+        </List>
       </Section>
     </>,
   ],

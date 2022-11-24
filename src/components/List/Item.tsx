@@ -1,4 +1,6 @@
 import { FC } from "react";
+import { ButtonProps } from "../Action/Button";
+import { LinkProps } from "../Action/Link";
 import { Icon, IconEnum } from "../Icon";
 
 export interface ItemProps {
@@ -12,7 +14,7 @@ export interface ItemProps {
   };
   image?: string;
   index?: number;
-  actions?: JSX.Element;
+  actions?: React.ReactElement<ButtonProps | LinkProps>;
 }
 
 export const Item: FC<ItemProps> = ({ type, title, subtitle, additional, count, image, index, actions }) => {
@@ -20,37 +22,19 @@ export const Item: FC<ItemProps> = ({ type, title, subtitle, additional, count, 
     return (
       <div className="flex flex-col items-start overflow-hidden rounded-2xl border border-zinc-100 w-full">
         {image && (
-          <div className="w-full h-40 relative">
+          <div className="w-full h-52">
             <img src={image} className="w-full h-full object-cover" />
           </div>
         )}
-        <div className="flex flex-col items-start relative gap-3 p-6">
+        <div className="flex flex-col items-start gap-3 p-6 w-full">
           <p className="text-base font-semibold text-left text-zinc-900">{title}</p>
           <p className="text-sm text-left text-zinc-600">{subtitle}</p>
-          <div className="flex items-center relative">
-            <p className="text-sm font-medium text-left text-[#1eb7a6]">link text</p>
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-6 h-6 relative"
-              preserveAspectRatio="none"
-            >
-              <path
-                d="M11 9L14 12L11 15"
-                stroke="#1EB7A6"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></path>
-            </svg>
-          </div>
-          <div className="flex items-center relative gap-3">
+          {actions && actions}
+          <div className="flex items-center justify-between gap-3 w-full">
             <p className="flex-grow text-sm text-left text-zinc-400">{additional}</p>
             {count && (
-              <div className="flex items-center relative gap-2">
+              <div className="flex items-center gap-2">
+                {count?.icon && <Icon name={count.icon} color="neutral" size="sm" />}
                 <p className="text-sm font-medium text-left text-zinc-400">{count.value}</p>
               </div>
             )}
@@ -62,14 +46,14 @@ export const Item: FC<ItemProps> = ({ type, title, subtitle, additional, count, 
 
   if (type === "text") {
     return (
-      <div className="flex flex-col items-start relative gap-3 w-full">
-        <div className="flex items-start relative gap-3">
+      <div className="flex flex-col items-start gap-3 w-full">
+        <div className="flex items-start gap-3">
           <div className="flex h-5 w-0.5 rounded-[1px] bg-zinc-200"></div>
           <p className="flex-grow text-sm text-left text-zinc-400">{additional}</p>
         </div>
-        <div className="flex items-center relative gap-2 w-full">
+        <div className="flex items-center gap-2 w-full">
           <p className="flex-grow text-base font-semibold text-left text-zinc-900">{title}</p>
-          <div className="flex items-center relative gap-1">
+          <div className="flex items-center gap-1">
             <div className="flex flex-col justify-center items-center h-6 w-6">
               {count?.icon && <Icon name={count.icon} color="neutral" size="sm" />}
             </div>
@@ -77,33 +61,14 @@ export const Item: FC<ItemProps> = ({ type, title, subtitle, additional, count, 
           </div>
         </div>
         <p className="text-sm text-left text-zinc-600">{subtitle}</p>
-        <div className="flex items-center relative">
-          <p className="text-sm font-medium text-left text-[#1eb7a6]">link text</p>
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-6 h-6 relative"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M11 9L14 12L11 15"
-              stroke="#1EB7A6"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-          </svg>
-        </div>
+        {actions && actions}
       </div>
     );
   }
 
   if (type === "bullet") {
     return (
-      <div className="flex items-center relative gap-4 w-full">
+      <div className="flex items-center gap-4 w-full">
         {image && (
           <div
             className="flex-shrink-0 h-10 w-10 flex items-start gap-2 p-[6px] rounded-full bg-white border border-[#e9e9e9]"
@@ -127,19 +92,19 @@ export const Item: FC<ItemProps> = ({ type, title, subtitle, additional, count, 
 
   if (type === "cover") {
     return (
-      <div className="flex items-center relative gap-3 w-full">
+      <div className="flex items-center gap-3 w-full">
         <p className="w-5 text-sm font-semibold text-center text-zinc-600">{index}</p>
         <img className="w-[46px] h-[46px] rounded-lg object-cover" src={image} />
         <div className="flex flex-col items-start flex-grow gap-0.5">
-          <div className="flex items-center self-stretch relative gap-2">
+          <div className="flex items-center self-stretch gap-2">
             <p className="flex-grow text-base font-semibold text-left text-zinc-900">{title}</p>
           </div>
-          <div className="flex items-center relative gap-3">
+          <div className="flex items-center gap-3">
             <p className="text-[13px] text-left text-zinc-600">{subtitle}</p>
           </div>
         </div>
         {count && (
-          <div className="flex items-center relative gap-2 pr-2">
+          <div className="flex items-center gap-2 pr-2">
             <p className="text-sm font-medium text-left text-zinc-400">{count.value}</p>
             {count.icon && <Icon name={count.icon} color="neutral" size="md" />}
           </div>
