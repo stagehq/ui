@@ -62,7 +62,7 @@ Default.args = {
       <Section>
           <Header title="My Music" icon="MusicalNoteIcon" action={<Action.Link url="https://github.com" text="Spotify profile"/>}/>
           <Cards>
-            <Cards.Item type="big" title="This album title" subtitle="Artist Name" image="https://source.unsplash.com/1000x500/?gradient&backgrounds" icon="PlayIcon" />
+            <Cards.Item type="horizontal" title="This album title" subtitle="Artist Name" image="https://source.unsplash.com/1000x500/?gradient&backgrounds" icon="" />
           </Cards>
           <List>
             {music.map((album, index) => (

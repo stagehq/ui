@@ -43,7 +43,7 @@ export const Item = ({ title, subtitle, image, icon, type, action }: ItemProps) 
     return (
       <div className="flex items-center overflow-hidden gap-6 pr-6 rounded-2xl border border-zinc-100">
         {image && (
-          <div className="w-40 h-40 relative">
+          <div className="w-24 h-24 relative">
             <img src={image} className="w-full h-full object-cover" />
           </div>
         )}
