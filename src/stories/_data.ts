@@ -104,21 +104,21 @@ export const experience: ItemProps[] = [
     title: "Software Engineer",
     subtitle: "Google",
     additional: "2020 - Present",
-    image: "https://cdn.icon-icons.com/icons2/2631/PNG/512/google_search_new_logo_icon_159150.png"
+    image: "https://img.icons8.com/color/512/google-logo.png"
   },
   {
     type: "bullet",
     title: "Software Engineer",
     subtitle: "Facebook",
     additional: "2019 - 2020",
-    image: "https://cdn.icon-icons.com/icons2/3375/PNG/512/meta_brand_icon_211716.png"
+    image: "https://img.icons8.com/color/512/meta--v1.png"
   },
   {
     type: "bullet",
     title: "Software Engineer",
     subtitle: "Twitter",
     additional: "2018 - 2019",
-    image: "https://cdn.icon-icons.com/icons2/1488/PNG/512/5294-twitter-i_102511.png"
+    image: "https://img.icons8.com/color/512/twitter--v1.png"
   },
 ];
 
