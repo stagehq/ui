@@ -5,7 +5,7 @@ import { Story, Meta } from "@storybook/react/types-6-0";
 import { Item, ItemProps } from "../components/List/Item";
 
 export default {
-  title: "UI/List/Item",
+  title: "UI/List",
   component: Item,
 } as Meta;
 

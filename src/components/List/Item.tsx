@@ -129,7 +129,7 @@ export const Item: FC<ItemProps> = ({ type, title, subtitle, additional, count, 
     return (
       <div className="flex items-center relative gap-3 w-full">
         <p className="w-5 text-sm font-semibold text-center text-zinc-600">{index}</p>
-        <img className="w-[46px] h-[46px] rounded-lg" src={image} />
+        <img className="w-[46px] h-[46px] rounded-lg object-cover" src={image} />
         <div className="flex flex-col items-start flex-grow gap-0.5">
           <div className="flex items-center self-stretch relative gap-2">
             <p className="flex-grow text-base font-semibold text-left text-zinc-900">{title}</p>
