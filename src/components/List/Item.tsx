@@ -18,7 +18,7 @@ export interface ItemProps {
 export const Item: FC<ItemProps> = ({ type, title, subtitle, additional, count, image, index, actions }) => {
   if (type === "card") {
     return (
-      <div className="flex flex-col items-start overflow-hidden rounded-2xl border border-zinc-100">
+      <div className="flex flex-col items-start overflow-hidden rounded-2xl border border-zinc-100 w-full">
         {image && (
           <div className="w-full h-40 relative">
             <img src={image} className="w-full h-full object-cover" />
@@ -103,7 +103,7 @@ export const Item: FC<ItemProps> = ({ type, title, subtitle, additional, count, 
 
   if (type === "bullet") {
     return (
-      <div className="flex items-center relative gap-4">
+      <div className="flex items-center relative gap-4 w-full">
         {image && (
           <div
             className="flex-shrink-0 h-10 w-10 flex items-start gap-2 p-[6px] rounded-full bg-white border border-[#e9e9e9]"
@@ -127,7 +127,7 @@ export const Item: FC<ItemProps> = ({ type, title, subtitle, additional, count, 
 
   if (type === "cover") {
     return (
-      <div className="flex items-center relative gap-3">
+      <div className="flex items-center relative gap-3 w-full">
         <p className="w-5 text-sm font-semibold text-center text-zinc-600">{index}</p>
         <img className="w-[46px] h-[46px] rounded-lg" src={image} />
         <div className="flex flex-col items-start flex-grow gap-0.5">

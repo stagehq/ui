@@ -1,22 +1,14 @@
 import React, { FC } from "react";
+import { ButtonProps } from "./Button";
+import { CardProps } from "./Card";
+import { HeaderProps } from "./Header";
+import { ListProps } from "./List";
+import { PillsProps } from "./Pills";
 
 export interface SectionProps {
-  title: string;
-  icon: string;
-  link: string;
-  children: React.ReactNode;
+  children: React.ReactElement<ListProps | ButtonProps | CardProps | PillsProps | HeaderProps>[];
 }
 
-export const Section: FC<SectionProps> = ({ title, icon, link, children }) => {
-  return (
-    <section>
-      <div className="section-title">
-        <h1>{title}</h1>
-        <a href={link}>
-          <i className={icon}></i>
-        </a>
-      </div>
-      {children}
-    </section>
-  );
+export const Section: FC<SectionProps> = ({ children }) => {
+  return <section className="flex flex-col justify-start items-start gap-7 w-full">{children}</section>;
 };
