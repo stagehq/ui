@@ -5,9 +5,7 @@ export interface CardsProps {
 }
 
 const Cards = ({ children }: CardsProps) => {
-  return (
-    <div className="flex flex-col gap-6 w-full">{children}</div>
-  )
+  return <div className="flex flex-col gap-6 w-full">{children}</div>;
 };
 
 Cards.Item = Item;

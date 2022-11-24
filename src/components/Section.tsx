@@ -1,12 +1,14 @@
 import React, { FC } from "react";
 import { ButtonProps } from "./Button";
-import { CardProps } from "./Card";
+import { CardsProps } from "./Cards";
 import { HeaderProps } from "./Header";
 import { ListProps } from "./List";
 import { PillsProps } from "./Pills";
 
 export interface SectionProps {
-  children: React.ReactElement<ListProps | ButtonProps | CardProps | PillsProps | HeaderProps>[];
+  children:
+    | React.ReactElement<ListProps | ButtonProps | CardsProps | PillsProps | HeaderProps>
+    | React.ReactElement<ListProps | ButtonProps | CardsProps | PillsProps | HeaderProps>[];
 }
 
 export const Section: FC<SectionProps> = ({ children }) => {
