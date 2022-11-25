@@ -20,7 +20,7 @@ export const Icon = ({ name, color, size }: IconProps) => {
       iconColor = "text-zinc-400";
       break;
     case "dark":
-      iconColor = "text-zinc-600";
+      iconColor = "text-zinc-600 dark:text-zinc-400";
       break;
     case "brand":
       iconColor = "text-brand-500";

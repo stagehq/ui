@@ -12,8 +12,8 @@ export interface PageProps {
 
 export const Page: React.FC<PageProps> = ({ header, main, aside, footer }) => {
   return (
-    <div className="bg-neutral-50">
-      <div className="relative bg-white max-w-screen-xl mx-auto px-6 md:px-24">
+    <div className="bg-zinc-50 dark:bg-black">
+      <div className="relative bg-white max-w-screen-xl mx-auto px-6 md:px-24 ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20">
         <PageHeader {...header} />
         <div className="flex flex-col lg:flex-row gap-6 md:gap-16 py-12 md:py-16">
           <main className="flex flex-col items-start gap-12 md:gap-16 lg:w-2/3">{main}</main>

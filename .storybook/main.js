@@ -4,9 +4,9 @@ module.exports = {
     "@storybook/addon-links",
     {
       name: "@storybook/addon-essentials",
-      options: {
-        backgrounds: false,
-      },
+      // options: {
+      //   backgrounds: false,
+      // },
     },
     "@storybook/addon-interactions",
     "@storybook/addon-a11y",

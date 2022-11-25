@@ -19,7 +19,7 @@ export const PageFooter: FC<PageFooterProps> = ({ title, location, socialMedia, 
   const currentYear = new Date().getFullYear().toString();
 
   return (
-    <footer className="flex flex-col justify-start items-start self-stretch relative gap-6 pb-6 bg-neutral-50">
+    <footer className="flex flex-col justify-start items-start self-stretch relative gap-6 pb-6 bg-zinc-50 dark:bg-black">
       <div className="self-stretch h-px bg-zinc-100 max-w-screen-xl mx-auto"></div>
       <div className="flex flex-col justify-center items-center self-stretch relative gap-6">
         <div className="flex flex-col justify-center items-center w-[273px] gap-2">
