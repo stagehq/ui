@@ -130,35 +130,55 @@ export const spotify: ItemProps[] = [
     title: "The Less I Know The Better",
     subtitle: "Tame Impala",
     additional: "2015",
-    image: "https://i.scdn.co/image/ab67616d0000b273d8b3b8f4f9f9f9f9f9f9f9f9",
+    count: {
+      value: 324,
+      icon: "PlayCircleIcon"
+    },
+    image: "https://source.unsplash.com/1000x500/?wood",
   },
   {
     type: "cover",
     title: "Sorry",
     subtitle: "Justin Bieber",
     additional: "2015",
-    image: "https://i.scdn.co/image/ab67616d0000b273d8b3b8f4f9f9f9f9f9f9f9f9",
+    count: {
+      value: 324,
+      icon: "PlayCircleIcon"
+    },
+    image: "https://source.unsplash.com/1000x500/?fire",
   },
   {
     type: "cover",
     title: "I Need A Dollar",
     subtitle: "Aloe Blacc",
     additional: "2015",
-    image: "https://i.scdn.co/image/ab67616d0000b273d8b3b8f4f9f9f9f9f9f9f9f9",
+    count: {
+      value: 324,
+      icon: "PlayCircleIcon"
+    },
+    image: "https://source.unsplash.com/1000x500/?water",
   },
   {
     type: "cover",
     title: "STAY",
     subtitle: "The Kid LAROI",
     additional: "2021",
-    image: "https://i.scdn.co/image/ab67616d0000b273d8b3b8f4f9f9f9f9f9f9f9f9",
+    count: {
+      value: 324,
+      icon: "PlayCircleIcon"
+    },
+    image: "https://source.unsplash.com/1000x500/?glass",
   },
   {
     type: "cover",
     title: "good 4 u",
     subtitle: "Olivia Rodrigo",
     additional: "2021",
-    image: "https://i.scdn.co/image/ab67616d0000b273d8b3b8f4f9f9f9f9f9f9f9f9",
+    count: {
+      value: 324,
+      icon: "PlayCircleIcon"
+    },
+    image: "https://source.unsplash.com/1000x500/?abstract",
   },
 ];
 
