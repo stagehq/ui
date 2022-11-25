@@ -15,7 +15,8 @@ export const blogPosts: ItemProps[] = [
     type: "text",
     title: "Crafting a design system for a multiplanetary future",
     additional: "September 1, 2022",
-    subtitle: "Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system.",
+    subtitle:
+      "Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system.",
     image:
       "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2680&q=80",
   },
@@ -23,7 +24,8 @@ export const blogPosts: ItemProps[] = [
     type: "text",
     title: "Introducing Animaginary: High performance web animations",
     additional: "August 17, 2022",
-    subtitle: "When you’re building a website for a company as ambitious as Planetaria, you need to make an impression. I wanted people to visit our website and see animations that looked more realistic than reality itself.",
+    subtitle:
+      "When you’re building a website for a company as ambitious as Planetaria, you need to make an impression. I wanted people to visit our website and see animations that looked more realistic than reality itself.",
     image:
       "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2680&q=80",
   },
@@ -31,7 +33,8 @@ export const blogPosts: ItemProps[] = [
     type: "text",
     title: "Rewriting the cosmOS kernel in Rust",
     additional: "July 2, 2022",
-    subtitle: "When we released the first version of cosmOS last year, it was written in Go. Go is a wonderful programming language with a lot of benefits, but it’s been a while since I’ve seen an article on the front page of Hacker News about rewriting some important tool in Go and I see articles on there about rewriting things in Rust every single week.",
+    subtitle:
+      "When we released the first version of cosmOS last year, it was written in Go. Go is a wonderful programming language with a lot of benefits, but it’s been a while since I’ve seen an article on the front page of Hacker News about rewriting some important tool in Go and I see articles on there about rewriting things in Rust every single week.",
     image:
       "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2680&q=80",
   },
@@ -41,26 +44,26 @@ export const projects: ItemProps[] = [
   {
     type: "card",
     title: "Splitbee – Your all-in-one analytics and conversion platform",
-    subtitle: "Track and optimize your online business with Splitbee. Your friendly analytics & conversion platform. · Get to know your Traffic · Understand their journey",
+    subtitle:
+      "Track and optimize your online business with Splitbee. Your friendly analytics & conversion platform. · Get to know your Traffic · Understand their journey",
     additional: "2021",
-    image:
-      "https://source.unsplash.com/1000x500/?analytics",
+    image: "https://source.unsplash.com/1000x500/?analytics",
   },
   {
     type: "card",
     title: "Zirkular – Open source made easy.",
-    subtitle: "Zirkular connects contributors and maintainers in a community-first workspace with goal-oriented communication, efficient workflows and smart automations.",
+    subtitle:
+      "Zirkular connects contributors and maintainers in a community-first workspace with goal-oriented communication, efficient workflows and smart automations.",
     additional: "2020",
-    image:
-    "https://source.unsplash.com/1000x500/?management",
+    image: "https://source.unsplash.com/1000x500/?management",
   },
   {
     type: "card",
     title: "Melo – The Sound Experience Platform",
-    subtitle: "Until now, this discipline of designing and developing sounds in digital products has been reserved for those with a high level of technical understanding.",
+    subtitle:
+      "Until now, this discipline of designing and developing sounds in digital products has been reserved for those with a high level of technical understanding.",
     additional: "2019",
-    image:
-    "https://source.unsplash.com/1000x500/?music",
+    image: "https://source.unsplash.com/1000x500/?music",
   },
 ];
 
@@ -104,21 +107,21 @@ export const experience: ItemProps[] = [
     title: "Software Engineer",
     subtitle: "Google",
     additional: "2020 - Present",
-    image: "https://img.icons8.com/color/512/google-logo.png"
+    image: "https://img.icons8.com/color/512/google-logo.png",
   },
   {
     type: "bullet",
     title: "Software Engineer",
     subtitle: "Facebook",
     additional: "2019 - 2020",
-    image: "https://img.icons8.com/color/512/meta--v1.png"
+    image: "https://img.icons8.com/color/512/meta--v1.png",
   },
   {
     type: "bullet",
     title: "Software Engineer",
     subtitle: "Twitter",
     additional: "2018 - 2019",
-    image: "https://img.icons8.com/color/512/twitter--v1.png"
+    image: "https://img.icons8.com/color/512/twitter--v1.png",
   },
 ];
 
@@ -132,7 +135,7 @@ export const spotify: ItemProps[] = [
     additional: "2015",
     count: {
       value: 324,
-      icon: "PlayCircleIcon"
+      icon: "PlayCircleIcon",
     },
     image: "https://source.unsplash.com/1000x500/?wood",
   },
@@ -143,7 +146,7 @@ export const spotify: ItemProps[] = [
     additional: "2015",
     count: {
       value: 324,
-      icon: "PlayCircleIcon"
+      icon: "PlayCircleIcon",
     },
     image: "https://source.unsplash.com/1000x500/?fire",
   },
@@ -154,7 +157,7 @@ export const spotify: ItemProps[] = [
     additional: "2015",
     count: {
       value: 324,
-      icon: "PlayCircleIcon"
+      icon: "PlayCircleIcon",
     },
     image: "https://source.unsplash.com/1000x500/?water",
   },
@@ -165,7 +168,7 @@ export const spotify: ItemProps[] = [
     additional: "2021",
     count: {
       value: 324,
-      icon: "PlayCircleIcon"
+      icon: "PlayCircleIcon",
     },
     image: "https://source.unsplash.com/1000x500/?glass",
   },
@@ -176,12 +179,11 @@ export const spotify: ItemProps[] = [
     additional: "2021",
     count: {
       value: 324,
-      icon: "PlayCircleIcon"
+      icon: "PlayCircleIcon",
     },
     image: "https://source.unsplash.com/1000x500/?abstract",
   },
 ];
-
 
 export const music: ItemProps[] = [
   {
@@ -247,13 +249,14 @@ export const university: ItemProps[] = [
     title: "UC Berkeley",
     subtitle: "M.Sc. Computer Science",
     additional: "2015 - 2019",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Seal_of_University_of_California%2C_Berkeley.svg/640px-Seal_of_University_of_California%2C_Berkeley.svg.png"
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Seal_of_University_of_California%2C_Berkeley.svg/640px-Seal_of_University_of_California%2C_Berkeley.svg.png",
   },
   {
     type: "bullet",
     title: "MIT",
     subtitle: "B.Sc. Computer Science",
     additional: "2010 - 2014",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/MIT_logo.svg/642px-MIT_logo.svg.png"
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/MIT_logo.svg/642px-MIT_logo.svg.png",
   },
 ];
