@@ -1,6 +1,4 @@
 import { FC } from "react";
-import { ButtonProps } from "../Action/Button";
-import { LinkProps } from "../Action/Link";
 import { ActionsProps } from "../Actions";
 import { Icon, IconEnum } from "../Icon";
 

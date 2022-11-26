@@ -38,7 +38,11 @@ Default.args = {
         <Header
           title="Recent Blogs"
           icon="BookOpenIcon"
-          actions={<Actions><Action.Link url="https://google.com" text="DEV.to" /></Actions>}
+          actions={
+            <Actions>
+              <Action.Link url="https://google.com" text="DEV.to" />
+            </Actions>
+          }
         />
         <List>
           {blogPosts.map((post) => (
@@ -56,7 +60,11 @@ Default.args = {
         <Header
           title="Open Source"
           icon="CodeBracketSquareIcon"
-          actions={<Actions><Action.Link url="https://github.com" text="GitHub profile" /></Actions>}
+          actions={
+            <Actions>
+              <Action.Link url="https://github.com" text="GitHub profile" />
+            </Actions>
+          }
         />
         <Pills pills={["react.js", "vue.js", "angular.js", "ember.js", "svelte.js"]} />
         <List>
@@ -90,9 +98,10 @@ Default.args = {
           title="My Music"
           icon="MusicalNoteIcon"
           actions={
-          <Actions>
-            <Action.Link url="https://github.com" text="Spotify profile" />
-          </Actions>}
+            <Actions>
+              <Action.Link url="https://github.com" text="Spotify profile" />
+            </Actions>
+          }
         />
         <Cards>
           <Cards.Item

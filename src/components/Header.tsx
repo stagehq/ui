@@ -19,7 +19,7 @@ export const Header: FC<HeaderProps> = ({ title, subtitle, icon, actions }) => {
           </div>
         )}
         <p className="flex-grow text-lg font-semibold text-left text-zinc-600 dark:text-zinc-100">{title}</p>
-{actions && actions}
+        {actions && actions}
       </div>
       {subtitle && <p className="self-stretch text-sm text-left text-zinc-600 dark:text-zinc-400">{subtitle}</p>}
     </div>

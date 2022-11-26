@@ -16,5 +16,9 @@ Default.args = {
   title: "Title",
   subtitle: "Subtitle",
   icon: "ArchiveBoxXMarkIcon",
-  actions: <Actions><Action.Link text="Open" url="www.google.com" /></Actions>,
+  actions: (
+    <Actions>
+      <Action.Link text="Open" url="www.google.com" />
+    </Actions>
+  ),
 };
