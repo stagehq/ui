@@ -1,5 +1,6 @@
 import { Story, Meta } from "@storybook/react/types-6-0";
 import Action from "../components/Action";
+import Actions from "../components/Actions";
 import Cards from "../components/Cards";
 import { Header } from "../components/Header";
 import List from "../components/List";
@@ -37,7 +38,7 @@ Default.args = {
         <Header
           title="Recent Blogs"
           icon="BookOpenIcon"
-          action={<Action.Link url="https://google.com" text="DEV.to" />}
+          actions={<Actions><Action.Link url="https://google.com" text="DEV.to" /></Actions>}
         />
         <List>
           {blogPosts.map((post) => (
@@ -55,7 +56,7 @@ Default.args = {
         <Header
           title="Open Source"
           icon="CodeBracketSquareIcon"
-          action={<Action.Link url="https://github.com" text="GitHub profile" />}
+          actions={<Actions><Action.Link url="https://github.com" text="GitHub profile" /></Actions>}
         />
         <Pills pills={["react.js", "vue.js", "angular.js", "ember.js", "svelte.js"]} />
         <List>
@@ -88,7 +89,10 @@ Default.args = {
         <Header
           title="My Music"
           icon="MusicalNoteIcon"
-          action={<Action.Link url="https://github.com" text="Spotify profile" />}
+          actions={
+          <Actions>
+            <Action.Link url="https://github.com" text="Spotify profile" />
+          </Actions>}
         />
         <Cards>
           <Cards.Item
@@ -123,7 +127,11 @@ Default.args = {
             title="Hire me!"
             subtitle="I build web apps for startups, businesses and public institutions as a freelance web developer and designer. Let's discuss your needs and see how I can help."
             icon="BoltIcon"
-            action={<Action.Button link="https://google.com" text="Contact me" icon="EnvelopeIcon" primary />}
+            actions={
+              <Actions>
+                <Action.Button link="https://google.com" text="Contact me" icon="EnvelopeIcon" primary />
+              </Actions>
+            }
           />
         </Cards>
       </Section>

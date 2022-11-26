@@ -1,5 +1,6 @@
 import { Story, Meta } from "@storybook/react/types-6-0";
 import Action from "../components/Action";
+import Actions from "../components/Actions";
 
 import { Header, HeaderProps } from "../components/Header";
 
@@ -15,5 +16,5 @@ Default.args = {
   title: "Title",
   subtitle: "Subtitle",
   icon: "ArchiveBoxXMarkIcon",
-  action: <Action.Link text="Open" url="www.google.com" />,
+  actions: <Actions><Action.Link text="Open" url="www.google.com" /></Actions>,
 };

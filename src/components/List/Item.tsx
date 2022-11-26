@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { ButtonProps } from "../Action/Button";
 import { LinkProps } from "../Action/Link";
+import { ActionsProps } from "../Actions";
 import { Icon, IconEnum } from "../Icon";
 
 export interface ItemProps {
@@ -14,7 +15,7 @@ export interface ItemProps {
   };
   image?: string;
   index?: number;
-  actions?: React.ReactElement<ButtonProps | LinkProps>;
+  actions?: React.ReactElement<ActionsProps>;
 }
 
 export const Item: FC<ItemProps> = ({ type, title, subtitle, additional, count, image, index, actions }) => {

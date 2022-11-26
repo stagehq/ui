@@ -1,6 +1,5 @@
-import Action from "../Action";
+import { ActionsProps } from "../Actions";
 import { Icon, IconEnum } from "../Icon";
-import { ButtonProps } from "../Action/Button";
 
 export type ItemEnum = "vertical" | "horizontal" | "small" | "big";
 export interface ItemProps {
@@ -9,10 +8,10 @@ export interface ItemProps {
   subtitle?: string;
   image?: string;
   icon?: IconEnum;
-  action?: React.ReactElement<ButtonProps>;
+  actions?: React.ReactElement<ActionsProps>;
 }
 
-export const Item = ({ title, subtitle, image, icon, type, action }: ItemProps) => {
+export const Item = ({ title, subtitle, image, icon, type, actions }: ItemProps) => {
   if (type === "vertical") {
     return (
       <div className="flex flex-col items-start w-full relative overflow-hidden rounded-2xl border border-zinc-100 dark:border-zinc-700/40">
@@ -33,7 +32,7 @@ export const Item = ({ title, subtitle, image, icon, type, action }: ItemProps) 
             </div>
             <p className="w-full text-sm text-zinc-600 dark:text-zinc-400">{subtitle}</p>
           </div>
-          {action && action}
+          {actions && actions}
         </div>
       </div>
     );
@@ -63,7 +62,7 @@ export const Item = ({ title, subtitle, image, icon, type, action }: ItemProps) 
               </div>
             )}
           </div>
-          {action && action}
+          {actions && actions}
         </div>
       </div>
     );
@@ -91,7 +90,7 @@ export const Item = ({ title, subtitle, image, icon, type, action }: ItemProps) 
               </div>
             )}
           </div>
-          {action && action}
+          {actions && actions}
         </div>
       </div>
     );
@@ -114,7 +113,7 @@ export const Item = ({ title, subtitle, image, icon, type, action }: ItemProps) 
             </div>
             <p className="w-[304px] text-sm text-left text-[#e0e0e5]">{subtitle}</p>
           </div>
-          {action && action}
+          {actions && actions}
         </div>
       </div>
     );

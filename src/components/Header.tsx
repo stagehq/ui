@@ -1,15 +1,15 @@
 import { FC } from "react";
-import { LinkProps } from "./Action/Link";
+import { ActionsProps } from "./Actions";
 import { Icon, IconEnum } from "./Icon";
 
 export interface HeaderProps {
   title: string;
   subtitle?: string;
   icon?: IconEnum;
-  action?: React.ReactElement<LinkProps>;
+  actions?: React.ReactElement<ActionsProps>;
 }
 
-export const Header: FC<HeaderProps> = ({ title, subtitle, icon, action }) => {
+export const Header: FC<HeaderProps> = ({ title, subtitle, icon, actions }) => {
   return (
     <div className="flex flex-col items-start gap-3 w-full">
       <div className="flex items-center self-stretch gap-4">
@@ -19,7 +19,7 @@ export const Header: FC<HeaderProps> = ({ title, subtitle, icon, action }) => {
           </div>
         )}
         <p className="flex-grow text-lg font-semibold text-left text-zinc-600 dark:text-zinc-100">{title}</p>
-        {action && action}
+{actions && actions}
       </div>
       {subtitle && <p className="self-stretch text-sm text-left text-zinc-600 dark:text-zinc-400">{subtitle}</p>}
     </div>
