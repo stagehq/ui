@@ -1,4 +1,4 @@
-import { ItemProps } from "../components/List/Item";
+import { ListItemProps } from "../components/List/Item";
 
 export const personal = {
   name: "Software designer, founder and amateur astronaut.",
@@ -10,7 +10,7 @@ export const personal = {
     "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2680&q=80",
 };
 
-export const blogPosts: ItemProps[] = [
+export const blogPosts: ListItemProps[] = [
   {
     type: "text",
     title: "Crafting a design system for a multiplanetary future",
@@ -40,7 +40,7 @@ export const blogPosts: ItemProps[] = [
   },
 ];
 
-export const projects: ItemProps[] = [
+export const projects: ListItemProps[] = [
   {
     type: "card",
     title: "Splitbee – Your all-in-one analytics and conversion platform",
@@ -67,7 +67,7 @@ export const projects: ItemProps[] = [
   },
 ];
 
-export const openSource: ItemProps[] = [
+export const openSource: ListItemProps[] = [
   {
     type: "card",
     title: "Spectrum",
@@ -101,7 +101,7 @@ export const openSource: ItemProps[] = [
   },
 ];
 
-export const experience: ItemProps[] = [
+export const experience: ListItemProps[] = [
   {
     type: "bullet",
     title: "Software Engineer",
@@ -125,9 +125,9 @@ export const experience: ItemProps[] = [
   },
 ];
 
-// export spotify array with 10 objects of type ItemProps and music data of most listened songs
+// export spotify array with 10 objects of type ListItemProps and music data of most listened songs
 
-export const spotify: ItemProps[] = [
+export const spotify: ListItemProps[] = [
   {
     type: "cover",
     title: "The Less I Know The Better",
@@ -185,7 +185,7 @@ export const spotify: ItemProps[] = [
   },
 ];
 
-export const music: ItemProps[] = [
+export const music: ListItemProps[] = [
   {
     type: "cover",
     title: "My first song",
@@ -243,7 +243,7 @@ export const music: ItemProps[] = [
   },
 ];
 
-export const university: ItemProps[] = [
+export const university: ListItemProps[] = [
   {
     type: "bullet",
     title: "UC Berkeley",
