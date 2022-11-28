@@ -2,10 +2,10 @@ import clsx from "clsx";
 import { Icon, IconEnum } from "./Icon";
 
 export interface ButtonProps {
-  primary?: boolean;
-  icon?: IconEnum;
   text: string;
   link: string;
+  icon?: IconEnum;
+  primary?: boolean;
 }
 
 export const Button = ({ primary, icon, text, link }: ButtonProps) => {
