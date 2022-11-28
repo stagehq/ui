@@ -108,7 +108,7 @@ Default.args = {
             type="horizontal"
             title="This album title"
             subtitle="Artist Name"
-            image="https://source.unsplash.com/1000x500/?gradient&backgrounds"
+            image="https://placeimg.com/640/480/arch"
             icon="PlayIcon"
           />
         </Cards>

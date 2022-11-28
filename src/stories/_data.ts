@@ -18,7 +18,7 @@ export const blogPosts: ListItemProps[] = [
     subtitle:
       "Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system.",
     image:
-      "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2680&q=80",
+      "https://placeimg.com/640/480/nature",
   },
   {
     type: "text",
@@ -27,7 +27,7 @@ export const blogPosts: ListItemProps[] = [
     subtitle:
       "When you’re building a website for a company as ambitious as Planetaria, you need to make an impression. I wanted people to visit our website and see animations that looked more realistic than reality itself.",
     image:
-      "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2680&q=80",
+      "https://placeimg.com/640/480/tech",
   },
   {
     type: "text",
@@ -36,7 +36,7 @@ export const blogPosts: ListItemProps[] = [
     subtitle:
       "When we released the first version of cosmOS last year, it was written in Go. Go is a wonderful programming language with a lot of benefits, but it’s been a while since I’ve seen an article on the front page of Hacker News about rewriting some important tool in Go and I see articles on there about rewriting things in Rust every single week.",
     image:
-      "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2680&q=80",
+      "https://placeimg.com/640/480/arch",
   },
 ];
 
@@ -47,7 +47,7 @@ export const projects: ListItemProps[] = [
     subtitle:
       "Track and optimize your online business with Splitbee. Your friendly analytics & conversion platform. · Get to know your Traffic · Understand their journey",
     additional: "2021",
-    image: "https://source.unsplash.com/1000x500/?analytics",
+    image: "https://placeimg.com/640/480/tech",
   },
   {
     type: "card",
@@ -55,7 +55,7 @@ export const projects: ListItemProps[] = [
     subtitle:
       "Zirkular connects contributors and maintainers in a community-first workspace with goal-oriented communication, efficient workflows and smart automations.",
     additional: "2020",
-    image: "https://source.unsplash.com/1000x500/?management",
+    image: "https://placeimg.com/640/480/nature",
   },
   {
     type: "card",
@@ -63,7 +63,7 @@ export const projects: ListItemProps[] = [
     subtitle:
       "Until now, this discipline of designing and developing sounds in digital products has been reserved for those with a high level of technical understanding.",
     additional: "2019",
-    image: "https://source.unsplash.com/1000x500/?music",
+    image: "https://placeimg.com/640/480/arch",
   },
 ];
 
@@ -137,7 +137,7 @@ export const spotify: ListItemProps[] = [
       value: 324,
       icon: "PlayCircleIcon",
     },
-    image: "https://source.unsplash.com/1000x500/?wood",
+    image: "https://placeimg.com/640/480/tech",
   },
   {
     type: "cover",
@@ -148,7 +148,7 @@ export const spotify: ListItemProps[] = [
       value: 324,
       icon: "PlayCircleIcon",
     },
-    image: "https://source.unsplash.com/1000x500/?fire",
+    image: "https://placeimg.com/740/480/arch",
   },
   {
     type: "cover",
@@ -159,7 +159,7 @@ export const spotify: ListItemProps[] = [
       value: 324,
       icon: "PlayCircleIcon",
     },
-    image: "https://source.unsplash.com/1000x500/?water",
+    image: "https://placeimg.com/640/480/nature",
   },
   {
     type: "cover",
@@ -170,7 +170,7 @@ export const spotify: ListItemProps[] = [
       value: 324,
       icon: "PlayCircleIcon",
     },
-    image: "https://source.unsplash.com/1000x500/?glass",
+    image: "https://placeimg.com/640/480/people",
   },
   {
     type: "cover",
@@ -181,7 +181,7 @@ export const spotify: ListItemProps[] = [
       value: 324,
       icon: "PlayCircleIcon",
     },
-    image: "https://source.unsplash.com/1000x500/?abstract",
+    image: "https://placeimg.com/640/480/arch",
   },
 ];
 
@@ -191,7 +191,7 @@ export const music: ListItemProps[] = [
     title: "My first song",
     subtitle: "Artist name",
     image:
-      "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2680&q=80",
+      "https://placeimg.com/840/480/nature",
     count: {
       value: 100,
       icon: "PlayIcon",
@@ -202,7 +202,7 @@ export const music: ListItemProps[] = [
     title: "My second song",
     subtitle: "Artist name",
     image:
-      "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2680&q=80",
+      "https://placeimg.com/640/480/animals",
     count: {
       value: 100,
       icon: "PlayIcon",
@@ -213,7 +213,7 @@ export const music: ListItemProps[] = [
     title: "My third song",
     subtitle: "Artist name",
     image:
-      "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2680&q=80",
+      "https://placeimg.com/640/480/animals",
     count: {
       value: 100,
       icon: "PlayIcon",
@@ -224,7 +224,7 @@ export const music: ListItemProps[] = [
     title: "My fourth song",
     subtitle: "Artist name",
     image:
-      "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2680&q=80",
+      "https://placeimg.com/640/480/animals",
     count: {
       value: 100,
       icon: "PlayIcon",
@@ -235,7 +235,7 @@ export const music: ListItemProps[] = [
     title: "My fifth song",
     subtitle: "Artist name",
     image:
-      "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2680&q=80",
+      "https://placeimg.com/640/480/animals",
     count: {
       value: 100,
       icon: "PlayIcon",
