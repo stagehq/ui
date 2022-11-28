@@ -2,8 +2,9 @@ import { FC } from "react";
 import { ActionsProps } from "../Actions";
 import { Icon, IconEnum } from "../Icon";
 
-export interface ItemProps {
-  type: "card" | "text" | "bullet" | "cover";
+type ListType = "card" | "text" | "bullet" | "cover";
+export interface ListItemProps {
+  type: ListType;
   title: string;
   subtitle: string;
   additional?: string;
@@ -16,7 +17,7 @@ export interface ItemProps {
   actions?: React.ReactElement<ActionsProps>;
 }
 
-export const Item: FC<ItemProps> = ({ type, title, subtitle, additional, count, image, index, actions }) => {
+export const ListItem: FC<ListItemProps> = ({ type, title, subtitle, additional, count, image, index, actions }) => {
   if (type === "card") {
     return (
       <div className="flex flex-col items-start overflow-hidden rounded-2xl border border-zinc-100 dark:border-zinc-700/40 w-full">
