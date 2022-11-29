@@ -24,7 +24,6 @@
   "license": "MIT",
   "dependencies": {
     "@heroicons/react": "^2.0.13",
-    "@stagehq/ui": "^0.1.0",
     "@storybook/addon-a11y": "^6.5.13",
     "@types/node": "^16.18.3",
     "@types/react": "^18.0.25",
