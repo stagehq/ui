@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
-  <a aria-label="Sign up for Stage Beta" href="https://tally.so/forms/w4a70o">
+  <a aria-label="Sign up for Stage Beta" href="https://tally.so/r/w4a70o">
     <img alt="" src="https://img.shields.io/badge/Sign%20up%20for%20Stage%20(beta)-black.svg?style=for-the-badge">
   </a>
   <!-- <a aria-label="Join the community on Discord" href="https://getstage.app/community">
@@ -26,4 +26,4 @@ Stage wouldn't be where it is without the feedback from our community, so we wou
 
 ## Sign up for Stage Beta
 
-We are currently in beta and would love to have you onboard. [Sign up here](https://tally.so/forms/w4a70o) to get early access.
+We are currently in beta and would love to have you onboard. [Sign up here](https://tally.so/r/w4a70o) to get early access.
