@@ -3,6 +3,15 @@
   <h1 align="center">Design System for Stage</h1>
 </p>
 
+<p align="center">
+  <a aria-label="Sign up for Stage Beta" href="https://tally.so/forms/w4a70o">
+    <img alt="" src="https://img.shields.io/badge/Sign%20up%20for%20Stage%20(beta)-black.svg?style=for-the-badge">
+  </a>
+  <!-- <a aria-label="Join the community on Discord" href="https://getstage.app/community">
+    <img alt="" src="https://img.shields.io/badge/Join%20the%20community-black.svg?style=for-the-badge&logo=Discord">
+  </a> -->
+</p>
+
 [Stage](https://getstage.app/) lets you build your nexyt-gen professional website fast. This Design System are the building blocks which let you build extensions with simple & well-designed components. It also includes documentation and examples of how to extend Stage using React.
 
 ![Header](images/header.png)
