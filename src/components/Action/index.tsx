@@ -5,11 +5,9 @@ interface ActionProps {
   children: React.ReactElement<ButtonProps | LinkProps>[];
 }
 
-const Action = ({ children }: ActionProps) => {
+export const Action = ({ children }: ActionProps) => {
   return <>{children}</>;
 };
 
 Action.Button = Button;
 Action.Link = Link;
-
-export default Action;

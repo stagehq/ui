@@ -1,5 +1,3 @@
-import { FC } from "react";
-
 export interface PageFooterProps {
   title: string;
   location: string;
@@ -15,7 +13,7 @@ export interface PageFooterProps {
   privacyPolicy: string;
 }
 
-export const PageFooter: FC<PageFooterProps> = ({ title, location, socialMedia, privacyPolicy }) => {
+export const PageFooter = ({ title, location, socialMedia, privacyPolicy }: PageFooterProps) => {
   const currentYear = new Date().getFullYear().toString();
 
   return (

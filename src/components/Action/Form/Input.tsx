@@ -1,8 +1,3 @@
-// react input component
-
-import { FC } from "react";
-
-// interface for input element
 interface InputProps {
   label: string;
   placeholder: string;
@@ -10,7 +5,7 @@ interface InputProps {
   value: string;
 }
 
-export const Input: FC<InputProps> = ({ label, placeholder, type }) => {
+export const Input = ({ label, placeholder, type }: InputProps) => {
   return (
     <div className="flex flex-col">
       <label className="text-sm font-medium text-left text-[#1eb7a6]">{label}</label>

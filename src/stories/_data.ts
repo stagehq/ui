@@ -17,8 +17,7 @@ export const blogPosts: ListItemProps[] = [
     additional: "September 1, 2022",
     subtitle:
       "Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system.",
-    image:
-      "https://placeimg.com/640/480/nature",
+    image: "https://placeimg.com/640/480/nature",
   },
   {
     type: "text",
@@ -26,8 +25,7 @@ export const blogPosts: ListItemProps[] = [
     additional: "August 17, 2022",
     subtitle:
       "When you’re building a website for a company as ambitious as Planetaria, you need to make an impression. I wanted people to visit our website and see animations that looked more realistic than reality itself.",
-    image:
-      "https://placeimg.com/640/480/tech",
+    image: "https://placeimg.com/640/480/tech",
   },
   {
     type: "text",
@@ -35,8 +33,7 @@ export const blogPosts: ListItemProps[] = [
     additional: "July 2, 2022",
     subtitle:
       "When we released the first version of cosmOS last year, it was written in Go. Go is a wonderful programming language with a lot of benefits, but it’s been a while since I’ve seen an article on the front page of Hacker News about rewriting some important tool in Go and I see articles on there about rewriting things in Rust every single week.",
-    image:
-      "https://placeimg.com/640/480/arch",
+    image: "https://placeimg.com/640/480/arch",
   },
 ];
 
@@ -182,64 +179,6 @@ export const spotify: ListItemProps[] = [
       icon: "PlayCircleIcon",
     },
     image: "https://placeimg.com/640/480/arch",
-  },
-];
-
-export const music: ListItemProps[] = [
-  {
-    type: "cover",
-    title: "My first song",
-    subtitle: "Artist name",
-    image:
-      "https://placeimg.com/840/480/nature",
-    count: {
-      value: 100,
-      icon: "PlayIcon",
-    },
-  },
-  {
-    type: "cover",
-    title: "My second song",
-    subtitle: "Artist name",
-    image:
-      "https://placeimg.com/640/480/animals",
-    count: {
-      value: 100,
-      icon: "PlayIcon",
-    },
-  },
-  {
-    type: "cover",
-    title: "My third song",
-    subtitle: "Artist name",
-    image:
-      "https://placeimg.com/640/480/animals",
-    count: {
-      value: 100,
-      icon: "PlayIcon",
-    },
-  },
-  {
-    type: "cover",
-    title: "My fourth song",
-    subtitle: "Artist name",
-    image:
-      "https://placeimg.com/640/480/animals",
-    count: {
-      value: 100,
-      icon: "PlayIcon",
-    },
-  },
-  {
-    type: "cover",
-    title: "My fifth song",
-    subtitle: "Artist name",
-    image:
-      "https://placeimg.com/640/480/animals",
-    count: {
-      value: 100,
-      icon: "PlayIcon",
-    },
   },
 ];
 

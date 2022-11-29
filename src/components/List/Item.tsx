@@ -1,4 +1,3 @@
-import { FC } from "react";
 import { ActionsProps } from "../Actions";
 import { Icon, IconEnum } from "../Icon";
 
@@ -17,7 +16,7 @@ export interface ListItemProps {
   actions?: React.ReactElement<ActionsProps>;
 }
 
-export const ListItem: FC<ListItemProps> = ({ type, title, subtitle, additional, count, image, index, actions }) => {
+export const ListItem = ({ type, title, subtitle, additional, count, image, index, actions }: ListItemProps) => {
   if (type === "card") {
     return (
       <div className="flex flex-col items-start overflow-hidden rounded-2xl border border-zinc-100 dark:border-zinc-700/40 w-full">

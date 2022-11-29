@@ -1,6 +1,8 @@
 {
   "name": "ui",
   "version": "0.1.0",
+  "description": "Design System for Stage Extensions",
+  "main": "src/index.js",
   "private": true,
   "dependencies": {
     "@heroicons/react": "^2.0.13",
@@ -28,10 +30,6 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "lint": "npx prettier --check . && npx eslint . --ext .js,.jsx,.ts,.tsx",
     "lint-fix": "npx prettier --write . && npx eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "storybook": "start-storybook -p 6006 -s public",

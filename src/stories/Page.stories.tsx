@@ -1,14 +1,14 @@
 import { Story, Meta } from "@storybook/react/types-6-0";
-import Action from "../components/Action";
-import Actions from "../components/Actions";
-import Cards from "../components/Cards";
+import { Action } from "../components/Action";
+import { Actions } from "../components/Actions";
+import { Cards } from "../components/Cards";
 import { Header } from "../components/Header";
-import List from "../components/List";
+import { List } from "../components/List";
 import { Page, PageProps } from "../components/Page";
 import { Pills } from "../components/Pills";
 import { Section } from "../components/Section";
 import { Seperator } from "../components/Seperator";
-import { blogPosts, experience, music, openSource, personal, projects, spotify, university } from "./_data";
+import { blogPosts, experience, openSource, personal, projects, spotify, university } from "./_data";
 
 export default {
   title: "Private/Page",

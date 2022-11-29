@@ -1,11 +1,9 @@
-import { FC } from "react";
-
 export interface LinkProps {
   text?: string;
   url: string;
 }
 
-export const Link: FC<LinkProps> = ({ text, url }) => {
+export const Link = ({ text, url }: LinkProps) => {
   return (
     <a href={url} target="_blank" rel="noopener" className="flex items-center">
       <span className="text-sm font-medium text-left text-[#1eb7a6]">{text ? text : "Link"}</span>

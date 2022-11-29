@@ -1,8 +1,8 @@
 // Card Story
 
 import { Story, Meta } from "@storybook/react/types-6-0";
-import Action from "../components/Action";
-import Actions from "../components/Actions";
+import { Action } from "../components/Action";
+import { Actions } from "../components/Actions";
 import { CardsItem, CardsItemProps } from "../components/Cards/Item";
 
 export default {

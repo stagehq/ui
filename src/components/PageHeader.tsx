@@ -1,4 +1,3 @@
-import { FC } from "react";
 import { Icon } from "./Icon";
 
 export interface PageHeaderProps {
@@ -9,7 +8,7 @@ export interface PageHeaderProps {
   toggleLightMode: () => void;
 }
 
-export const PageHeader: FC<PageHeaderProps> = ({ title, description, image, lightMode, toggleLightMode }) => {
+export const PageHeader = ({ title, description, image, lightMode, toggleLightMode }: PageHeaderProps) => {
   return (
     <div className="flex flex-col justify-start items-start gap-[54px] pt-6">
       <div className="flex justify-end items-start self-stretch gap-2">

@@ -1,6 +1,5 @@
 import { IconEnum } from "../Icon";
 import { Button as HocButton } from "../Button";
-import { FC } from "react";
 
 export interface ButtonProps {
   primary?: boolean;
@@ -9,6 +8,6 @@ export interface ButtonProps {
   link: string;
 }
 
-export const Button: FC<ButtonProps> = ({ primary, icon, text, link }) => {
+export const Button = ({ primary, icon, text, link }: ButtonProps) => {
   return <HocButton {...{ primary, icon, text, link }} />;
 };

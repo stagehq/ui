@@ -1,4 +1,3 @@
-import React, { FC } from "react";
 import { ButtonProps } from "./Button";
 import { CardsProps } from "./Cards";
 import { HeaderProps } from "./Header";
@@ -11,6 +10,6 @@ export interface SectionProps {
     | React.ReactElement<ListProps | ButtonProps | CardsProps | PillsProps | HeaderProps>[];
 }
 
-export const Section: FC<SectionProps> = ({ children }) => {
+export const Section = ({ children }: SectionProps) => {
   return <section className="flex flex-col justify-start items-start gap-7 w-full">{children}</section>;
 };

@@ -1,4 +1,3 @@
-import { FC } from "react";
 import { ActionsProps } from "./Actions";
 import { Icon, IconEnum } from "./Icon";
 
@@ -9,7 +8,7 @@ export interface HeaderProps {
   actions?: React.ReactElement<ActionsProps>;
 }
 
-export const Header: FC<HeaderProps> = ({ title, subtitle, icon, actions }) => {
+export const Header = ({ title, subtitle, icon, actions }: HeaderProps) => {
   return (
     <div className="flex flex-col items-start gap-3 w-full">
       <div className="flex items-center self-stretch gap-4">
