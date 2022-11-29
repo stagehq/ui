@@ -12,7 +12,7 @@
   </a> -->
 </p>
 
-[Stage](https://getstage.app/) lets you build your nexyt-gen professional website fast. This Design System are the building blocks which let you build extensions with simple & well-designed components. It also includes documentation and examples of how to extend Stage using React.
+[Stage](https://getstage.app/) lets you build your next-gen professional website fast. This Design System provides you with the building blocks which let you build extensions with simple & well-designed components. It also includes documentation and examples of how to extend Stage using React.
 
 ![Header](images/header.png)
 
