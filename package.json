@@ -50,7 +50,8 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "prepublish": "tsc --noEmit false",
-    "publish": "npm run prepublish && npm publish"
+    "publish": "npm run prepublish && npm publish",
+    "test": "tsc"
   },
   "eslintConfig": {
     "extends": [
