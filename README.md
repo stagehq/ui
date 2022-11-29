@@ -23,3 +23,7 @@ Visit [https://developers.getstage.app](https://developers.getstage.app) to get 
 ## Feedback
 
 Stage wouldn't be where it is without the feedback from our community, so we would be happy to hear what you think of the API / Developer Experience and how we can improve. Please use [GitHub issues](https://github.com/stagehq/ui/issues/new/choose) for everything API related (bugs, improvements suggestions, developer experience, docs, etc). We have a overivew [templates](https://developers.getstage.app/api-reference/overview) that should help you get started.
+
+## Sign up for Stage Beta
+
+We are currently in beta and would love to have you onboard. [Sign up here](https://tally.so/forms/w4a70o) to get early access.
