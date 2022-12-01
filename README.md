@@ -1,5 +1,5 @@
 <p align="center">
-  <!-- <img src="images/logo.png" height="128"> -->
+  <img src="images/logo.png" height="128">
   <h1 align="center">Design System for Stage</h1>
 </p>
 
