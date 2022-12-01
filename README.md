@@ -18,7 +18,7 @@
 
 ## Getting Started
 
-Visit [https://developers.getstage.app](https://developers.getstage.app) to get started with our API. If you want to discover and install extensions, check out [our extension collection](https://getstage.app/) (soon online).
+⚠️ Currently under construction – Visit [https://developers.getstage.app](https://developers.getstage.app) to get started with our API. If you want to discover and install extensions, check out [our extension collection](https://getstage.app/) (soon online).
 
 ## Feedback
 
