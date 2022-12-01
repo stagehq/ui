@@ -1,13 +1,15 @@
+import { NonEmptyArr } from "../types/utils";
 import { ButtonProps } from "./Button";
 import { CardsProps } from "./Cards";
 import { HeaderProps } from "./Header";
 import { ListProps } from "./List";
 import { PillsProps } from "./Pills";
 
+type SectionElement = React.ReactElement<ListProps | ButtonProps | CardsProps | PillsProps | HeaderProps>;
+type SectionChildren = NonEmptyArr<SectionElement>;
+
 export interface SectionProps {
-  children:
-    | React.ReactElement<ListProps | ButtonProps | CardsProps | PillsProps | HeaderProps>
-    | React.ReactElement<ListProps | ButtonProps | CardsProps | PillsProps | HeaderProps>[];
+  children: SectionElement | SectionChildren;
 }
 
 export const Section = ({ children }: SectionProps) => {
