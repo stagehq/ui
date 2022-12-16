@@ -19,9 +19,9 @@ export const Link = ({ text, url }: LinkProps) => {
         <path
           d="M11 9L14 12L11 15"
           stroke="#1EB7A6"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         ></path>
       </svg>
     </a>
