@@ -7,8 +7,8 @@ export interface PillsProps {
 export const Pills = ({ pills }: PillsProps) => {
   return (
     <div className="flex flex-row flex-wrap gap-2">
-      {pills.map((pill) => (
-        <Pill name={pill} />
+      {pills.map((pill, index) => (
+        <Pill name={pill} key={"pill" + index} />
       ))}
     </div>
   );
