@@ -8,5 +8,6 @@ import { Seperator } from "./components/Seperator";
 import { Header } from "./components/Header";
 import { PageHeader } from "./components/PageHeader";
 import { PageFooter } from "./components/PageFooter";
+import { Pills } from "./components/Pills";
 
-export { Button, Section, List, Actions, Action, Cards, Seperator, Header, PageFooter, PageHeader };
+export { Button, Section, List, Actions, Action, Cards, Seperator, Header, PageFooter, PageHeader, Pills };
