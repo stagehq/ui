@@ -16,8 +16,8 @@ export default {
 } as Meta;
 
 const Template: Story<PageProps> = (args) => <Page {...args} />;
-export const Default = Template.bind({});
-Default.args = {
+
+const argObject = {
   header: {
     title: personal.name,
     description: personal.description,
@@ -173,3 +173,25 @@ Default.args = {
     </>,
   ],
 };
+
+export const Default = Template.bind({});
+Default.args = argObject;
+export const Tablet = Template.bind({});
+Tablet.args = argObject;
+Tablet.decorators = [
+  (Page) => (
+    <div style={{ width: '1024px' }}>
+      <Page />
+    </div>
+  ),
+];
+
+export const Mobile = Template.bind({});
+Mobile.args = argObject;
+Mobile.decorators = [
+  (Page) => (
+    <div style={{ width: '375px' }}>
+      <Page />
+    </div>
+  ),
+];
