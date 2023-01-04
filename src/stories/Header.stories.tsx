@@ -5,7 +5,7 @@ import { Actions } from "../components/Actions";
 import { Header, HeaderProps } from "../components/Header";
 
 export default {
-  title: "UI/Header",
+  title: "Private/Header",
   component: Header,
 } as Meta;
 
@@ -18,7 +18,7 @@ Default.args = {
   icon: "ArchiveBoxXMarkIcon",
   actions: (
     <Actions>
-      <Action.Link text="Open" url="www.google.com" />
+      <Action.Link url="www.google.com" />
     </Actions>
   ),
 };

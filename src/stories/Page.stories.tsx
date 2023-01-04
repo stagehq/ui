@@ -40,7 +40,7 @@ const argObject = {
           icon="BookOpenIcon"
           actions={
             <Actions>
-              <Action.Link url="https://google.com" text="DEV.to" />
+              <Action.Link url="https://google.com"/>
             </Actions>
           }
         />
@@ -51,7 +51,7 @@ const argObject = {
               title={post.title}
               additional={post.additional}
               subtitle={post.subtitle}
-              actions={<Action.Link url="https://google.com" text="Read article" />}
+              actions={<Action.Link url="https://google.com"/>}
             />
           ))}
         </List>
@@ -62,7 +62,7 @@ const argObject = {
           icon="CodeBracketSquareIcon"
           actions={
             <Actions>
-              <Action.Link url="https://github.com" text="GitHub profile" />
+              <Action.Link url="https://github.com"/>
             </Actions>
           }
         />
@@ -99,7 +99,7 @@ const argObject = {
           icon="MusicalNoteIcon"
           actions={
             <Actions>
-              <Action.Link url="https://github.com" text="Spotify profile" />
+              <Action.Link url="https://github.com"/>
             </Actions>
           }
         />
