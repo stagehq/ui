@@ -10,9 +10,10 @@ export interface BlockProps {
   actions?: React.ReactElement<ActionsProps>;
   title?: string
   subtitle?: string
+  handleTitleChange?: (title: string) => void
 }
 
-export const Block = ({children, actions, title, subtitle}: BlockProps) => {
+export const Block = ({children, actions, title, subtitle, handleTitleChange}: BlockProps) => {
 
   const [titleState, setTitleState] = useState<string | undefined>(title);
 
@@ -23,7 +24,9 @@ export const Block = ({children, actions, title, subtitle}: BlockProps) => {
   }
 
   const handleSubmit = () => {
-    console.log(titleState);
+    if(titleState != null && handleTitleChange != null){
+      handleTitleChange(titleState);
+    }  
   }
 
   return <div className="@container flex flex-col gap-12 border border-zinc-300 shadow-sm rounded-2xl p-8 w-full">
@@ -43,7 +46,9 @@ export const Block = ({children, actions, title, subtitle}: BlockProps) => {
             onBlur={() => handleSubmit()}
           />
         </div>
-        {actions && actions}
+        <div className="w-10 h-10">
+         {actions && actions}
+        </div>
       </div>
       {subtitle && <p className="self-stretch text-sm text-left text-zinc-600 dark:text-zinc-400">{subtitle}</p>}
     </div>

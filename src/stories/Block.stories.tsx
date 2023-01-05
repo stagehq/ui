@@ -10,6 +10,10 @@ export default {
   component: Block,
 } as Meta;
 
+const exampleTitleHanlder = (title: string) => {
+  console.log(title);
+}
+
 const Template: Story<BlockProps> = (args) => {
   return <Block {...args}>{
     <div className="p-4 bg-zinc-100 border border-zinc-200 flex items-center justify-center rounded-md h-32">Body</div>
@@ -23,5 +27,6 @@ Default.args = {
       <Action.Link url="www.google.com" />
     </Actions>
   ),
+  handleTitleChange: exampleTitleHanlder,
   title: "Open Source"
 };
