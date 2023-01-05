@@ -68,15 +68,13 @@ const argObject = {
         </Block.List>
       </Block>
       <Block title="My Music" actions={<Action.Link url="https://spotify.com"/>}>
-        <Block.Card>
-          <Block.Card.Item
-            type="horizontal"
-            title="This album title"
-            subtitle="Artist Name"
-            image="https://placeimg.com/640/480/arch"
-            icon="PlayIcon"
-          />
-        </Block.Card>
+        <Block.Card
+          type="horizontal"
+          title="This album title"
+          subtitle="Artist Name"
+          image="https://placeimg.com/640/480/arch"
+          icon="PlayIcon"
+        />
         <Block.List>
           {spotify.map((album, index) => (
             <Block.List.Item

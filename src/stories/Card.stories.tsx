@@ -3,14 +3,14 @@
 import { Story, Meta } from "@storybook/react/types-6-0";
 import { Action } from "../components/Action";
 import { Actions } from "../components/Actions";
-import { CardItem, CardItemProps } from "../components/Card/Item";
+import { Card, CardProps } from "../components/Card";
 
 export default {
   title: "UI/Card",
-  component: CardItem,
+  component: Card,
 } as Meta;
 
-const Template: Story<CardItemProps> = (args) => <CardItem {...args} />;
+const Template: Story<CardProps> = (args) => <Card {...args} />;
 
 export const Vertical = Template.bind({});
 Vertical.args = {
