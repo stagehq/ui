@@ -1,14 +1,18 @@
-import React, { FC, KeyboardEvent, ReactElement, ReactNode, useState } from "react";
+import React, { KeyboardEvent, useState } from "react";
 import { ActionsProps } from "../Actions";
+import { Card, CardProps } from "../Card";
+import { List, ListProps } from "../List";
+import { Pills, PillsProps } from "../Pills";
+import { Seperator } from "../Seperator";
 
 export interface BlockProps {
-  children: ReactNode | ReactElement;
+  children: React.ReactElement<ListProps | PillsProps | CardProps> | React.ReactElement<ListProps | PillsProps | CardProps>[];
   actions?: React.ReactElement<ActionsProps>;
   title?: string
   subtitle?: string
 }
 
-export const Block:FC<BlockProps> = ({children, actions, title, subtitle}) => {
+export const Block = ({children, actions, title, subtitle}: BlockProps) => {
 
   const [titleState, setTitleState] = useState<string | undefined>(title);
 
@@ -48,3 +52,8 @@ export const Block:FC<BlockProps> = ({children, actions, title, subtitle}) => {
     </div>   
   </div>
 }
+
+Block.List = List;
+Block.Pills = Pills;
+Block.Card = Card;
+Block.Seperator = Seperator;

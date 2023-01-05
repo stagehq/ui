@@ -2,7 +2,7 @@ import { ActionsProps } from "../Actions";
 import { Icon, IconEnum } from "../Icon";
 
 export type CardType = "vertical" | "horizontal" | "small" | "big";
-export interface CardsItemProps {
+export interface CardItemProps {
   type: CardType;
   title: string;
   subtitle?: string;
@@ -11,7 +11,7 @@ export interface CardsItemProps {
   actions?: React.ReactElement<ActionsProps>;
 }
 
-export const CardsItem = ({ title, subtitle, image, icon, type, actions }: CardsItemProps) => {
+export const CardItem = ({ title, subtitle, image, icon, type, actions }: CardItemProps) => {
   if (type === "vertical") {
     return (
       <div className="flex flex-col items-start w-full relative overflow-hidden rounded-2xl border border-zinc-100 dark:border-zinc-700/40">

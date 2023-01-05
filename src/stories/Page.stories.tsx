@@ -1,11 +1,7 @@
 import { Story, Meta } from "@storybook/react/types-6-0";
 import { Action } from "../components/Action";
 import { Block } from "../components/Block";
-import { Cards } from "../components/Cards";
-import { List } from "../components/List";
 import { Page, PageProps } from "../components/Page";
-import { Pills } from "../components/Pills";
-import { Seperator } from "../components/Seperator";
 import { blogPosts, experience, openSource, personal, projects, spotify, university } from "./_data";
 
 export default {
@@ -33,22 +29,22 @@ const argObject = {
   main: [
     <>
       <Block title="My writings" actions={<Action.Link url="https://dev.to"/>}>
-        <List>
+        <Block.List>
           {blogPosts.map((post) => (
-            <List.Item
+            <Block.List.Item
               type={post.type}
               title={post.title}
               additional={post.additional}
               subtitle={post.subtitle}
             />
           ))}
-        </List>
+        </Block.List>
       </Block>
       <Block title="Open Source" actions={<Action.Link url="https://github.com"/>}>
-        <Pills pills={["react.js", "vue.js", "angular.js", "ember.js", "svelte.js"]} />
-        <List>
+        <Block.Pills pills={["react.js", "vue.js", "angular.js", "ember.js", "svelte.js"]} />
+        <Block.List>
           {openSource.map((project) => (
-            <List.Item
+            <Block.List.Item
               type={project.type}
               title={project.title}
               additional={project.additional}
@@ -56,12 +52,12 @@ const argObject = {
               count={project.count && { value: project.count?.value, icon: project.count?.icon }}
             />
           ))}
-        </List>
+        </Block.List>
       </Block>
       <Block title="Deployed Projects">
-        <List>
+        <Block.List>
           {projects.map((project) => (
-            <List.Item
+            <Block.List.Item
               type={project.type}
               title={project.title}
               additional={project.additional}
@@ -69,21 +65,21 @@ const argObject = {
               image={project.image}
             />
           ))}
-        </List>
+        </Block.List>
       </Block>
       <Block title="My Music" actions={<Action.Link url="https://spotify.com"/>}>
-        <Cards>
-          <Cards.Item
+        <Block.Card>
+          <Block.Card.Item
             type="horizontal"
             title="This album title"
             subtitle="Artist Name"
             image="https://placeimg.com/640/480/arch"
             icon="PlayIcon"
           />
-        </Cards>
-        <List>
+        </Block.Card>
+        <Block.List>
           {spotify.map((album, index) => (
-            <List.Item
+            <Block.List.Item
               index={index + 1}
               type={album.type}
               title={album.title}
@@ -92,16 +88,16 @@ const argObject = {
               count={album.count && { value: album.count.value, icon: album.count.icon }}
             />
           ))}
-        </List>
+        </Block.List>
       </Block>
     </>,
   ],
   aside: [
     <>
       <Block title="Experience" actions={<Action.Link url="https://linkedin.com"/>}>
-        <List>
+        <Block.List>
           {experience.map((job) => (
-            <List.Item
+            <Block.List.Item
               type={job.type}
               title={job.subtitle}
               subtitle={job.title}
@@ -109,11 +105,11 @@ const argObject = {
               image={job.image}
             />
           ))}
-        </List>
-        <Seperator />
-        <List>
+        </Block.List>
+        <Block.Seperator />
+        <Block.List>
           {university.map((job) => (
-            <List.Item
+            <Block.List.Item
               type={job.type}
               title={job.title}
               subtitle={job.subtitle}
@@ -121,7 +117,7 @@ const argObject = {
               image={job.image}
             />
           ))}
-        </List>
+        </Block.List>
       </Block>
     </>,
   ],
