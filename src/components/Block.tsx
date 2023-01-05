@@ -1,19 +1,20 @@
 import React, { KeyboardEvent, useState } from "react";
-import { ActionsProps } from "../Actions";
-import { Card, CardProps } from "../Card";
-import { List, ListProps } from "../List";
-import { Pills, PillsProps } from "../Pills";
-import { Seperator } from "../Seperator";
+import { ActionsProps } from "./Actions";
+import { Card, CardProps } from "./Card";
+import { List, ListProps } from "./List";
+import { Pills, PillsProps } from "./Pills";
+import { Seperator } from "./Seperator";
 
 export interface BlockProps {
   children: React.ReactElement<ListProps | PillsProps | CardProps> | React.ReactElement<ListProps | PillsProps | CardProps>[];
   actions?: React.ReactElement<ActionsProps>;
+  imagePath?: string
   title?: string
   subtitle?: string
   handleTitleChange?: (title: string) => void
 }
 
-export const Block = ({children, actions, title, subtitle, handleTitleChange}: BlockProps) => {
+export const Block = ({children, actions, imagePath, title, subtitle, handleTitleChange}: BlockProps) => {
 
   const [titleState, setTitleState] = useState<string | undefined>(title);
 
@@ -33,7 +34,7 @@ export const Block = ({children, actions, title, subtitle, handleTitleChange}: B
     <div className="flex flex-col gap-4">
       <div className="flex items-center justify-between gap-4">
         <div className="flex items-center gap-4 flex-grow">
-          <img src="https://avatars.githubusercontent.com/u/65030610?s=200&v=4" className="w-10 h-10 object-cover rounded-md"></img>
+          {imagePath && <img src={imagePath} className="w-10 h-10 object-cover rounded-md"></img>}
           <input
             type="text"
             name="title"
