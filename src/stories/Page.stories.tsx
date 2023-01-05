@@ -1,12 +1,10 @@
 import { Story, Meta } from "@storybook/react/types-6-0";
 import { Action } from "../components/Action";
-import { Actions } from "../components/Actions";
+import { Block } from "../components/Block";
 import { Cards } from "../components/Cards";
-import { Header } from "../components/Header";
 import { List } from "../components/List";
 import { Page, PageProps } from "../components/Page";
 import { Pills } from "../components/Pills";
-import { Section } from "../components/Section";
 import { Seperator } from "../components/Seperator";
 import { blogPosts, experience, openSource, personal, projects, spotify, university } from "./_data";
 
@@ -34,16 +32,7 @@ const argObject = {
   },
   main: [
     <>
-      <Section>
-        <Header
-          title="Recent Blogs"
-          icon="BookOpenIcon"
-          actions={
-            <Actions>
-              <Action.Link url="https://google.com"/>
-            </Actions>
-          }
-        />
+      <Block title="My writings" actions={<Action.Link url="https://dev.to"/>}>
         <List>
           {blogPosts.map((post) => (
             <List.Item
@@ -51,21 +40,11 @@ const argObject = {
               title={post.title}
               additional={post.additional}
               subtitle={post.subtitle}
-              actions={<Action.Link url="https://google.com"/>}
             />
           ))}
         </List>
-      </Section>
-      <Section>
-        <Header
-          title="Open Source"
-          icon="CodeBracketSquareIcon"
-          actions={
-            <Actions>
-              <Action.Link url="https://github.com"/>
-            </Actions>
-          }
-        />
+      </Block>
+      <Block title="Open Source" actions={<Action.Link url="https://github.com"/>}>
         <Pills pills={["react.js", "vue.js", "angular.js", "ember.js", "svelte.js"]} />
         <List>
           {openSource.map((project) => (
@@ -78,9 +57,8 @@ const argObject = {
             />
           ))}
         </List>
-      </Section>
-      <Section>
-        <Header title="Web Projects" icon="GlobeAltIcon" />
+      </Block>
+      <Block title="Deployed Projects">
         <List>
           {projects.map((project) => (
             <List.Item
@@ -92,17 +70,8 @@ const argObject = {
             />
           ))}
         </List>
-      </Section>
-      <Section>
-        <Header
-          title="My Music"
-          icon="MusicalNoteIcon"
-          actions={
-            <Actions>
-              <Action.Link url="https://github.com"/>
-            </Actions>
-          }
-        />
+      </Block>
+      <Block title="My Music" actions={<Action.Link url="https://spotify.com"/>}>
         <Cards>
           <Cards.Item
             type="horizontal"
@@ -124,28 +93,12 @@ const argObject = {
             />
           ))}
         </List>
-      </Section>
+      </Block>
     </>,
   ],
   aside: [
     <>
-      <Section>
-        <Cards>
-          <Cards.Item
-            type="vertical"
-            title="Hire me!"
-            subtitle="I build web apps for startups, businesses and public institutions as a freelance web developer and designer. Let's discuss your needs and see how I can help."
-            icon="BoltIcon"
-            actions={
-              <Actions>
-                <Action.Button link="https://google.com" text="Contact me" icon="EnvelopeIcon" primary />
-              </Actions>
-            }
-          />
-        </Cards>
-      </Section>
-      <Section>
-        <Header title="Experience" icon="BriefcaseIcon" />
+      <Block title="Experience" actions={<Action.Link url="https://linkedin.com"/>}>
         <List>
           {experience.map((job) => (
             <List.Item
@@ -169,7 +122,7 @@ const argObject = {
             />
           ))}
         </List>
-      </Section>
+      </Block>
     </>,
   ],
 };

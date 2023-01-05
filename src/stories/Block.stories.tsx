@@ -3,7 +3,7 @@
 import { Story, Meta } from "@storybook/react/types-6-0";
 import { Action } from "../components/Action";
 import { Actions } from "../components/Actions";
-import Block, { BlockProps } from "../components/Block";
+import { Block, BlockProps } from "../components/Block";
 
 export default {
   title: "UI/Block",

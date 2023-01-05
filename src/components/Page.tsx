@@ -1,11 +1,11 @@
+import { BlockProps } from "./Block";
 import { PageFooter, PageFooterProps } from "./PageFooter";
 import { PageHeader, PageHeaderProps } from "./PageHeader";
-import { SectionProps } from "./Section";
 
 export interface PageProps {
   header: PageHeaderProps;
-  main: React.ReactElement<SectionProps>[];
-  aside: React.ReactElement<SectionProps>[];
+  main: React.ReactElement<BlockProps>[];
+  aside: React.ReactElement<BlockProps>[];
   footer: PageFooterProps;
 }
 

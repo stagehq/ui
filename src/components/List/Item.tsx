@@ -45,7 +45,7 @@ export const ListItem = ({ type, title, subtitle, additional, count, image, inde
 
   if (type === "text") {
     return (
-      <div className="flex flex-col items-start gap-3 w-full">
+      <div className="flex flex-col items-start gap-3 w-full pb-6">
         <div className="flex items-start gap-3">
           <div className="flex h-5 w-0.5 rounded-[1px] bg-zinc-200"></div>
           <p className="flex-grow text-sm text-left text-zinc-400">{additional}</p>
