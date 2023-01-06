@@ -4,7 +4,7 @@ export interface LinkProps {
 
 export const Link = ({ url }: LinkProps) => {
   return (
-    <a href={url} target="_blank" rel="noopener" className="flex items-center w-10 h-10 justify-center rounded-3xl border border-zinc-200 shadow-sm">
+    <a href={url} target="_blank" rel="noopener" className="flex items-center w-10 h-10 justify-center rounded-3xl border border-zinc-200 hover:border-zinc-300 bg-white hover:shadow shadow-sm">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
