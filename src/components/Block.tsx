@@ -13,11 +13,12 @@ export interface BlockProps {
   title?: string
   subtitle?: string
   size: number
+  isEditable: boolean
   handleTitleChange?: (title: string) => void
   handleSizeChange?: (size: number) => void
 }
 
-export const Block = ({children, actions, imagePath, title, subtitle, size, handleTitleChange, handleSizeChange}: BlockProps) => {
+export const Block = ({children, actions, imagePath, title, subtitle, size, isEditable, handleTitleChange, handleSizeChange}: BlockProps) => {
 
   const [titleState, setTitleState] = useState<string | undefined>(title);
   const [isHovering, setIsHovering] = useState<boolean>(false);
@@ -34,7 +35,7 @@ export const Block = ({children, actions, imagePath, title, subtitle, size, hand
     }  
   }
 
-  return <BlockEditWrapper isHovering={isHovering} setIsHovering={setIsHovering} size={size} handleSizeChange={handleSizeChange}>
+  return <BlockEditWrapper isHovering={isHovering} setIsHovering={setIsHovering} size={size} handleSizeChange={handleSizeChange} isEditable={isEditable}>
     <div 
       className="@container flex flex-col gap-12 border border-zinc-200 bg-white shadow-sm rounded-2xl p-8 w-full"
       onMouseEnter={() => setIsHovering(true)}
@@ -81,11 +82,12 @@ interface BlockEditWrapperProps {
   children: React.ReactElement<BlockProps>;
   isHovering: boolean;
   size: number;
+  isEditable: boolean;
   setIsHovering: (value: boolean) => void;
   handleSizeChange?: (size: number) => void
 }
 
-export const BlockEditWrapper:FC<BlockEditWrapperProps> = ({children, isHovering, size, setIsHovering, handleSizeChange}) => {
+export const BlockEditWrapper:FC<BlockEditWrapperProps> = ({children, isHovering, size, isEditable, setIsHovering, handleSizeChange}) => {
 
   const handleResize = (instruction: number) => {
     if(size != instruction){
@@ -97,7 +99,7 @@ export const BlockEditWrapper:FC<BlockEditWrapperProps> = ({children, isHovering
 
   return <div className="relative hover:outline outline-2 outline-zinc-800 rounded-2xl cursor-grab w-full">
     {children}
-    {isHovering && 
+    {isHovering && isEditable && 
       <div 
         className="absolute w-full flex justify-center h-11 -mt-5 gap-1" 
         onMouseEnter={() => setIsHovering(true)} 

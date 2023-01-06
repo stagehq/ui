@@ -28,7 +28,7 @@ const argObject = {
   },
   main: [
     <>
-      <Block title="My writings" imagePath="https://avatars.githubusercontent.com/u/65030610?s=200&v=4" size={2} actions={<Action.Link url="https://dev.to"/>}>
+      <Block title="My writings" imagePath="https://avatars.githubusercontent.com/u/65030610?s=200&v=4" size={2} isEditable={true} actions={<Action.Link url="https://dev.to"/>}>
         <Block.List>
           {blogPosts.map((post, index) => (
             <Block.List.Item
@@ -41,7 +41,7 @@ const argObject = {
           ))}
         </Block.List>
       </Block>
-      <Block title="Open Source" imagePath="https://avatars.githubusercontent.com/u/9919?s=200&v=4" size={2} actions={<Action.Link url="https://github.com"/>}>
+      <Block title="Open Source" imagePath="https://avatars.githubusercontent.com/u/9919?s=200&v=4" size={2} isEditable={true} actions={<Action.Link url="https://github.com"/>}>
         <Block.Pills pills={["react.js", "vue.js", "angular.js", "ember.js", "svelte.js"]} />
         <Block.List>
           {openSource.map((project, index) => (
@@ -56,7 +56,7 @@ const argObject = {
           ))}
         </Block.List>
       </Block>
-      <Block imagePath="https://avatars.githubusercontent.com/u/24602613?s=200&v=4" size={2} title="Deployed Projects">
+      <Block imagePath="https://avatars.githubusercontent.com/u/24602613?s=200&v=4" size={2} isEditable={true} title="Deployed Projects">
         <Block.List>
           {projects.map((project, index) => (
             <Block.List.Item
@@ -70,7 +70,7 @@ const argObject = {
           ))}
         </Block.List>
       </Block>
-      <Block title="My Music" imagePath="https://avatars.githubusercontent.com/u/251374?s=200&v=4" size={2} actions={<Action.Link url="https://spotify.com"/>}>
+      <Block title="My Music" imagePath="https://avatars.githubusercontent.com/u/251374?s=200&v=4" size={2} isEditable={true} actions={<Action.Link url="https://spotify.com"/>}>
         <Block.Card
           type="horizontal"
           title="This album title"
@@ -96,7 +96,7 @@ const argObject = {
   ],
   aside: [
     <>
-      <Block title="Experience" imagePath="https://avatars.githubusercontent.com/u/357098?s=200&v=4" size={1} actions={<Action.Link url="https://linkedin.com"/>}>
+      <Block title="Experience" imagePath="https://avatars.githubusercontent.com/u/357098?s=200&v=4" size={1} isEditable={true} actions={<Action.Link url="https://linkedin.com"/>}>
         <Block.List>
           {experience.map((job, index) => (
             <Block.List.Item
