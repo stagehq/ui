@@ -67,7 +67,7 @@ export const ListItem = ({ type, title, subtitle, additional, count, image, inde
 
   if (type === "bullet") {
     return (
-      <div className="flex items-center gap-4 w-full">
+      <div className="flex @xl:items-center gap-2 @xl:gap-4 w-full flex-col @xl:flex-row">
         {image && (
           <div
             className="flex-shrink-0 h-10 w-10 flex items-start gap-2 p-[6px] rounded-full bg-white border border-[#e9e9e9]"

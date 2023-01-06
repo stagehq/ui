@@ -20,7 +20,7 @@ const exampleChangeSize = (size: number) => {
 }
 
 const Template: Story<BlockProps> = (args) => {
-  return <div className="flex flex-col gap-8 max-w-screen-xl mx-auto">
+  return <div className="flex flex-col gap-8 max-w-screen-xl px-24 mx-auto">
     <div className="w-full">
       <Block {...args} size={3} isEditable={true}/>
     </div>

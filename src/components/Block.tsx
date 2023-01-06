@@ -97,7 +97,7 @@ export const BlockEditWrapper:FC<BlockEditWrapperProps> = ({children, isHovering
     }
   }
 
-  return <div className="relative hover:outline outline-2 outline-zinc-800 rounded-2xl cursor-grab w-full">
+  return <div className={clsx("relative outline-2 outline-zinc-800 rounded-2xl cursor-grab w-full", isEditable && "hover:outline")}>
     {children}
     {isHovering && isEditable && 
       <div 
