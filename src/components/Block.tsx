@@ -30,7 +30,7 @@ export const Block = ({children, actions, imagePath, title, subtitle, handleTitl
     }  
   }
 
-  return <div className="@container flex flex-col gap-12 border border-zinc-300 shadow-sm rounded-2xl p-8 w-full">
+  return <div className="@container flex flex-col gap-12 border border-zinc-200 bg-white shadow-sm rounded-2xl p-8 w-full">
     <div className="flex flex-col gap-4">
       <div className="flex items-center justify-between gap-4">
         <div className="flex items-center gap-4 flex-grow">
