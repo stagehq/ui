@@ -1,8 +1,12 @@
 import { Story, Meta } from "@storybook/react/types-6-0";
 import { Action } from "../components/Action";
 import { Block } from "../components/Block";
+import { List } from "../components/List";
+import { Card } from "../components/Card";
 import { Page, PageProps } from "../components/Page";
+import { Pills } from "../components/Pills";
 import { blogPosts, experience, openSource, personal, projects, spotify, university } from "./_data";
+import { Seperator } from "../components/Seperator";
 
 export default {
   title: "Private/Page",
@@ -29,9 +33,9 @@ const argObject = {
   main: [
     <>
       <Block title="My writings" imagePath="https://avatars.githubusercontent.com/u/65030610?s=200&v=4" size={2} isEditable={true} actions={<Action.Link url="https://dev.to"/>}>
-        <Block.List>
+        <List>
           {blogPosts.map((post, index) => (
-            <Block.List.Item
+            <List.Item
               type={post.type}
               title={post.title}
               additional={post.additional}
@@ -39,13 +43,13 @@ const argObject = {
               key={`Block-${index}`}
             />
           ))}
-        </Block.List>
+        </List>
       </Block>
       <Block title="Open Source" imagePath="https://avatars.githubusercontent.com/u/9919?s=200&v=4" size={2} isEditable={true} actions={<Action.Link url="https://github.com"/>}>
-        <Block.Pills pills={["react.js", "vue.js", "angular.js", "ember.js", "svelte.js"]} />
-        <Block.List>
+        <Pills pills={["react.js", "vue.js", "angular.js", "ember.js", "svelte.js"]} />
+        <List>
           {openSource.map((project, index) => (
-            <Block.List.Item
+            <List.Item
               type={project.type}
               title={project.title}
               additional={project.additional}
@@ -54,12 +58,12 @@ const argObject = {
               key={`Block-${index}`}
             />
           ))}
-        </Block.List>
+        </List>
       </Block>
       <Block imagePath="https://avatars.githubusercontent.com/u/24602613?s=200&v=4" size={2} isEditable={true} title="Deployed Projects">
-        <Block.List>
+        <List>
           {projects.map((project, index) => (
-            <Block.List.Item
+            <List.Item
               type={project.type}
               title={project.title}
               additional={project.additional}
@@ -68,19 +72,19 @@ const argObject = {
               key={`Block-${index}`}
             />
           ))}
-        </Block.List>
+        </List>
       </Block>
       <Block title="My Music" imagePath="https://avatars.githubusercontent.com/u/251374?s=200&v=4" size={2} isEditable={true} actions={<Action.Link url="https://spotify.com"/>}>
-        <Block.Card
+        <Card
           type="horizontal"
           title="This album title"
           subtitle="Artist Name"
           image="https://placeimg.com/640/480/arch"
           icon="PlayIcon"
         />
-        <Block.List>
+        <List>
           {spotify.map((album, index) => (
-            <Block.List.Item
+            <List.Item
               index={index + 1}
               type={album.type}
               title={album.title}
@@ -90,16 +94,16 @@ const argObject = {
               key={`Block-${index}`}
             />
           ))}
-        </Block.List>
+        </List>
       </Block>
     </>,
   ],
   aside: [
     <>
       <Block title="Experience" imagePath="https://avatars.githubusercontent.com/u/357098?s=200&v=4" size={1} isEditable={true} actions={<Action.Link url="https://linkedin.com"/>}>
-        <Block.List>
+        <List>
           {experience.map((job, index) => (
-            <Block.List.Item
+            <List.Item
               type={job.type}
               title={job.subtitle}
               subtitle={job.title}
@@ -108,11 +112,11 @@ const argObject = {
               key={`Block-${index}`}
             />
           ))}
-        </Block.List>
-        <Block.Seperator />
-        <Block.List>
+        </List>
+        <Seperator />
+        <List>
           {university.map((job, index) => (
-            <Block.List.Item
+            <List.Item
               type={job.type}
               title={job.title}
               subtitle={job.subtitle}
@@ -121,7 +125,7 @@ const argObject = {
               key={`Block-${index}`}
             />
           ))}
-        </Block.List>
+        </List>
       </Block>
     </>,
   ],
