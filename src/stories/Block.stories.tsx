@@ -14,27 +14,29 @@ export default {
 
 const exampleTitleHanlder = (title: string) => {
   console.log(title);
-}
+};
 
 const exampleChangeSize = (size: number) => {
   console.log("size: " + size);
-}
+};
 
 const Template: Story<BlockProps> = (args) => {
-  return <div className="flex flex-col gap-8 max-w-screen-xl px-24 mx-auto">
-    <div className="w-full">
-      <Block {...args} size={3} isEditable={true}/>
-    </div>
-    <div className="flex gap-8 flex-col md:flex-row">
-      <div className="w-full md:w-[calc((100%_-_32px)_/_2_*_1)] xl:w-[calc((100%_-_64px)_/_3_*_2_+_32px)]">
-        <Block {...args} size={2} isEditable={true}/>
+  return (
+    <div className="flex flex-col gap-8 max-w-screen-xl px-24 mx-auto">
+      <div className="w-full">
+        <Block {...args} size={3} isEditable={true} />
       </div>
-      <div className="w-full md:w-[calc((100%_-_32px)_/_2_*_1)] xl:w-[calc((100%_-_64px)_/_3_*_1)]">
-        <Block {...args} size={1} isEditable={true}/>
+      <div className="flex gap-8 flex-col md:flex-row">
+        <div className="w-full md:w-[calc((100%_-_32px)_/_2_*_1)] xl:w-[calc((100%_-_64px)_/_3_*_2_+_32px)]">
+          <Block {...args} size={2} isEditable={true} />
+        </div>
+        <div className="w-full md:w-[calc((100%_-_32px)_/_2_*_1)] xl:w-[calc((100%_-_64px)_/_3_*_1)]">
+          <Block {...args} size={1} isEditable={true} />
+        </div>
       </div>
     </div>
-  </div>
-}
+  );
+};
 
 export const Default = Template.bind({});
 Default.args = {
@@ -46,7 +48,9 @@ Default.args = {
   handleTitleChange: exampleTitleHanlder,
   handleSizeChange: exampleChangeSize,
   title: "Title",
-  children: <div className="p-4 bg-zinc-100 border border-zinc-200 flex items-center justify-center rounded-md h-32">Body</div>
+  children: (
+    <div className="p-4 bg-zinc-100 border border-zinc-200 flex items-center justify-center rounded-md h-32">Body</div>
+  ),
 };
 
 export const Blogs = Template.bind({});
