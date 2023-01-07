@@ -4,7 +4,6 @@ import { Story, Meta } from "@storybook/react/types-6-0";
 import { Action } from "../components/Action";
 import { Actions } from "../components/Actions";
 import { Block, BlockProps } from "../components/Block";
-import { List } from "../components/List";
 import { blogPosts, experience, openSource, projects, spotify } from "./_data";
 
 export default {
@@ -60,18 +59,17 @@ Blogs.args = {
   handleSizeChange: exampleChangeSize,
   title: "Open Source",
   imagePath: "https://avatars.githubusercontent.com/u/65030610?s=200&v=4",
-  children: <List>
+  children: <Block.List>
     {blogPosts.map((post, index) => (
-      <List.Item
+      <Block.List.Item
         type={post.type}
         title={post.title}
         additional={post.additional}
         subtitle={post.subtitle}
         key={`Block-${index}`}
-        actions={(<Actions><Action.LinkWrapper url={"https://google.com"}/></Actions>)}
       />
     ))}
-  </List>
+  </Block.List>
 };
 
 export const Repos = Template.bind({});
@@ -85,9 +83,9 @@ Repos.args = {
   handleSizeChange: exampleChangeSize,
   title: "My Repositories",
   imagePath: "https://avatars.githubusercontent.com/u/9919?s=200&v=4",
-  children: <List>
+  children: <Block.List>
     {openSource.map((project, index) => (
-      <List.Item
+      <Block.List.Item
         type={project.type}
         title={project.title}
         additional={project.additional}
@@ -96,7 +94,7 @@ Repos.args = {
         key={`Block-${index}`}
       />
     ))}
-  </List>
+  </Block.List>
 };
 
 export const WebProjects = Template.bind({});
@@ -105,9 +103,9 @@ WebProjects.args = {
   handleSizeChange: exampleChangeSize,
   title: "Deployed Projects",
   imagePath: "https://avatars.githubusercontent.com/u/24602613?s=200&v=4",
-  children: <List>
+  children: <Block.List>
     {projects.map((project, index) => (
-      <List.Item
+      <Block.List.Item
         type={project.type}
         title={project.title}
         additional={project.additional}
@@ -116,7 +114,7 @@ WebProjects.args = {
         key={`Block-${index}`}
       />
     ))}
-  </List>
+  </Block.List>
 };
 
 export const Music = Template.bind({});
@@ -130,9 +128,9 @@ Music.args = {
   handleSizeChange: exampleChangeSize,
   title: "Best Music ever",
   imagePath: "https://avatars.githubusercontent.com/u/251374?s=200&v=4",
-  children: <List>
+  children: <Block.List>
     {spotify.map((track, index) => (
-      <List.Item
+      <Block.List.Item
         type={track.type}
         title={track.title}
         subtitle={track.subtitle}
@@ -141,7 +139,7 @@ Music.args = {
         key={`Block-${index}`}
       />
     ))}
-  </List>
+  </Block.List>
 };
 
 export const CV = Template.bind({});
@@ -155,9 +153,9 @@ CV.args = {
   handleSizeChange: exampleChangeSize,
   title: "Experience",
   imagePath: "https://avatars.githubusercontent.com/u/357098?s=200&v=4",
-  children: <List>
+  children: <Block.List>
     {experience.map((pos, index) => (
-      <List.Item
+      <Block.List.Item
         type={pos.type}
         title={pos.title}
         subtitle={pos.subtitle}
@@ -166,5 +164,5 @@ CV.args = {
         key={`Block-${index}`}
       />
     ))}
-  </List>
+  </Block.List>
 }
