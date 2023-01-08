@@ -2,6 +2,7 @@
 
 import { Story, Meta } from "@storybook/react/types-6-0";
 import { Block, BlockProps } from "../components/Block";
+import { Card } from "../components/Card";
 import { List } from "../components/List";
 import { blogPosts, experience, openSource, projects, spotify } from "./_data";
 
@@ -125,19 +126,22 @@ Music.args = {
   title: "Best Music ever",
   imagePath: "https://avatars.githubusercontent.com/u/251374?s=200&v=4",
   children: (
-    <List>
-      {spotify.map((track, index) => (
-        <List.Item
-          type={track.type}
-          title={track.title}
-          subtitle={track.subtitle}
-          image={track.image}
-          index={index + 1}
-          key={`Block-${index}`}
-          actions={{ open: { url: "https://spotify.com" } }}
-        />
-      ))}
-    </List>
+    <>
+      <Card title="jo" type="vertical" image="https://avatars.githubusercontent.com/u/251374?s=200&v=4" actions={{ button: { text: "Test", url: "https://test.com" } }}/>
+      <List>
+        {spotify.map((track, index) => (
+          <List.Item
+            type={track.type}
+            title={track.title}
+            subtitle={track.subtitle}
+            image={track.image}
+            index={index + 1}
+            key={`Block-${index}`}
+            actions={{ open: { url: "https://spotify.com" } }}
+          />
+        ))}
+      </List>
+    </>
   ),
 };
 

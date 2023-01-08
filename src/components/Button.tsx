@@ -3,15 +3,15 @@ import { Icon, IconEnum } from "./Icon";
 
 export interface ButtonProps {
   text: string;
-  link: string;
+  url: string;
   icon?: IconEnum;
   primary?: boolean;
 }
 
-export const Button = ({ primary, icon, text, link }: ButtonProps) => {
+export const Button = ({ primary, icon, text, url }: ButtonProps) => {
   return (
     <a
-      href={link}
+      href={url}
       target="_blank"
       rel="noopener"
       className={clsx(

@@ -45,7 +45,8 @@ const argObject = {
               title={post.title}
               additional={post.additional}
               subtitle={post.subtitle}
-              key={`Block-${index}`}
+              key={`Posts-${index}`}
+              actions={{ open: { url: "https://dev.to" } }}
             />
           ))}
         </List>
@@ -66,7 +67,8 @@ const argObject = {
               additional={project.additional}
               subtitle={project.subtitle}
               count={project.count && { value: project.count?.value, icon: project.count?.icon }}
-              key={`Block-${index}`}
+              key={`OpenSource-${index}`}
+              actions={{ open: { url: "https://github.com" } }}
             />
           ))}
         </List>
@@ -85,7 +87,7 @@ const argObject = {
               additional={project.additional}
               subtitle={project.subtitle}
               image={project.image}
-              key={`Block-${index}`}
+              key={`Projects-${index}`}
             />
           ))}
         </List>
@@ -103,6 +105,7 @@ const argObject = {
           subtitle="Artist Name"
           image="https://placeimg.com/640/480/arch"
           icon="PlayIcon"
+          actions={{ open: {url: "https://google.com"} }}
         />
         <List>
           {spotify.map((album, index) => (
@@ -113,7 +116,7 @@ const argObject = {
               subtitle={album.subtitle}
               image={album.image}
               count={album.count && { value: album.count.value, icon: album.count.icon }}
-              key={`Block-${index}`}
+              key={`Music-${index}`}
             />
           ))}
         </List>
@@ -137,7 +140,7 @@ const argObject = {
               subtitle={job.title}
               additional={job.additional}
               image={job.image}
-              key={`Block-${index}`}
+              key={`Experience-${index}`}
             />
           ))}
         </List>
@@ -150,7 +153,7 @@ const argObject = {
               subtitle={job.subtitle}
               additional={job.additional}
               image={job.image}
-              key={`Block-${index}`}
+              key={`University-${index}`}
             />
           ))}
         </List>

@@ -14,7 +14,7 @@ export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
   text: "Primary Button",
-  link: "https://www.google.com",
+  url: "https://www.google.com",
   icon: "EnvelopeIcon",
 };
 
@@ -22,6 +22,6 @@ export const Secondary = Template.bind({});
 Secondary.args = {
   primary: false,
   text: "Secondary Button",
-  link: "https://www.google.com",
+  url: "https://www.google.com",
   icon: "InboxStackIcon",
 };

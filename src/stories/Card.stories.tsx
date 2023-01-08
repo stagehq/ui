@@ -17,7 +17,7 @@ Vertical.args = {
   image: "https://source.unsplash.com/1000x500/?gradient&backgrounds",
   icon: "ArchiveBoxXMarkIcon",
   type: "vertical",
-  actions: { button: { text: "Action Button", link: "https://www.google.com" } },
+  actions: { button: { text: "Action Button", url: "https://www.google.com" } },
 };
 
 export const Horizontal = Template.bind({});
@@ -27,7 +27,7 @@ Horizontal.args = {
   image: "https://source.unsplash.com/500x500/?gradient&backgrounds",
   icon: "ArchiveBoxXMarkIcon",
   type: "horizontal",
-  actions: { button: { text: "Action Button", link: "https://www.google.com" } },
+  actions: { button: { text: "Action Button", url: "https://www.google.com" } },
 };
 
 export const Small = Template.bind({});
@@ -37,7 +37,7 @@ Small.args = {
   image: "https://source.unsplash.com/500x500/?gradient&backgrounds",
   icon: "ArchiveBoxXMarkIcon",
   type: "small",
-  actions: { button: { text: "Action Button", link: "https://www.google.com" } },
+  actions: { button: { text: "Action Button", url: "https://www.google.com" } },
 };
 
 export const Big = Template.bind({});
@@ -47,5 +47,5 @@ Big.args = {
   image: "https://source.unsplash.com/1000x500/?gradient&backgrounds",
   icon: "ArchiveBoxXMarkIcon",
   type: "big",
-  actions: { button: { text: "Action Button", link: "https://www.google.com" } },
+  actions: { button: { text: "Action Button", url: "https://www.google.com" } },
 };
