@@ -1,5 +1,5 @@
-import clsx from "clsx";
-import React, { FC, KeyboardEvent, useState } from "react";
+import React, { KeyboardEvent, useState } from "react";
+import { Action } from "./Action";
 import { ActionsProps } from "./Actions";
 import { BlockEditWrapper } from "./BlockEditWrapper";
 import { CardProps } from "./Card";
@@ -10,7 +10,7 @@ export interface BlockProps {
   children:
     | React.ReactElement<ListProps | PillsProps | CardProps>
     | React.ReactElement<ListProps | PillsProps | CardProps>[];
-  actions?: React.ReactElement<ActionsProps>;
+  actions?: ActionsProps;
   imagePath?: string;
   title?: string;
   subtitle?: string;
@@ -75,14 +75,15 @@ export const Block = ({
                 onBlur={() => handleSubmit()}
               />
             </div>
-            <div className="w-10 h-10">{actions && actions}</div>
+            <div className="w-10 h-10">
+              {(actions?.link && <Action.Link {...actions.link} />) ||
+                (actions?.button && <Action.Button {...actions.button} />)}
+            </div>
           </div>
           {subtitle && <p className="self-stretch text-sm text-left text-zinc-600 dark:text-zinc-400">{subtitle}</p>}
         </div>
-        <div className="flex flex-col gap-6">
-          {children}    
-        </div>   
+        <div className="flex flex-col gap-6">{children}</div>
       </div>
     </BlockEditWrapper>
-  )
-}
+  );
+};

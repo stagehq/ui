@@ -1,5 +1,4 @@
 import { Story, Meta } from "@storybook/react/types-6-0";
-import { Action } from "../components/Action";
 import { Block } from "../components/Block";
 import { List } from "../components/List";
 import { Card } from "../components/Card";
@@ -32,7 +31,13 @@ const argObject = {
   },
   main: [
     <>
-      <Block title="My writings" imagePath="https://avatars.githubusercontent.com/u/65030610?s=200&v=4" size={2} isEditable={true} actions={<Action.Link url="https://dev.to"/>}>
+      <Block
+        title="My writings"
+        imagePath="https://avatars.githubusercontent.com/u/65030610?s=200&v=4"
+        size={2}
+        isEditable={true}
+        actions={{ link: { url: "https://dev.to" } }}
+      >
         <List>
           {blogPosts.map((post, index) => (
             <List.Item
@@ -45,7 +50,13 @@ const argObject = {
           ))}
         </List>
       </Block>
-      <Block title="Open Source" imagePath="https://avatars.githubusercontent.com/u/9919?s=200&v=4" size={2} isEditable={true} actions={<Action.Link url="https://github.com"/>}>
+      <Block
+        title="Open Source"
+        imagePath="https://avatars.githubusercontent.com/u/9919?s=200&v=4"
+        size={2}
+        isEditable={true}
+        actions={{ link: { url: "https://github.com" } }}
+      >
         <Pills pills={["react.js", "vue.js", "angular.js", "ember.js", "svelte.js"]} />
         <List>
           {openSource.map((project, index) => (
@@ -60,7 +71,12 @@ const argObject = {
           ))}
         </List>
       </Block>
-      <Block imagePath="https://avatars.githubusercontent.com/u/24602613?s=200&v=4" size={2} isEditable={true} title="Deployed Projects">
+      <Block
+        imagePath="https://avatars.githubusercontent.com/u/24602613?s=200&v=4"
+        size={2}
+        isEditable={true}
+        title="Deployed Projects"
+      >
         <List>
           {projects.map((project, index) => (
             <List.Item
@@ -74,7 +90,13 @@ const argObject = {
           ))}
         </List>
       </Block>
-      <Block title="My Music" imagePath="https://avatars.githubusercontent.com/u/251374?s=200&v=4" size={2} isEditable={true} actions={<Action.Link url="https://spotify.com"/>}>
+      <Block
+        title="My Music"
+        imagePath="https://avatars.githubusercontent.com/u/251374?s=200&v=4"
+        size={2}
+        isEditable={true}
+        actions={{ link: { url: "https://spotify.com" } }}
+      >
         <Card
           type="horizontal"
           title="This album title"
@@ -100,7 +122,13 @@ const argObject = {
   ],
   aside: [
     <>
-      <Block title="Experience" imagePath="https://avatars.githubusercontent.com/u/357098?s=200&v=4" size={1} isEditable={true} actions={<Action.Link url="https://linkedin.com"/>}>
+      <Block
+        title="Experience"
+        imagePath="https://avatars.githubusercontent.com/u/357098?s=200&v=4"
+        size={1}
+        isEditable={true}
+        actions={{ link: { url: "https://www.google.com" } }}
+      >
         <List>
           {experience.map((job, index) => (
             <List.Item

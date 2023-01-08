@@ -1,3 +1,5 @@
+import { Action } from "./Action";
+import { withLink } from "./Action/helper";
 import { ActionsProps } from "./Actions";
 import { Icon, IconEnum } from "./Icon";
 
@@ -8,12 +10,12 @@ export interface CardProps {
   subtitle?: string;
   image?: string;
   icon?: IconEnum;
-  actions?: React.ReactElement<ActionsProps>;
+  actions?: ActionsProps;
 }
 
 export const Card = ({ title, subtitle, image, icon, type, actions }: CardProps) => {
   if (type === "vertical") {
-    return (
+    return withLink(
       <div className="flex flex-col items-start w-full relative overflow-hidden rounded-2xl border border-zinc-100 dark:border-zinc-700/40">
         {image && (
           <div className="w-full h-40 relative">
@@ -32,14 +34,16 @@ export const Card = ({ title, subtitle, image, icon, type, actions }: CardProps)
             </div>
             <p className="w-full text-sm text-zinc-600 dark:text-zinc-400">{subtitle}</p>
           </div>
-          {actions && actions}
+          {(actions?.link && <Action.Link {...actions.link} />) ||
+            (actions?.button && <Action.Button {...actions.button} />)}
         </div>
-      </div>
+      </div>,
+      actions
     );
   }
 
   if (type === "horizontal") {
-    return (
+    return withLink(
       <div className="flex items-center overflow-hidden gap-6 pr-6 rounded-2xl border border-zinc-100 dark:border-zinc-700/40">
         {image && (
           <div className="w-24 h-24 relative">
@@ -62,14 +66,16 @@ export const Card = ({ title, subtitle, image, icon, type, actions }: CardProps)
               </div>
             )}
           </div>
-          {actions && actions}
+          {(actions?.link && <Action.Link {...actions.link} />) ||
+            (actions?.button && <Action.Button {...actions.button} />)}
         </div>
-      </div>
+      </div>,
+      actions
     );
   }
 
   if (type === "small") {
-    return (
+    return withLink(
       <div className="flex items-center overflow-hidden gap-6 px-6 rounded-2xl border border-zinc-100 dark:border-zinc-700/40">
         <div className="flex flex-col items-start flex-grow gap-6 py-6">
           <div className="flex items-center self-stretch gap-6">
@@ -90,14 +96,16 @@ export const Card = ({ title, subtitle, image, icon, type, actions }: CardProps)
               </div>
             )}
           </div>
-          {actions && actions}
+          {(actions?.link && <Action.Link {...actions.link} />) ||
+            (actions?.button && <Action.Button {...actions.button} />)}
         </div>
-      </div>
+      </div>,
+      actions
     );
   }
 
   if (type === "big") {
-    return (
+    return withLink(
       <div className="flex flex-col items-start h-[400px] overflow-hidden rounded-2xl border border-zinc-100 dark:border-zinc-700/40 relative">
         <img className="absolute w-full h-full top-0 bottom-0 left-0 right-0 object-cover" src={image} />
         <div
@@ -113,9 +121,11 @@ export const Card = ({ title, subtitle, image, icon, type, actions }: CardProps)
             </div>
             <p className="w-[304px] text-sm text-left text-[#e0e0e5]">{subtitle}</p>
           </div>
-          {actions && actions}
+          {(actions?.link && <Action.Link {...actions.link} />) ||
+            (actions?.button && <Action.Button {...actions.button} />)}
         </div>
-      </div>
+      </div>,
+      actions
     );
   }
 

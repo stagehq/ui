@@ -1,8 +1,6 @@
 // Block Story
 
 import { Story, Meta } from "@storybook/react/types-6-0";
-import { Action } from "../components/Action";
-import { Actions } from "../components/Actions";
 import { Block, BlockProps } from "../components/Block";
 import { List } from "../components/List";
 import { blogPosts, experience, openSource, projects, spotify } from "./_data";
@@ -40,11 +38,7 @@ const Template: Story<BlockProps> = (args) => {
 
 export const Default = Template.bind({});
 Default.args = {
-  actions: (
-    <Actions>
-      <Action.Link url="www.google.com" />
-    </Actions>
-  ),
+  actions: { link: { url: "https://www.google.com" } },
   handleTitleChange: exampleTitleHanlder,
   handleSizeChange: exampleChangeSize,
   title: "Title",
@@ -55,52 +49,49 @@ Default.args = {
 
 export const Blogs = Template.bind({});
 Blogs.args = {
-  actions: (
-    <Actions>
-      <Action.Link url="https://dev.to" />
-    </Actions>
-  ),
+  actions: { link: { url: "https://www.google.com" } },
   handleTitleChange: exampleTitleHanlder,
   handleSizeChange: exampleChangeSize,
   title: "Open Source",
   imagePath: "https://avatars.githubusercontent.com/u/65030610?s=200&v=4",
-  children: <List>
-    {blogPosts.map((post, index) => (
-      <List.Item
-        type={post.type}
-        title={post.title}
-        additional={post.additional}
-        subtitle={post.subtitle}
-        key={`Block-${index}`}
-        actions={(<Actions><Action.LinkWrapper url={"https://google.com"}/></Actions>)}
-      />
-    ))}
-  </List>
+  children: (
+    <List>
+      {blogPosts.map((post, index) => (
+        <List.Item
+          type={post.type}
+          title={post.title}
+          additional={post.additional}
+          subtitle={post.subtitle}
+          key={`Block-${index}`}
+          actions={{ open: { url: "https://dev.to" } }}
+        />
+      ))}
+    </List>
+  ),
 };
 
 export const Repos = Template.bind({});
 Repos.args = {
-  actions: (
-    <Actions>
-      <Action.Link url="https://github.com" />
-    </Actions>
-  ),
+  actions: { link: { url: "https://www.google.com" } },
   handleTitleChange: exampleTitleHanlder,
   handleSizeChange: exampleChangeSize,
   title: "My Repositories",
   imagePath: "https://avatars.githubusercontent.com/u/9919?s=200&v=4",
-  children: <List>
-    {openSource.map((project, index) => (
-      <List.Item
-        type={project.type}
-        title={project.title}
-        additional={project.additional}
-        subtitle={project.subtitle}
-        count={project.count}
-        key={`Block-${index}`}
-      />
-    ))}
-  </List>
+  children: (
+    <List>
+      {openSource.map((project, index) => (
+        <List.Item
+          type={project.type}
+          title={project.title}
+          additional={project.additional}
+          subtitle={project.subtitle}
+          count={project.count}
+          key={`Block-${index}`}
+          actions={{ open: { url: "https://github.com" } }}
+        />
+      ))}
+    </List>
+  ),
 };
 
 export const WebProjects = Template.bind({});
@@ -109,66 +100,67 @@ WebProjects.args = {
   handleSizeChange: exampleChangeSize,
   title: "Deployed Projects",
   imagePath: "https://avatars.githubusercontent.com/u/24602613?s=200&v=4",
-  children: <List>
-    {projects.map((project, index) => (
-      <List.Item
-        type={project.type}
-        title={project.title}
-        additional={project.additional}
-        subtitle={project.subtitle}
-        image={project.image}
-        key={`Block-${index}`}
-      />
-    ))}
-  </List>
+  children: (
+    <List>
+      {projects.map((project, index) => (
+        <List.Item
+          type={project.type}
+          title={project.title}
+          additional={project.additional}
+          subtitle={project.subtitle}
+          image={project.image}
+          key={`Block-${index}`}
+          actions={{ open: { url: "https://vercel.com" } }}
+        />
+      ))}
+    </List>
+  ),
 };
 
 export const Music = Template.bind({});
 Music.args = {
-  actions: (
-    <Actions>
-      <Action.Link url="https://spotify.com" />
-    </Actions>
-  ),
+  actions: { link: { url: "https://www.google.com" } },
   handleTitleChange: exampleTitleHanlder,
   handleSizeChange: exampleChangeSize,
   title: "Best Music ever",
   imagePath: "https://avatars.githubusercontent.com/u/251374?s=200&v=4",
-  children: <List>
-    {spotify.map((track, index) => (
-      <List.Item
-        type={track.type}
-        title={track.title}
-        subtitle={track.subtitle}
-        image={track.image}
-        index={index + 1}
-        key={`Block-${index}`}
-      />
-    ))}
-  </List>
+  children: (
+    <List>
+      {spotify.map((track, index) => (
+        <List.Item
+          type={track.type}
+          title={track.title}
+          subtitle={track.subtitle}
+          image={track.image}
+          index={index + 1}
+          key={`Block-${index}`}
+          actions={{ open: { url: "https://spotify.com" } }}
+        />
+      ))}
+    </List>
+  ),
 };
 
 export const CV = Template.bind({});
 CV.args = {
-  actions: (
-    <Actions>
-      <Action.Link url="https://linkedIn.com" />
-    </Actions>
-  ),
+  actions: { link: { url: "https://www.google.com" } },
   handleTitleChange: exampleTitleHanlder,
   handleSizeChange: exampleChangeSize,
   title: "Experience",
   imagePath: "https://avatars.githubusercontent.com/u/357098?s=200&v=4",
-  children: <List>
-    {experience.map((pos, index) => (
-      <List.Item
-        type={pos.type}
-        title={pos.title}
-        subtitle={pos.subtitle}
-        image={pos.image}
-        additional={pos.additional}
-        key={`Block-${index}`}
-      />
-    ))}
-  </List>
-}
+  children: (
+    <List>
+      {experience.map((pos, index) => (
+        <List.Item
+          type={pos.type}
+          title={pos.title}
+          subtitle={pos.subtitle}
+          image={pos.image}
+          additional={pos.additional}
+          key={`Block-${index}`}
+          actions={{ open: { url: "https://linkedin.com" } }}
+        />
+      ))}
+    </List>
+  ),
+};

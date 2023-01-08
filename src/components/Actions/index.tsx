@@ -1,15 +1,11 @@
-import { NonEmptyArr } from "../../types/utils";
+import { ButtonProps } from "../Action/Button";
 import { LinkProps } from "../Action/Link";
-import { LinkWrapperProps } from "../Action/LinkWrapper";
-import { ButtonProps } from "../Button";
 
-type ActionsElement = React.ReactElement<LinkProps | ButtonProps | LinkWrapperProps>;
-type ActionsChildren = NonEmptyArr<ActionsElement>;
-
-export interface ActionsProps {
-  children: ActionsElement | ActionsChildren;
+export interface OpenProps {
+  url: string;
 }
-
-export const Actions = ({ children }: ActionsProps) => {
-  return <>{children}</>;
-};
+export interface ActionsProps {
+  button?: ButtonProps;
+  link?: LinkProps;
+  open?: OpenProps;
+}
