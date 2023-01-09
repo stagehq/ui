@@ -2,20 +2,20 @@ import React, { KeyboardEvent, useState } from "react";
 import { Action } from "./Action";
 import { ActionsProps } from "./Actions";
 import { BlockEditWrapper } from "./BlockEditWrapper";
+import { ButtonProps } from "./Button";
 import { CardProps } from "./Card";
 import { ListProps } from "./List";
 import { PillsProps } from "./Pills";
 
 export interface BlockProps {
   children:
-    | React.ReactElement<ListProps | PillsProps | CardProps>
-    | React.ReactElement<ListProps | PillsProps | CardProps>[];
+    | React.ReactElement<ListProps | ButtonProps | PillsProps | CardProps>
+    | React.ReactElement<ListProps | ButtonProps | PillsProps | CardProps>[];
+  size: 1 | 2 | 3;
   actions?: ActionsProps;
   imagePath?: string;
   title?: string;
-  subtitle?: string;
-  size: number;
-  isEditable: boolean;
+  isEditable?: boolean;
   handleTitleChange?: (title: string) => void;
   handleSizeChange?: (size: number) => void;
 }
@@ -25,7 +25,6 @@ export const Block = ({
   actions,
   imagePath,
   title,
-  subtitle,
   size,
   isEditable,
   handleTitleChange,
@@ -52,7 +51,7 @@ export const Block = ({
       setIsHovering={setIsHovering}
       size={size}
       handleSizeChange={handleSizeChange}
-      isEditable={isEditable}
+      isEditable={isEditable ? isEditable : true}
     >
       <div
         className="@container flex flex-col gap-12 border border-zinc-200 bg-white shadow-sm rounded-2xl p-8 w-full"
@@ -80,7 +79,6 @@ export const Block = ({
                 (actions?.button && <Action.Button {...actions.button} />)}
             </div>
           </div>
-          {subtitle && <p className="self-stretch text-sm text-left text-zinc-600 dark:text-zinc-400">{subtitle}</p>}
         </div>
         <div className="flex flex-col gap-6">{children}</div>
       </div>
