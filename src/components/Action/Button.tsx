@@ -5,9 +5,9 @@ export interface ButtonProps {
   primary?: boolean;
   icon?: IconEnum;
   text: string;
-  link: string;
+  url: string;
 }
 
-export const Button = ({ primary, icon, text, link }: ButtonProps) => {
-  return <HocButton {...{ primary, icon, text, link }} />;
+export const Button = ({ primary, icon, text, url }: ButtonProps) => {
+  return <HocButton {...{ primary, icon, text, url }} />;
 };

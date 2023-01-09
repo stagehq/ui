@@ -1,14 +1,11 @@
 import { Story, Meta } from "@storybook/react/types-6-0";
-import { Action } from "../components/Action";
-import { Actions } from "../components/Actions";
-import { Cards } from "../components/Cards";
-import { Header } from "../components/Header";
+import { Block } from "../components/Block";
 import { List } from "../components/List";
+import { Card } from "../components/Card";
 import { Page, PageProps } from "../components/Page";
 import { Pills } from "../components/Pills";
-import { Section } from "../components/Section";
-import { Seperator } from "../components/Seperator";
 import { blogPosts, experience, openSource, personal, projects, spotify, university } from "./_data";
+import { Seperator } from "../components/Seperator";
 
 export default {
   title: "Private/Page",
@@ -34,84 +31,82 @@ const argObject = {
   },
   main: [
     <>
-      <Section>
-        <Header
-          title="Recent Blogs"
-          icon="BookOpenIcon"
-          actions={
-            <Actions>
-              <Action.Link url="https://google.com" text="DEV.to" />
-            </Actions>
-          }
-        />
+      <Block
+        title="My writings"
+        imagePath="https://avatars.githubusercontent.com/u/65030610?s=200&v=4"
+        size={2}
+        isEditable={true}
+        actions={{ link: { url: "https://dev.to" } }}
+      >
         <List>
-          {blogPosts.map((post) => (
+          {blogPosts.map((post, index) => (
             <List.Item
               type={post.type}
               title={post.title}
               additional={post.additional}
               subtitle={post.subtitle}
-              actions={<Action.Link url="https://google.com" text="Read article" />}
+              key={`Posts-${index}`}
+              actions={{ open: { url: "https://dev.to" } }}
             />
           ))}
         </List>
-      </Section>
-      <Section>
-        <Header
-          title="Open Source"
-          icon="CodeBracketSquareIcon"
-          actions={
-            <Actions>
-              <Action.Link url="https://github.com" text="GitHub profile" />
-            </Actions>
-          }
-        />
+      </Block>
+      <Block
+        title="Open Source"
+        imagePath="https://avatars.githubusercontent.com/u/9919?s=200&v=4"
+        size={2}
+        isEditable={true}
+        actions={{ link: { url: "https://github.com" } }}
+      >
         <Pills pills={["react.js", "vue.js", "angular.js", "ember.js", "svelte.js"]} />
         <List>
-          {openSource.map((project) => (
+          {openSource.map((project, index) => (
             <List.Item
               type={project.type}
               title={project.title}
               additional={project.additional}
               subtitle={project.subtitle}
               count={project.count && { value: project.count?.value, icon: project.count?.icon }}
+              key={`OpenSource-${index}`}
+              actions={{ open: { url: "https://github.com" } }}
             />
           ))}
         </List>
-      </Section>
-      <Section>
-        <Header title="Web Projects" icon="GlobeAltIcon" />
+      </Block>
+      <Block
+        imagePath="https://avatars.githubusercontent.com/u/24602613?s=200&v=4"
+        size={2}
+        isEditable={true}
+        title="Deployed Projects"
+      >
         <List>
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <List.Item
               type={project.type}
               title={project.title}
               additional={project.additional}
               subtitle={project.subtitle}
               image={project.image}
+              key={`Projects-${index}`}
             />
           ))}
         </List>
-      </Section>
-      <Section>
-        <Header
-          title="My Music"
-          icon="MusicalNoteIcon"
-          actions={
-            <Actions>
-              <Action.Link url="https://github.com" text="Spotify profile" />
-            </Actions>
-          }
+      </Block>
+      <Block
+        title="My Music"
+        imagePath="https://avatars.githubusercontent.com/u/251374?s=200&v=4"
+        size={2}
+        isEditable={true}
+        actions={{ link: { url: "https://spotify.com" } }}
+      >
+        <Card
+          type="horizontal"
+          title="This album title"
+          subtitle="Artist Name"
+          image="https://placeimg.com/640/480/arch"
+          icon="PlayIcon"
+          actions={{ open: {url: "https://google.com"} }}
         />
-        <Cards>
-          <Cards.Item
-            type="horizontal"
-            title="This album title"
-            subtitle="Artist Name"
-            image="https://placeimg.com/640/480/arch"
-            icon="PlayIcon"
-          />
-        </Cards>
         <List>
           {spotify.map((album, index) => (
             <List.Item
@@ -121,77 +116,51 @@ const argObject = {
               subtitle={album.subtitle}
               image={album.image}
               count={album.count && { value: album.count.value, icon: album.count.icon }}
+              key={`Music-${index}`}
             />
           ))}
         </List>
-      </Section>
+      </Block>
     </>,
   ],
   aside: [
     <>
-      <Section>
-        <Cards>
-          <Cards.Item
-            type="vertical"
-            title="Hire me!"
-            subtitle="I build web apps for startups, businesses and public institutions as a freelance web developer and designer. Let's discuss your needs and see how I can help."
-            icon="BoltIcon"
-            actions={
-              <Actions>
-                <Action.Button link="https://google.com" text="Contact me" icon="EnvelopeIcon" primary />
-              </Actions>
-            }
-          />
-        </Cards>
-      </Section>
-      <Section>
-        <Header title="Experience" icon="BriefcaseIcon" />
+      <Block
+        title="Experience"
+        imagePath="https://avatars.githubusercontent.com/u/357098?s=200&v=4"
+        size={1}
+        isEditable={true}
+        actions={{ link: { url: "https://www.google.com" } }}
+      >
         <List>
-          {experience.map((job) => (
+          {experience.map((job, index) => (
             <List.Item
               type={job.type}
               title={job.subtitle}
               subtitle={job.title}
               additional={job.additional}
               image={job.image}
+              key={`Experience-${index}`}
             />
           ))}
         </List>
         <Seperator />
         <List>
-          {university.map((job) => (
+          {university.map((job, index) => (
             <List.Item
               type={job.type}
               title={job.title}
               subtitle={job.subtitle}
               additional={job.additional}
               image={job.image}
+              key={`University-${index}`}
             />
           ))}
         </List>
-      </Section>
+      </Block>
     </>,
   ],
 };
 
 export const Default = Template.bind({});
 Default.args = argObject;
-export const Tablet = Template.bind({});
-Tablet.args = argObject;
-Tablet.decorators = [
-  (Page) => (
-    <div style={{ width: '1024px' }}>
-      <Page />
-    </div>
-  ),
-];
-
-export const Mobile = Template.bind({});
-Mobile.args = argObject;
-Mobile.decorators = [
-  (Page) => (
-    <div style={{ width: '375px' }}>
-      <Page />
-    </div>
-  ),
-];

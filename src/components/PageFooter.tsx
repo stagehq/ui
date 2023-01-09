@@ -13,7 +13,7 @@ export interface PageFooterProps {
   privacyPolicy: string;
 }
 
-export const PageFooter = ({ title, location, socialMedia, privacyPolicy }: PageFooterProps) => {
+export const PageFooter = ({ title, location }: PageFooterProps) => {
   const currentYear = new Date().getFullYear().toString();
 
   return (

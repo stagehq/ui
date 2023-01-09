@@ -1,28 +1,24 @@
 export interface LinkProps {
-  text?: string;
   url: string;
 }
 
-export const Link = ({ text, url }: LinkProps) => {
+export const Link = ({ url }: LinkProps) => {
   return (
-    <a href={url} target="_blank" rel="noopener" className="flex items-center">
-      <span className="text-sm font-medium text-left text-[#1eb7a6]">{text ? text : "Link"}</span>
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener"
+      className="flex items-center w-10 h-10 justify-center rounded-3xl border border-zinc-200 hover:border-zinc-300 bg-white hover:shadow shadow-sm"
+    >
       <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-6 h-6"
-        preserveAspectRatio="none"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        className="w-5 h-5"
+        viewBox="0 0 24 24"
       >
-        <path
-          d="M11 9L14 12L11 15"
-          stroke="#1EB7A6"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        ></path>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
       </svg>
     </a>
   );
