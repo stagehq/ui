@@ -1,7 +1,7 @@
 import React, { KeyboardEvent, useState } from "react";
 import { Action } from "./Action";
 import { ActionsProps } from "./Actions";
-import { BlockEditWrapper } from "./BlockEditWrapper";
+import { blockCols, BlockEditWrapper } from "./BlockEditWrapper";
 import { ButtonProps } from "./Button";
 import { CardProps } from "./Card";
 import { ListProps } from "./List";
@@ -11,13 +11,14 @@ export interface BlockProps {
   children:
     | React.ReactElement<ListProps | ButtonProps | PillsProps | CardProps>
     | React.ReactElement<ListProps | ButtonProps | PillsProps | CardProps>[];
-  size: 1 | 2 | 3;
+  size: blockCols;
   actions?: ActionsProps;
   imagePath?: string;
   title?: string;
   isEditable?: boolean;
   handleTitleChange?: (title: string) => void;
-  handleSizeChange?: (size: number) => void;
+  handleSizeChange?: (size: blockCols) => void;
+  handleDelete?: () => void;
 }
 
 export const Block = ({
@@ -29,6 +30,7 @@ export const Block = ({
   isEditable,
   handleTitleChange,
   handleSizeChange,
+  handleDelete,
 }: BlockProps) => {
   const [titleState, setTitleState] = useState<string | undefined>(title);
   const [isHovering, setIsHovering] = useState<boolean>(false);
@@ -51,10 +53,11 @@ export const Block = ({
       setIsHovering={setIsHovering}
       size={size}
       handleSizeChange={handleSizeChange}
+      handleDelete={handleDelete}
       isEditable={isEditable ? isEditable : true}
     >
       <div
-        className="@container flex flex-col gap-12 border border-zinc-200 bg-white shadow-sm rounded-2xl p-8 w-full"
+        className="@container flex flex-col gap-12 border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 shadow-sm rounded-2xl p-8 w-full"
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
       >
@@ -66,7 +69,7 @@ export const Block = ({
                 type="text"
                 name="title"
                 id="title"
-                className="block text-xl h-10 px-2 w-full rounded-md text-zinc-800 font-semibold focus:bg-zink-100 placeholder-transparent hover:placeholder-zinc-300 focus:border-black focus:ring-black focus:bg-white border-0"
+                className="block text-xl h-10 px-2 w-full rounded-md bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-100 font-semibold placeholder-transparent hover:placeholder-zinc-300 dark:hover:placeholder-zinc-300 focus:border-black focus:ring-black focus:bg-white dark:focus:bg-zinc-900  border-0"
                 placeholder="Enter title"
                 value={titleState}
                 onChange={(e) => setTitleState(e.target.value)}

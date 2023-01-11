@@ -2,14 +2,15 @@ import clsx from "clsx";
 import { FC } from "react";
 import { BlockProps } from "./Block";
 
-// EditingHover ----------------------------------------
+export type blockCols = 1 | 2 | 3;
 interface BlockEditWrapperProps {
   children: React.ReactElement<BlockProps>;
   isHovering: boolean;
-  size: number;
+  size: blockCols;
   isEditable: boolean;
   setIsHovering: (value: boolean) => void;
-  handleSizeChange?: (size: number) => void;
+  handleSizeChange?: (size: blockCols) => void;
+  handleDelete?: () => void;
 }
 
 export const BlockEditWrapper: FC<BlockEditWrapperProps> = ({
@@ -19,8 +20,9 @@ export const BlockEditWrapper: FC<BlockEditWrapperProps> = ({
   isEditable,
   setIsHovering,
   handleSizeChange,
+  handleDelete
 }) => {
-  const handleResize = (instruction: number) => {
+  const handleResize = (instruction: blockCols) => {
     if (size != instruction) {
       if (handleSizeChange != null) {
         handleSizeChange(instruction);
@@ -71,7 +73,7 @@ export const BlockEditWrapper: FC<BlockEditWrapperProps> = ({
               <div className="border-2 border-white w-2 h-5 rounded-sm"></div>
             </div>
           </div>
-          <div className="flex items-center justify-center h-11 w-11 bg-zinc-800 hover:bg-zinc-700 text-white rounded-lg shadow-lg cursor-pointer">
+          <div className="flex items-center justify-center h-11 w-11 bg-zinc-800 hover:bg-zinc-700 text-white rounded-lg shadow-lg cursor-pointer" onClick={handleDelete}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

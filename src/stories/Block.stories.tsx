@@ -42,6 +42,7 @@ Default.args = {
   actions: { link: { url: "https://www.google.com" } },
   handleTitleChange: exampleTitleHanlder,
   handleSizeChange: exampleChangeSize,
+  handleDelete: () => console.log("delete this block"),
   title: "Title",
   children: (
     <div className="p-4 bg-zinc-100 border border-zinc-200 flex items-center justify-center rounded-md h-32">Body</div>
@@ -53,6 +54,7 @@ Blogs.args = {
   actions: { link: { url: "https://www.google.com" } },
   handleTitleChange: exampleTitleHanlder,
   handleSizeChange: exampleChangeSize,
+  handleDelete: () => console.log("delete this block"),
   title: "Open Source",
   imagePath: "https://avatars.githubusercontent.com/u/65030610?s=200&v=4",
   children: (
@@ -76,6 +78,7 @@ Repos.args = {
   actions: { link: { url: "https://www.google.com" } },
   handleTitleChange: exampleTitleHanlder,
   handleSizeChange: exampleChangeSize,
+  handleDelete: () => console.log("delete this block"),
   title: "My Repositories",
   imagePath: "https://avatars.githubusercontent.com/u/9919?s=200&v=4",
   children: (
@@ -99,6 +102,7 @@ export const WebProjects = Template.bind({});
 WebProjects.args = {
   handleTitleChange: exampleTitleHanlder,
   handleSizeChange: exampleChangeSize,
+  handleDelete: () => console.log("delete this block"),
   title: "Deployed Projects",
   imagePath: "https://avatars.githubusercontent.com/u/24602613?s=200&v=4",
   children: (
@@ -123,6 +127,7 @@ Music.args = {
   actions: { link: { url: "https://www.google.com" } },
   handleTitleChange: exampleTitleHanlder,
   handleSizeChange: exampleChangeSize,
+  handleDelete: () => console.log("delete this block"),
   title: "Best Music ever",
   imagePath: "https://avatars.githubusercontent.com/u/251374?s=200&v=4",
   children: (
@@ -150,6 +155,7 @@ CV.args = {
   actions: { link: { url: "https://www.google.com" } },
   handleTitleChange: exampleTitleHanlder,
   handleSizeChange: exampleChangeSize,
+  handleDelete: () => console.log("delete this block"),
   title: "Experience",
   imagePath: "https://avatars.githubusercontent.com/u/357098?s=200&v=4",
   children: (
