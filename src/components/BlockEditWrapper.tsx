@@ -38,7 +38,7 @@ export const BlockEditWrapper: FC<BlockEditWrapperProps> = ({
       )}
     >
       {children}
-      {isHovering && isEditable && (
+      {(isHovering && isEditable) && (
         <div
           className="absolute w-full flex justify-center h-11 -mt-5 gap-1"
           onMouseEnter={() => setIsHovering(true)}
