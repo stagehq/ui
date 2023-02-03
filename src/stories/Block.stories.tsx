@@ -45,7 +45,7 @@ Default.args = {
   handleDelete: () => console.log("delete this block"),
   title: "Title",
   children: (
-    <div className="p-4 bg-zinc-100 border border-zinc-200 flex items-center justify-center rounded-md h-32">Body</div>
+    <div className="p-4 bg-zinc-100 border border-zinc-300 flex items-center justify-center rounded-md h-32">Body</div>
   ),
 };
 

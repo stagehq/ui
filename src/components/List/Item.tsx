@@ -26,7 +26,7 @@ export const ListItem = ({ type, title, subtitle, additional, count, image, inde
 
   if (type === "card") {
     return withLink(
-      <div className="flex flex-col items-start overflow-hidden rounded-2xl border border-zinc-100 dark:border-zinc-700/40 w-full" onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
+      <div className="flex flex-col items-start overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-500/40 w-full" onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
         {image && (
           <div className="w-full h-52">
             <img src={image} className="w-full h-full object-cover" />

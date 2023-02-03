@@ -9,7 +9,7 @@ export const Link = ({ url }: LinkProps) => {
       target="_blank"
       rel="noopener"
       draggable="false"
-      className="flex items-center w-10 h-10 justify-center rounded-3xl border text-black dark:text-zinc-100 border-zinc-200 dark:border-zinc-700 hover:border-zinc-300 dark:hover:border-zinc-600 bg-white dark:bg-zinc-900 hover:shadow shadow-sm"
+      className="flex items-center w-10 h-10 justify-center rounded-3xl border text-black dark:text-zinc-100 border-zinc-300 dark:border-zinc-600 hover:border-zinc-300 dark:hover:border-zinc-600 bg-white dark:bg-zinc-900 hover:shadow shadow-sm"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

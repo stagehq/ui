@@ -21,7 +21,7 @@ export const Card = ({ title, subtitle, image, icon, type, actions }: CardProps)
 
   if (type === "vertical") {
     return withLink(
-      <div className="flex flex-col items-start w-full relative overflow-hidden rounded-2xl border border-zinc-100 dark:border-zinc-700/40" onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
+      <div className="flex flex-col items-start w-full relative overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-500/40" onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
         {image && (
           <div className="w-full h-40 relative">
             <img src={image} className="w-full h-full object-cover" />
@@ -49,7 +49,7 @@ export const Card = ({ title, subtitle, image, icon, type, actions }: CardProps)
 
   if (type === "horizontal") {
     return withLink(
-      <div className="flex items-center overflow-hidden gap-6 pr-6 rounded-2xl border border-zinc-100 dark:border-zinc-700/40" onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
+      <div className="flex items-center overflow-hidden gap-6 pr-6 rounded-2xl border border-zinc-200 dark:border-zinc-500/40" onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
         {image && (
           <div className="w-24 h-24 relative">
             <img src={image} className="w-full h-full object-cover" />
@@ -81,7 +81,7 @@ export const Card = ({ title, subtitle, image, icon, type, actions }: CardProps)
 
   if (type === "small") {
     return withLink(
-      <div className="flex items-center overflow-hidden gap-6 px-6 rounded-2xl border border-zinc-100 dark:border-zinc-700/40" onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
+      <div className="flex items-center overflow-hidden gap-6 px-6 rounded-2xl border border-zinc-200 dark:border-zinc-500/40" onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
         <div className="flex flex-col items-start flex-grow gap-6 py-6">
           <div className="flex items-center self-stretch gap-6">
             <img className="w-[46px] h-[46px] rounded-lg object-cover" src={image} />
@@ -111,7 +111,7 @@ export const Card = ({ title, subtitle, image, icon, type, actions }: CardProps)
 
   if (type === "big") {
     return withLink(
-      <div className="flex flex-col items-start h-[400px] overflow-hidden rounded-2xl border border-zinc-100 dark:border-zinc-700/40 relative" onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
+      <div className="flex flex-col items-start h-[400px] overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-500/40 relative" onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
         <img className="absolute w-full h-full top-0 bottom-0 left-0 right-0 object-cover" src={image} />
         <div
           className="flex flex-col justify-end items-start self-stretch flex-grow gap-6 p-6 z-10"

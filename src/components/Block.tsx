@@ -57,7 +57,7 @@ export const Block = ({
       isEditable={isEditable ? isEditable : false}
     >
       <div
-        className="@container flex flex-col gap-12 border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 shadow-sm rounded-2xl p-8 w-full"
+        className="@container flex flex-col gap-12 border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-900 shadow-sm rounded-2xl p-8 w-full"
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
       >
