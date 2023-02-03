@@ -8,6 +8,7 @@ export const Link = ({ url }: LinkProps) => {
       href={url}
       target="_blank"
       rel="noopener"
+      draggable="false"
       className="flex items-center w-10 h-10 justify-center rounded-3xl border border-zinc-200 hover:border-zinc-300 bg-white hover:shadow shadow-sm"
     >
       <svg
