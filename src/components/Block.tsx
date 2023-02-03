@@ -75,6 +75,7 @@ export const Block = ({
                 onChange={(e) => setTitleState(e.target.value)}
                 onKeyDown={(e) => handleKeyPress(e)}
                 onBlur={() => handleSubmit()}
+                disabled={!isEditable}
               />
             </div>
             <div className="w-10 h-10">

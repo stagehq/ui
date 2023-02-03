@@ -23,14 +23,14 @@ const Template: Story<BlockProps> = (args) => {
   return (
     <div className="flex flex-col gap-8 max-w-screen-xl px-24 mx-auto">
       <div className="w-full">
-        <Block {...args} size={3} isEditable={true} />
+        <Block {...args} size={3} />
       </div>
       <div className="flex gap-8 flex-col md:flex-row">
         <div className="w-full md:w-[calc((100%_-_32px)_/_2_*_1)] xl:w-[calc((100%_-_64px)_/_3_*_2_+_32px)]">
-          <Block {...args} size={2} isEditable={true} />
+          <Block {...args} size={2} />
         </div>
         <div className="w-full md:w-[calc((100%_-_32px)_/_2_*_1)] xl:w-[calc((100%_-_64px)_/_3_*_1)]">
-          <Block {...args} size={1} isEditable={true} />
+          <Block {...args} size={1} />
         </div>
       </div>
     </div>
