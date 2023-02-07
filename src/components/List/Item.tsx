@@ -33,12 +33,12 @@ export const ListItem = ({ type, title, subtitle, additional, count, image, inde
           </div>
         )}
         <div className="flex flex-col items-start gap-3 p-6 w-full">
-          <p className={clsx("text-base font-semibold text-left text-zinc-900 dark:text-zinc-100", isHovering && actions?.open && "underline")}>{title}</p>
-          <p className="text-sm text-left text-zinc-600 dark:text-zinc-400">{subtitle}</p>
+          <p className={clsx("text-base font-semibold text-left text-zinc-900 dark:text-zinc-100 w-full text-ellipsis overflow-hidden", isHovering && actions?.open && "underline")}>{title}</p>
+          <p className="text-sm text-left text-zinc-600 dark:text-zinc-400 w-full text-ellipsis overflow-hidden">{subtitle}</p>
           {(actions?.link && <Action.Link {...actions.link} />) ||
             (actions?.button && <Action.Button {...actions.button} />)}
           <div className="flex items-center justify-between gap-3 w-full">
-            <p className="flex-grow text-sm text-left text-zinc-400">{additional}</p>
+            <p className="flex-grow text-sm text-left text-zinc-400 text-ellipsis overflow-hidden">{additional}</p>
             {count && (
               <div className="flex items-center gap-2">
                 {count?.icon && <Icon name={count.icon} color="neutral" size="sm" />}
