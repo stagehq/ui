@@ -1,4 +1,4 @@
-import React, { KeyboardEvent, useState } from "react";
+import React, { KeyboardEvent, useEffect, useState } from "react";
 import { Action } from "./Action";
 import { ActionsProps } from "./Actions";
 import { blockCols, BlockEditWrapper } from "./BlockEditWrapper";
@@ -32,7 +32,12 @@ export const Block = ({
   handleSizeChange,
   handleDelete,
 }: BlockProps) => {
+  const [titleInternal, setTitleInternal] = useState<string>(title ? title : "");
   const [isHovering, setIsHovering] = useState<boolean>(false);
+
+  useEffect(() => {
+    setTitleInternal(title ? title : "");
+  }, [title]);
 
   return (
     <BlockEditWrapper
@@ -58,8 +63,9 @@ export const Block = ({
                 id="title"
                 className="block text-xl h-10 px-2 w-full rounded-md dark:bg-zinc-900 text-zinc-800 dark:text-zinc-100 font-semibold placeholder-transparent hover:placeholder-zinc-300 hover:bg-zinc-100 focus:bg-transparent dark:hover:bg-zinc-800 dark:hover:placeholder-zinc-300 dark:focus:bg-zinc-900"
                 placeholder="Enter title"
-                value={title}
-                onChange={(e) => handleTitleChange && handleTitleChange(e.target.value)}
+                value={titleInternal}
+                onChange={(e) => setTitleInternal(e.target.value)}
+                onBlur={() => handleTitleChange && handleTitleChange(titleInternal)}
                 disabled={!isEditable}
               />
             </div>
