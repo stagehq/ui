@@ -1,4 +1,4 @@
-import React, { KeyboardEvent, useState } from "react";
+import React, { KeyboardEvent, useEffect, useState } from "react";
 import { Action } from "./Action";
 import { ActionsProps } from "./Actions";
 import { blockCols, BlockEditWrapper } from "./BlockEditWrapper";
@@ -34,6 +34,10 @@ export const Block = ({
 }: BlockProps) => {
   const [titleInternal, setTitleInternal] = useState<string>(title ? title : "");
   const [isHovering, setIsHovering] = useState<boolean>(false);
+
+  useEffect(() => {
+    setTitleInternal(title ? title : "");
+  }, [title]);
 
   return (
     <BlockEditWrapper
