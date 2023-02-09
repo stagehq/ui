@@ -61,7 +61,7 @@ export const Block = ({
                 type="text"
                 name="title"
                 id="title"
-                className="block text-xl h-10 px-2 w-full rounded-md dark:bg-zinc-900 text-zinc-800 dark:text-zinc-100 font-semibold placeholder-transparent hover:placeholder-zinc-300 hover:bg-zinc-100 focus:bg-transparent dark:hover:bg-zinc-800 dark:hover:placeholder-zinc-300 dark:focus:bg-zinc-900"
+                className="block text-xl h-10 px-2 w-full rounded-md dark:bg-zinc-900 text-zinc-800 dark:text-zinc-100 font-semibold placeholder-transparent hover:placeholder-zinc-300 hover:bg-zinc-100 focus:bg-transparent dark:hover:bg-zinc-800 dark:hover:placeholder-zinc-300 dark:focus:bg-zinc-900 outline-none focus:ring-2 focus:ring-zinc-800 dark:focus:ring-zinc-100"
                 placeholder="Enter title"
                 value={titleInternal}
                 onChange={(e) => setTitleInternal(e.target.value)}
