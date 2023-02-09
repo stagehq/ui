@@ -32,20 +32,7 @@ export const Block = ({
   handleSizeChange,
   handleDelete,
 }: BlockProps) => {
-  const [titleState, setTitleState] = useState<string | undefined>(title);
   const [isHovering, setIsHovering] = useState<boolean>(false);
-
-  const handleKeyPress = (e: KeyboardEvent) => {
-    if (e.code === "Enter") {
-      (e.target as HTMLInputElement).blur();
-    }
-  };
-
-  const handleSubmit = () => {
-    if (titleState != null && handleTitleChange != null) {
-      handleTitleChange(titleState);
-    }
-  };
 
   return (
     <BlockEditWrapper
@@ -71,10 +58,8 @@ export const Block = ({
                 id="title"
                 className="block text-xl h-10 px-2 w-full rounded-md bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-100 font-semibold placeholder-transparent hover:placeholder-zinc-300 dark:hover:placeholder-zinc-300 focus:border-black focus:ring-black focus:bg-white dark:focus:bg-zinc-900  border-0"
                 placeholder="Enter title"
-                value={titleState}
-                onChange={(e) => setTitleState(e.target.value)}
-                onKeyDown={(e) => handleKeyPress(e)}
-                onBlur={() => handleSubmit()}
+                value={title}
+                onChange={(e) => handleTitleChange && handleTitleChange(e.target.value)}
                 disabled={!isEditable}
               />
             </div>
