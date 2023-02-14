@@ -63,7 +63,7 @@ export const Block = ({
                 name="title"
                 id="title"
                 className={clsx("block text-xl h-10 px-2 w-full rounded-md dark:bg-zinc-900 text-zinc-800 dark:text-zinc-100 font-semibold placeholder-transparent bg-white border-0",
-                  isEditable && "hover:placeholder-zinc-300 dark:hover:placeholder-zinc-300 hover:bg-zinc-100 focus:bg-transparent focus:ring-black dark:focus:ring-white"
+                  isEditable && "hover:placeholder-zinc-300 dark:hover:placeholder-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 focus:bg-transparent dark:focus:bg-transparent focus:ring-black dark:focus:ring-white"
                 )}
                 placeholder="Enter title"
                 value={titleInternal}
@@ -78,7 +78,7 @@ export const Block = ({
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-6">{children}</div>
+        {children && <div className="flex flex-col gap-6">{children}</div>}
       </div>
     </BlockEditWrapper>
   );
