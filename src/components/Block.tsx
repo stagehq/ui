@@ -80,7 +80,7 @@ export const Block = ({
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-6">{children}</div>
+        {children && <div className="flex flex-col gap-6">{children}</div>}
       </div>
     </BlockEditWrapper>
   );
