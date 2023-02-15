@@ -52,7 +52,8 @@ export const Block = ({
       isEditable={isEditable ? isEditable : false}
     >
       <div
-        className={clsx("@container flex flex-col gap-12 border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-900 shadow-sm rounded-2xl p-8 w-full", isHighlighted && "border-blue-500 bg-blue-50 dark:border-blue-500 dark:bg-blue-900/40")}
+        className={clsx("@container flex flex-col gap-12 border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-900 shadow-sm rounded-2xl p-8 w-full", 
+        isHighlighted && "border-blue-500 bg-blue-50 dark:border-blue-500/50 dark:bg-blue-900/30")}
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
       >
@@ -66,7 +67,8 @@ export const Block = ({
                 id="title"
                 className={clsx("block text-xl h-10 px-2 w-full rounded-md dark:bg-zinc-900 text-zinc-800 dark:text-zinc-100 font-semibold placeholder-transparent bg-white border-0",
                   isEditable && "hover:placeholder-zinc-300 dark:hover:placeholder-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 focus:bg-transparent dark:focus:bg-transparent focus:ring-black dark:focus:ring-white",
-                  isHighlighted && "bg-blue-50 hover:bg-blue-100 dark:bg-transparent dark:hover:bg-blue-900/50",
+                  isHighlighted && "bg-transparent hover:bg-zinc-900/5 dark:bg-transparent dark:hover:bg-white/5",
+                  !isEditable && "hover:bg-transparent dark:hover:bg-transparent"
                 )}
                 placeholder="Enter title"
                 value={titleInternal}
