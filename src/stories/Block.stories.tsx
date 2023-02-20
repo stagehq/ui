@@ -3,6 +3,7 @@
 import { Story, Meta } from "@storybook/react/types-6-0";
 import { Block, BlockProps } from "../components/Block";
 import { Card } from "../components/Card";
+import { Image } from "../components/Image";
 import { List } from "../components/List";
 import { blogPosts, experience, openSource, projects, spotify } from "./_data";
 
@@ -73,6 +74,14 @@ Blogs.args = {
   ),
 };
 
+export const ImageBlock = Template.bind({});
+ImageBlock.args = {
+  handleTitleChange: exampleTitleHanlder,
+  handleSizeChange: exampleChangeSize,
+  handleDelete: () => console.log("delete this block"),
+  children: <Image src="https://avatars.githubusercontent.com/u/65030610?s=200&v=4" alt="Profile Image" />,
+};
+
 export const Repos = Template.bind({});
 Repos.args = {
   actions: { link: { url: "https://www.google.com" } },
@@ -132,7 +141,12 @@ Music.args = {
   imagePath: "https://avatars.githubusercontent.com/u/251374?s=200&v=4",
   children: (
     <>
-      <Card title="jo" type="vertical" image="https://avatars.githubusercontent.com/u/251374?s=200&v=4" actions={{ button: { text: "Test", url: "https://test.com" } }}/>
+      <Card
+        title="jo"
+        type="vertical"
+        image="https://avatars.githubusercontent.com/u/251374?s=200&v=4"
+        actions={{ button: { text: "Test", url: "https://test.com" } }}
+      />
       <List>
         {spotify.map((track, index) => (
           <List.Item
