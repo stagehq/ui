@@ -60,6 +60,14 @@ export const Block = ({
   useEffect(() => {
     window.addEventListener("resize", handleResize);
   }, []);
+  useEffect(() => {
+    if (!descriptionRef.current) return;
+    const resizeObserver = new ResizeObserver(() => {
+      handleDynamicHeight(descriptionRef);
+    });
+    resizeObserver.observe(descriptionRef.current);
+    return () => resizeObserver.disconnect();
+  }, []);
 
   useEffect(() => {
     handleDynamicHeight(descriptionRef);
@@ -151,10 +159,10 @@ const handleDynamicHeight = (
     myRef.current.style.height = 0 + "px";
     myRef.current.style.height = myRef.current.scrollHeight + "px";
   }
-  // setTimeout(() => {
-  //   if (myRef.current?.style) {
-  //     myRef.current.style.height = 0 + "px";
-  //     myRef.current.style.height = myRef.current.scrollHeight + "px";
-  //   }
-  // }, 100);
+  setTimeout(() => {
+    if (myRef.current?.style) {
+      myRef.current.style.height = 0 + "px";
+      myRef.current.style.height = myRef.current.scrollHeight + "px";
+    }
+  }, 100);
 };
