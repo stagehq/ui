@@ -5,6 +5,7 @@ import { Block, BlockProps } from "../components/Block";
 import { Card } from "../components/Card";
 import { Image } from "../components/Image";
 import { List } from "../components/List";
+import { Button } from "../components/Button";
 import { blogPosts, experience, openSource, projects, spotify } from "./_data";
 
 export default {
@@ -47,6 +48,18 @@ Default.args = {
   title: "Title",
   children: (
     <div className="p-4 bg-zinc-100 border border-zinc-300 flex items-center justify-center rounded-md h-32">Body</div>
+  ),
+};
+
+export const Funnel = Template.bind({});
+Funnel.args = {
+  handleTitleChange: exampleTitleHanlder,
+  handleSizeChange: exampleChangeSize,
+  handleDelete: () => console.log("delete this block"),
+  title: "Hire me!",
+  description: "I build web apps for startups, businesses and public institutions as a freelance web developer and designer. Let's discuss your needs and see how I can help.",
+  children: (
+    <Button primary icon={"EnvelopeIcon"} text={"Contact me"} url={"https://google.com"}/>
   ),
 };
 

@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Action } from "./Action";
 import { ActionsProps } from "./Actions";
 import { blockCols, BlockEditWrapper } from "./BlockEditWrapper";
@@ -17,9 +17,11 @@ export interface BlockProps {
   actions?: ActionsProps;
   imagePath?: string;
   title?: string;
+  description?: string;
   isEditable?: boolean;
   isHighlighted?: boolean;
   handleTitleChange?: (title: string) => void;
+  handleDescriptionChange?: (description: string) => void;
   handleSizeChange?: (size: blockCols) => void;
   handleDelete?: () => void;
 }
@@ -29,19 +31,43 @@ export const Block = ({
   actions,
   imagePath,
   title,
+  description,
   size,
   isEditable,
   isHighlighted,
   handleTitleChange,
+  handleDescriptionChange,
   handleSizeChange,
   handleDelete,
 }: BlockProps) => {
   const [titleInternal, setTitleInternal] = useState<string>(title ? title : "");
+  const [descriptionInternal, setDescriptionInternal] = useState<string>(description ? description : "");
   const [isHovering, setIsHovering] = useState<boolean>(false);
 
+  //refs
+  const descriptionRef = useRef<HTMLTextAreaElement>(null);
+
+  //controlled inputs
   useEffect(() => {
     setTitleInternal(title ? title : "");
   }, [title]);
+
+  useEffect(() => {
+    setDescriptionInternal(description ? description : "");
+  }, [description]);
+
+  //handle window resize
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    handleDynamicHeight(descriptionRef);
+  }, [descriptionRef, descriptionInternal]);
+
+  const handleResize = () => {
+    handleDynamicHeight(descriptionRef);
+  };
 
   return (
     <BlockEditWrapper
@@ -84,11 +110,30 @@ export const Block = ({
                   disabled={!isEditable}
                 />
               </div>
-              <div className="w-10 h-10">
+              {actions && <div className="w-10 h-10">
                 {(actions?.link && <Action.Link {...actions.link} />) ||
                   (actions?.button && <Action.Button {...actions.button} />)}
-              </div>
+              </div>}
             </div>
+            {descriptionInternal && <div>
+              <textarea
+                ref={descriptionRef}
+                name="description"
+                id="description"
+                className={clsx(
+                  "block text-sm h-10 px-2 py-2 resize-none w-full rounded-md dark:bg-zinc-900 text-zinc-800 dark:text-zinc-100 font-regular placeholder-transparent bg-white border-0",
+                  isEditable &&
+                    "hover:placeholder-zinc-300 dark:hover:placeholder-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 focus:bg-transparent dark:focus:bg-transparent focus:ring-black dark:focus:ring-white",
+                  isHighlighted && "bg-transparent hover:bg-zinc-900/5 dark:bg-transparent dark:hover:bg-white/5",
+                  !isEditable && "hover:bg-transparent dark:hover:bg-transparent"
+                )}
+                placeholder="Enter description"
+                value={descriptionInternal}
+                onChange={(e) => setDescriptionInternal(e.target.value)}
+                onBlur={() => handleDescriptionChange && handleDescriptionChange(descriptionInternal)}
+                disabled={!isEditable}
+              />
+            </div>}
           </div>
         )}
         {children && (
@@ -97,4 +142,19 @@ export const Block = ({
       </div>
     </BlockEditWrapper>
   );
+};
+
+const handleDynamicHeight = (
+  myRef: React.RefObject<HTMLTextAreaElement>
+) => {
+  if (myRef.current?.style) {
+    myRef.current.style.height = 0 + "px";
+    myRef.current.style.height = myRef.current.scrollHeight + "px";
+  }
+  setTimeout(() => {
+    if (myRef.current?.style) {
+      myRef.current.style.height = 0 + "px";
+      myRef.current.style.height = myRef.current.scrollHeight + "px";
+    }
+  }, 100);
 };
