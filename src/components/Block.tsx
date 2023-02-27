@@ -18,6 +18,7 @@ export interface BlockProps {
   imagePath?: string;
   title?: string;
   description?: string;
+  enableDescription?: boolean;
   isEditable?: boolean;
   isHighlighted?: boolean;
   handleTitleChange?: (title: string) => void;
@@ -32,6 +33,7 @@ export const Block = ({
   imagePath,
   title,
   description,
+  enableDescription,
   size,
   isEditable,
   isHighlighted,
@@ -123,7 +125,7 @@ export const Block = ({
                   (actions?.button && <Action.Button {...actions.button} />)}
               </div>}
             </div>
-            {descriptionInternal && <div>
+            {enableDescription && <div>
               <textarea
                 ref={descriptionRef}
                 name="description"
@@ -131,11 +133,11 @@ export const Block = ({
                 className={clsx(
                   "block text-sm h-10 px-2 py-2 resize-none w-full rounded-md dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400 font-regular placeholder-transparent bg-white border-0",
                   isEditable &&
-                    "hover:placeholder-zinc-300 dark:hover:placeholder-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 focus:bg-transparent dark:focus:bg-transparent focus:ring-black dark:focus:ring-white",
+                    "placeholder-zinc-400 dark:placeholder-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 focus:bg-transparent dark:focus:bg-transparent focus:ring-black dark:focus:ring-white",
                   isHighlighted && "bg-transparent hover:bg-zinc-900/5 dark:bg-transparent dark:hover:bg-white/5",
                   !isEditable && "hover:bg-transparent dark:hover:bg-transparent"
                 )}
-                placeholder="Enter description"
+                placeholder="Enter description ..."
                 value={descriptionInternal}
                 onChange={(e) => setDescriptionInternal(e.target.value)}
                 onBlur={() => handleDescriptionChange && handleDescriptionChange(descriptionInternal)}

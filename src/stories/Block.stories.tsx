@@ -57,6 +57,7 @@ Funnel.args = {
   handleSizeChange: exampleChangeSize,
   handleDelete: () => console.log("delete this block"),
   title: "Hire me!",
+  enableDescription: true,
   description: "I build web apps for startups, businesses and public institutions as a freelance web developer and designer. Let's discuss your needs and see how I can help.",
   children: (
     <Button primary icon={"EnvelopeIcon"} text={"Contact me"} url={"https://google.com"}/>
