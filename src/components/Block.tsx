@@ -114,9 +114,10 @@ export const Block = ({
                   className={clsx(
                     removeFokusState,
                     "block h-10 w-full rounded-md border-0 px-2  text-xl font-semibold text-zinc-800 placeholder-transparent hover:bg-transparent dark:bg-zinc-900 dark:text-zinc-100 dark:hover:bg-transparent",
+                    isEditable && addFokusState,
                     isEditable && 
-                      "hover:bg-zinc-100 hover:placeholder-zinc-300 dark:hover:bg-zinc-800 dark:hover:placeholder-zinc-300",
-                    isEditable && addFokusState
+                      "hover:bg-zinc-100 hover:placeholder-zinc-300 dark:hover:bg-zinc-800 dark:hover:placeholder-zinc-300"
+                    
                   )}
                   placeholder="Enter title"
                   value={titleInternal}
@@ -141,9 +142,9 @@ export const Block = ({
                   className={clsx(
                     removeFokusState,
                     "font-regular block h-10 w-full resize-none rounded-md border-0 bg-white px-2 py-2 text-sm text-zinc-600 dark:bg-zinc-900 dark:text-zinc-400",
+                    isEditable && addFokusState,
                     isEditable &&
-                      "placeholder-zinc-400 hover:bg-zinc-100 dark:placeholder-zinc-300 dark:hover:bg-zinc-800",
-                    isEditable && addFokusState
+                      "hover:bg-zinc-100 placeholder-zinc-400 dark:hover:bg-zinc-800 dark:placeholder-zinc-300"  
                   )}
                   placeholder="Enter description ..."
                   value={descriptionInternal}
