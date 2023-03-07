@@ -3,7 +3,9 @@
 import { Story, Meta } from "@storybook/react/types-6-0";
 import { Block, BlockProps } from "../components/Block";
 import { Card } from "../components/Card";
+import { Image } from "../components/Image";
 import { List } from "../components/List";
+import { Button } from "../components/Button";
 import { blogPosts, experience, openSource, projects, spotify } from "./_data";
 
 export default {
@@ -49,6 +51,19 @@ Default.args = {
   ),
 };
 
+export const Funnel = Template.bind({});
+Funnel.args = {
+  handleTitleChange: exampleTitleHanlder,
+  handleSizeChange: exampleChangeSize,
+  handleDelete: () => console.log("delete this block"),
+  title: "Hire me!",
+  enableDescription: true,
+  description: "I build web apps for startups, businesses and public institutions as a freelance web developer and designer. Let's discuss your needs and see how I can help.",
+  children: (
+    <Button primary icon={"EnvelopeIcon"} text={"Contact me"} url={"https://google.com"}/>
+  ),
+};
+
 export const Blogs = Template.bind({});
 Blogs.args = {
   actions: { link: { url: "https://www.google.com" } },
@@ -71,6 +86,14 @@ Blogs.args = {
       ))}
     </List>
   ),
+};
+
+export const ImageBlock = Template.bind({});
+ImageBlock.args = {
+  handleTitleChange: exampleTitleHanlder,
+  handleSizeChange: exampleChangeSize,
+  handleDelete: () => console.log("delete this block"),
+  children: <Image src="https://avatars.githubusercontent.com/u/65030610?s=200&v=4" alt="Profile Image" />,
 };
 
 export const Repos = Template.bind({});
@@ -132,7 +155,12 @@ Music.args = {
   imagePath: "https://avatars.githubusercontent.com/u/251374?s=200&v=4",
   children: (
     <>
-      <Card title="jo" type="vertical" image="https://avatars.githubusercontent.com/u/251374?s=200&v=4" actions={{ button: { text: "Test", url: "https://test.com" } }}/>
+      <Card
+        title="jo"
+        type="vertical"
+        image="https://avatars.githubusercontent.com/u/251374?s=200&v=4"
+        actions={{ button: { text: "Test", url: "https://test.com" } }}
+      />
       <List>
         {spotify.map((track, index) => (
           <List.Item

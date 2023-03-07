@@ -6,5 +6,6 @@ import { Seperator } from "./components/Seperator";
 import { PageHeader } from "./components/PageHeader";
 import { PageFooter } from "./components/PageFooter";
 import { Pills } from "./components/Pills";
+import { Image } from "./components/Image";
 
-export { Button, List, Card, Seperator, Block, PageFooter, PageHeader, Pills };
+export { Button, List, Card, Seperator, Block, PageFooter, PageHeader, Pills, Image };

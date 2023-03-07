@@ -105,7 +105,7 @@ const argObject = {
           subtitle="Artist Name"
           image="https://placeimg.com/640/480/arch"
           icon="PlayIcon"
-          actions={{ open: {url: "https://google.com"} }}
+          actions={{ open: { url: "https://google.com" } }}
         />
         <List>
           {spotify.map((album, index) => (

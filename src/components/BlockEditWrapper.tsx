@@ -20,7 +20,7 @@ export const BlockEditWrapper: FC<BlockEditWrapperProps> = ({
   isEditable,
   setIsHovering,
   handleSizeChange,
-  handleDelete
+  handleDelete,
 }) => {
   const handleResize = (instruction: blockCols) => {
     if (size != instruction) {
@@ -38,7 +38,7 @@ export const BlockEditWrapper: FC<BlockEditWrapperProps> = ({
       )}
     >
       {children}
-      {(isHovering && isEditable) && (
+      {isHovering && isEditable && (
         <div
           className="absolute w-full flex justify-center h-11 -mt-5 gap-1"
           onMouseEnter={() => setIsHovering(true)}
@@ -73,7 +73,10 @@ export const BlockEditWrapper: FC<BlockEditWrapperProps> = ({
               <div className="border-2 border-white w-2 h-5 rounded-sm"></div>
             </div>
           </div>
-          <div className="flex items-center justify-center h-11 w-11 bg-zinc-800 hover:bg-zinc-700 text-white rounded-lg shadow-lg cursor-pointer" onClick={handleDelete}>
+          <div
+            className="flex items-center justify-center h-11 w-11 bg-zinc-800 hover:bg-zinc-700 text-white rounded-lg shadow-lg cursor-pointer"
+            onClick={handleDelete}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
