@@ -49,6 +49,10 @@ export const Block = ({
   //refs
   const descriptionRef = useRef<HTMLTextAreaElement>(null);
 
+  //style variables
+  const removeFokusState = "focus-visible:ring-0 focus-visible:border-none focus-visible:outline-none focus:ring-0 focus:border-none focus:outline-none cursor-default";
+  const addFokusState = "focus-visible:ring-zinc-900 focus-visible:ring-1 focus-visible:ringfocus-visible:border-none focus-visible:outline-none focus:ring-1 focus:ring-zinc-900 focus:border-none focus:outline-none cursor-default focus:bg-transparent focus:hover:bg-transparent dark:focus:ring-white !cursor-text";
+
   //controlled inputs
   useEffect(() => {
     setTitleInternal(title ? title : "");
@@ -108,9 +112,11 @@ export const Block = ({
                   name="title"
                   id={id}
                   className={clsx(
-                    "fokus:ring-0 fokus:border-none fokus:outline-none block h-10 w-full cursor-default rounded-md border-0 px-2  text-xl font-semibold text-zinc-800 placeholder-transparent hover:bg-transparent dark:bg-zinc-900 dark:text-zinc-100 dark:hover:bg-transparent",
-                    isEditable &&
-                      "fokus:ring-1 cursor-pointer hover:bg-zinc-100 hover:placeholder-zinc-300 focus:bg-transparent focus:ring-black dark:hover:bg-zinc-800 dark:hover:placeholder-zinc-300 dark:focus:bg-transparent dark:focus:ring-white"
+                    removeFokusState,
+                    "block h-10 w-full rounded-md border-0 px-2  text-xl font-semibold text-zinc-800 placeholder-transparent hover:bg-transparent dark:bg-zinc-900 dark:text-zinc-100 dark:hover:bg-transparent",
+                    isEditable && 
+                      "hover:bg-zinc-100 hover:placeholder-zinc-300 dark:hover:bg-zinc-800 dark:hover:placeholder-zinc-300",
+                    isEditable && addFokusState
                   )}
                   placeholder="Enter title"
                   value={titleInternal}
@@ -133,9 +139,11 @@ export const Block = ({
                   name="description"
                   id="description"
                   className={clsx(
-                    "font-regular fokus:ring-0 fokus:border-none fokus:outline-none block h-10 w-full cursor-default resize-none rounded-md border-0 bg-white px-2 py-2 text-sm text-zinc-600 dark:bg-zinc-900 dark:text-zinc-400",
+                    removeFokusState,
+                    "font-regular block h-10 w-full resize-none rounded-md border-0 bg-white px-2 py-2 text-sm text-zinc-600 dark:bg-zinc-900 dark:text-zinc-400",
                     isEditable &&
-                      "fokus:ring-1 cursor-pointer placeholder-zinc-400 hover:bg-zinc-100 focus:bg-transparent focus:ring-black dark:placeholder-zinc-300 dark:hover:bg-zinc-800 dark:focus:bg-transparent dark:focus:ring-white"
+                      "placeholder-zinc-400 hover:bg-zinc-100 dark:placeholder-zinc-300 dark:hover:bg-zinc-800",
+                    isEditable && addFokusState
                   )}
                   placeholder="Enter description ..."
                   value={descriptionInternal}

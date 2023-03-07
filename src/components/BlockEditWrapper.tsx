@@ -33,8 +33,8 @@ export const BlockEditWrapper: FC<BlockEditWrapperProps> = ({
   return (
     <div
       className={clsx(
-        "relative w-full rounded-2xl outline-2 outline-zinc-800",
-        isEditable && "cursor-grab hover:outline"
+        "relative w-full rounded-2xl ring-zinc-800",
+        isEditable && "cursor-grab hover:ring-2"
       )}
     >
       {children}
