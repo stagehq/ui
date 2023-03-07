@@ -49,7 +49,8 @@
     "lint-fix": "npx prettier --write . && npx eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "prepublish": "rm -rf dist && tsc --noEmit false"
+    "prepublish": "rm -rf dist && tsc --noEmit false",
+    "prepublish-win": "rmdir /s /q dist && tsc --noEmit false"
   },
   "eslintConfig": {
     "extends": [
