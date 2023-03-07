@@ -16,11 +16,12 @@ export interface ListItemProps {
     icon: IconEnum;
   };
   image?: string;
+  imageAlt?: string;
   index?: number;
   actions?: ActionsProps;
 }
 
-export const ListItem = ({ type, title, subtitle, additional, count, image, index, actions }: ListItemProps) => {
+export const ListItem = ({ type, title, subtitle, additional, count, image, imageAlt, index, actions }: ListItemProps) => {
 
   const [isHovering, setIsHovering] = useState(false);
 
@@ -29,7 +30,7 @@ export const ListItem = ({ type, title, subtitle, additional, count, image, inde
       <div className="flex flex-col items-start overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-500/40 w-full" onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
         {image && (
           <div className="w-full h-52">
-            <img src={image} className="w-full h-full object-cover" />
+            <img src={image} alt={imageAlt} className="w-full h-full object-cover" />
           </div>
         )}
         <div className="flex flex-col items-start gap-3 p-6 w-full">
@@ -82,7 +83,7 @@ export const ListItem = ({ type, title, subtitle, additional, count, image, inde
             className="flex-shrink-0 h-10 w-10 flex items-start gap-2 p-[6px] rounded-full bg-white border border-[#e9e9e9]"
             style={{ boxShadow: "0px 2px 4px 0 rgba(0,0,0,0.05)" }}
           >
-            <img src={image} alt="logo" className="object-cover object-center w-full h-full rounded-full" />
+            <img src={image} alt={imageAlt} className="object-cover object-center w-full h-full rounded-full" />
           </div>
         )}
         <div className="flex flex-col items-start flex-grow gap-0.5">
@@ -103,7 +104,7 @@ export const ListItem = ({ type, title, subtitle, additional, count, image, inde
     return withLink(
       <div className="flex items-center gap-3 w-full" onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
         <p className="w-5 text-sm font-semibold text-center text-zinc-600 dark:text-zinc-400">{index}</p>
-        <img className="w-[46px] h-[46px] rounded-lg object-cover" src={image} />
+        <img src={image} alt={imageAlt} className="w-[46px] h-[46px] rounded-lg object-cover" />
         <div className="flex flex-col items-start flex-grow gap-0.5">
           <div className="flex items-center self-stretch gap-2">
             <p className={clsx("flex-grow text-base font-semibold text-left text-zinc-900 dark:text-zinc-100", isHovering && actions?.open && "underline")}>{title}</p>

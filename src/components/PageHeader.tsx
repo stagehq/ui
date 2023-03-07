@@ -20,7 +20,7 @@ export const PageHeader = ({ title, description, image, lightMode, toggleLightMo
         </div>
       </div>
       <div className="flex flex-col justify-start items-start self-stretch gap-5 @3xl:w-3/4 @6xl:w-1/2">
-        <img src={image} className="w-16 h-16 rounded-full object-cover" />
+        <img src={image} alt={"Profile picture"} className="w-16 h-16 rounded-full object-cover" />
         <h1 className="w-auto text-2xl @3xl:text-4xl font-bold text-left text-zinc-800 dark:text-zinc-100">{title}</h1>
         <h2 className="w-auto text-sm text-left text-zinc-600 dark:text-zinc-400">{description}</h2>
       </div>

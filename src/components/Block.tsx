@@ -14,7 +14,8 @@ export interface BlockProps {
     | React.ReactElement<ListProps | ButtonProps | PillsProps | CardProps>[];
   size: blockCols;
   actions?: ActionsProps;
-  imagePath?: string;
+  image?: string;
+  imageAlt?: string;
   title?: string;
   isEditable?: boolean;
   handleTitleChange?: (title: string) => void;
@@ -25,7 +26,8 @@ export interface BlockProps {
 export const Block = ({
   children,
   actions,
-  imagePath,
+  image,
+  imageAlt,
   title,
   size,
   isEditable,
@@ -57,7 +59,7 @@ export const Block = ({
         <div className="flex flex-col gap-4">
           <div className="flex items-center justify-between gap-4">
             <div className="flex items-center gap-4 flex-grow">
-              {imagePath && <img src={imagePath} className="w-10 h-10 object-cover rounded-md"></img>}
+              {image && <img src={image} alt={imageAlt} className="w-10 h-10 object-cover rounded-md"></img>}
               <input
                 type="text"
                 name="title"
