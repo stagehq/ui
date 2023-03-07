@@ -8,6 +8,7 @@ export const personal = {
   location: "New York, NY",
   image:
     "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2680&q=80",
+  imageAlt: "Spencer",
 };
 
 export const blogPosts: ListItemProps[] = [
@@ -18,6 +19,7 @@ export const blogPosts: ListItemProps[] = [
     subtitle:
       "Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system.",
     image: "https://placeimg.com/640/480/nature",
+    imageAlt: "Nature",
   },
   {
     type: "text",
@@ -26,6 +28,7 @@ export const blogPosts: ListItemProps[] = [
     subtitle:
       "When you’re building a website for a company as ambitious as Planetaria, you need to make an impression. I wanted people to visit our website and see animations that looked more realistic than reality itself.",
     image: "https://placeimg.com/640/480/tech",
+    imageAlt: "Tech",
   },
   {
     type: "text",
@@ -34,6 +37,7 @@ export const blogPosts: ListItemProps[] = [
     subtitle:
       "When we released the first version of cosmOS last year, it was written in Go. Go is a wonderful programming language with a lot of benefits, but it’s been a while since I’ve seen an article on the front page of Hacker News about rewriting some important tool in Go and I see articles on there about rewriting things in Rust every single week.",
     image: "https://placeimg.com/640/480/arch",
+    imageAlt: "Arch",
   },
 ];
 
@@ -45,6 +49,7 @@ export const projects: ListItemProps[] = [
       "Track and optimize your online business with Splitbee. Your friendly analytics & conversion platform. · Get to know your Traffic · Understand their journey",
     additional: "2021",
     image: "https://placeimg.com/640/480/tech",
+    imageAlt: "Tech",
   },
   {
     type: "card",
@@ -53,6 +58,7 @@ export const projects: ListItemProps[] = [
       "Zirkular connects contributors and maintainers in a community-first workspace with goal-oriented communication, efficient workflows and smart automations.",
     additional: "2020",
     image: "https://placeimg.com/640/480/nature",
+    imageAlt: "Nature",
   },
   {
     type: "card",
@@ -61,6 +67,7 @@ export const projects: ListItemProps[] = [
       "Until now, this discipline of designing and developing sounds in digital products has been reserved for those with a high level of technical understanding.",
     additional: "2019",
     image: "https://placeimg.com/640/480/arch",
+    imageAlt: "Arch",
   },
 ];
 
@@ -105,6 +112,7 @@ export const experience: ListItemProps[] = [
     subtitle: "Google",
     additional: "2020 - Present",
     image: "https://img.icons8.com/color/512/google-logo.png",
+    imageAlt: "Google Logo",
   },
   {
     type: "bullet",
@@ -112,6 +120,7 @@ export const experience: ListItemProps[] = [
     subtitle: "Facebook",
     additional: "2019 - 2020",
     image: "https://img.icons8.com/color/512/meta--v1.png",
+    imageAlt: "Meta Logo",
   },
   {
     type: "bullet",
@@ -119,6 +128,7 @@ export const experience: ListItemProps[] = [
     subtitle: "Twitter",
     additional: "2018 - 2019",
     image: "https://img.icons8.com/color/512/twitter--v1.png",
+    imageAlt: "Twitter Logo",
   },
 ];
 
@@ -135,6 +145,7 @@ export const spotify: ListItemProps[] = [
       icon: "PlayCircleIcon",
     },
     image: "https://placeimg.com/640/480/tech",
+    imageAlt: "Tech",
   },
   {
     type: "cover",
@@ -146,6 +157,7 @@ export const spotify: ListItemProps[] = [
       icon: "PlayCircleIcon",
     },
     image: "https://placeimg.com/740/480/arch",
+    imageAlt: "Arch",
   },
   {
     type: "cover",
@@ -157,6 +169,7 @@ export const spotify: ListItemProps[] = [
       icon: "PlayCircleIcon",
     },
     image: "https://placeimg.com/640/480/nature",
+    imageAlt: "Nature",
   },
   {
     type: "cover",
@@ -168,6 +181,7 @@ export const spotify: ListItemProps[] = [
       icon: "PlayCircleIcon",
     },
     image: "https://placeimg.com/640/480/people",
+    imageAlt: "People",
   },
   {
     type: "cover",
@@ -179,6 +193,7 @@ export const spotify: ListItemProps[] = [
       icon: "PlayCircleIcon",
     },
     image: "https://placeimg.com/640/480/arch",
+    imageAlt: "Arch",
   },
 ];
 
@@ -190,6 +205,7 @@ export const university: ListItemProps[] = [
     additional: "2015 - 2019",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Seal_of_University_of_California%2C_Berkeley.svg/640px-Seal_of_University_of_California%2C_Berkeley.svg.png",
+    imageAlt: "UC Berkeley Logo",
   },
   {
     type: "bullet",
@@ -197,5 +213,6 @@ export const university: ListItemProps[] = [
     subtitle: "B.Sc. Computer Science",
     additional: "2010 - 2014",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/MIT_logo.svg/642px-MIT_logo.svg.png",
+    imageAlt: "MIT Logo",
   },
 ];

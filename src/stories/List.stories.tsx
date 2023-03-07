@@ -23,6 +23,7 @@ Card.args = {
   },
   index: 1,
   image: "https://source.unsplash.com/1000x500/?universe",
+  imageAlt: "Universe",
 };
 
 export const Text = Template.bind({});
@@ -50,6 +51,7 @@ Bullet.args = {
   },
   index: 1,
   image: "https://source.unsplash.com/1000x500/?universe",
+  imageAlt: "Universe",
 };
 
 export const Cover = Template.bind({});
@@ -64,4 +66,5 @@ Cover.args = {
   },
   index: 1,
   image: "https://source.unsplash.com/1000x500/?universe",
+  imageAlt: "Universe",
 };

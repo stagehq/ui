@@ -19,6 +19,7 @@ const argObject = {
     title: personal.name,
     description: personal.description,
     image: personal.image,
+    imageAlt: personal.imageAlt,
     lightMode: true,
     toggleLightMode: () => {
       "toggle light mode";
@@ -33,7 +34,8 @@ const argObject = {
     <>
       <Block
         title="My writings"
-        imagePath="https://avatars.githubusercontent.com/u/65030610?s=200&v=4"
+        image="https://avatars.githubusercontent.com/u/65030610?s=200&v=4"
+        imageAlt="Dev.to logo"
         size={2}
         isEditable={true}
         actions={{ link: { url: "https://dev.to" } }}
@@ -53,7 +55,8 @@ const argObject = {
       </Block>
       <Block
         title="Open Source"
-        imagePath="https://avatars.githubusercontent.com/u/9919?s=200&v=4"
+        image="https://avatars.githubusercontent.com/u/9919?s=200&v=4"
+        imageAlt="GitHub logo"
         size={2}
         isEditable={true}
         actions={{ link: { url: "https://github.com" } }}
@@ -74,7 +77,8 @@ const argObject = {
         </List>
       </Block>
       <Block
-        imagePath="https://avatars.githubusercontent.com/u/24602613?s=200&v=4"
+        image="https://avatars.githubusercontent.com/u/24602613?s=200&v=4"
+        imageAlt="Placeholder logo"
         size={2}
         isEditable={true}
         title="Deployed Projects"
@@ -94,7 +98,8 @@ const argObject = {
       </Block>
       <Block
         title="My Music"
-        imagePath="https://avatars.githubusercontent.com/u/251374?s=200&v=4"
+        image="https://avatars.githubusercontent.com/u/251374?s=200&v=4"
+        imageAlt="Spotify logo"
         size={2}
         isEditable={true}
         actions={{ link: { url: "https://spotify.com" } }}
@@ -104,6 +109,7 @@ const argObject = {
           title="This album title"
           subtitle="Artist Name"
           image="https://placeimg.com/640/480/arch"
+          imageAlt="Album cover"
           icon="PlayIcon"
           actions={{ open: { url: "https://google.com" } }}
         />
@@ -115,6 +121,7 @@ const argObject = {
               title={album.title}
               subtitle={album.subtitle}
               image={album.image}
+              imageAlt={album.imageAlt}
               count={album.count && { value: album.count.value, icon: album.count.icon }}
               key={`Music-${index}`}
             />
@@ -127,7 +134,8 @@ const argObject = {
     <>
       <Block
         title="Experience"
-        imagePath="https://avatars.githubusercontent.com/u/357098?s=200&v=4"
+        image="https://avatars.githubusercontent.com/u/357098?s=200&v=4"
+        imageAlt="LinkedIn logo"
         size={1}
         isEditable={true}
         actions={{ link: { url: "https://www.google.com" } }}
@@ -140,6 +148,7 @@ const argObject = {
               subtitle={job.title}
               additional={job.additional}
               image={job.image}
+              imageAlt={job.imageAlt}
               key={`Experience-${index}`}
             />
           ))}
@@ -153,6 +162,7 @@ const argObject = {
               subtitle={job.subtitle}
               additional={job.additional}
               image={job.image}
+              imageAlt={job.imageAlt}
               key={`University-${index}`}
             />
           ))}

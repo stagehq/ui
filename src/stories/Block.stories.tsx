@@ -71,7 +71,8 @@ Blogs.args = {
   handleSizeChange: exampleChangeSize,
   handleDelete: () => console.log("delete this block"),
   title: "Open Source",
-  imagePath: "https://avatars.githubusercontent.com/u/65030610?s=200&v=4",
+  image: "https://avatars.githubusercontent.com/u/65030610?s=200&v=4",
+  imageAlt: "Dev.to Logo",
   children: (
     <List>
       {blogPosts.map((post, index) => (
@@ -103,7 +104,8 @@ Repos.args = {
   handleSizeChange: exampleChangeSize,
   handleDelete: () => console.log("delete this block"),
   title: "My Repositories",
-  imagePath: "https://avatars.githubusercontent.com/u/9919?s=200&v=4",
+  image: "https://avatars.githubusercontent.com/u/9919?s=200&v=4",
+  imageAlt: "GitHub Logo",
   children: (
     <List>
       {openSource.map((project, index) => (
@@ -127,7 +129,8 @@ WebProjects.args = {
   handleSizeChange: exampleChangeSize,
   handleDelete: () => console.log("delete this block"),
   title: "Deployed Projects",
-  imagePath: "https://avatars.githubusercontent.com/u/24602613?s=200&v=4",
+  image: "https://avatars.githubusercontent.com/u/24602613?s=200&v=4",
+  imageAlt: "Logo",
   children: (
     <List>
       {projects.map((project, index) => (
@@ -137,6 +140,7 @@ WebProjects.args = {
           additional={project.additional}
           subtitle={project.subtitle}
           image={project.image}
+          imageAlt={project.imageAlt}
           key={`Block-${index}`}
           actions={{ open: { url: "https://vercel.com" } }}
         />
@@ -152,13 +156,15 @@ Music.args = {
   handleSizeChange: exampleChangeSize,
   handleDelete: () => console.log("delete this block"),
   title: "Best Music ever",
-  imagePath: "https://avatars.githubusercontent.com/u/251374?s=200&v=4",
+  image: "https://avatars.githubusercontent.com/u/251374?s=200&v=4",
+  imageAlt: "Spotify Logo",
   children: (
     <>
       <Card
         title="jo"
         type="vertical"
         image="https://avatars.githubusercontent.com/u/251374?s=200&v=4"
+        imageAlt="Spotify Logo"
         actions={{ button: { text: "Test", url: "https://test.com" } }}
       />
       <List>
@@ -168,6 +174,7 @@ Music.args = {
             title={track.title}
             subtitle={track.subtitle}
             image={track.image}
+            imageAlt={track.imageAlt}
             index={index + 1}
             key={`Block-${index}`}
             actions={{ open: { url: "https://spotify.com" } }}
@@ -185,7 +192,8 @@ CV.args = {
   handleSizeChange: exampleChangeSize,
   handleDelete: () => console.log("delete this block"),
   title: "Experience",
-  imagePath: "https://avatars.githubusercontent.com/u/357098?s=200&v=4",
+  image: "https://avatars.githubusercontent.com/u/357098?s=200&v=4",
+  imageAlt: "LinkedIn Logo",
   children: (
     <List>
       {experience.map((pos, index) => (
@@ -194,6 +202,7 @@ CV.args = {
           title={pos.title}
           subtitle={pos.subtitle}
           image={pos.image}
+          imageAlt={pos.imageAlt}
           additional={pos.additional}
           key={`Block-${index}`}
           actions={{ open: { url: "https://linkedin.com" } }}
