@@ -79,6 +79,8 @@ export const Block = ({
     handleDynamicHeight(descriptionRef);
   };
 
+  const id = "title " + Math.random().toString(36).substr(2, 9);
+
   return (
     <BlockEditWrapper
       isHovering={isHovering}
@@ -104,7 +106,7 @@ export const Block = ({
                 <input
                   type="text"
                   name="title"
-                  id="title"
+                  id={id}
                   className={clsx(
                     "fokus:ring-0 fokus:border-none fokus:outline-none block h-10 w-full cursor-default rounded-md border-0 px-2  text-xl font-semibold text-zinc-800 placeholder-transparent hover:bg-transparent dark:bg-zinc-900 dark:text-zinc-100 dark:hover:bg-transparent",
                     isEditable &&
