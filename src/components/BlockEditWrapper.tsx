@@ -33,48 +33,48 @@ export const BlockEditWrapper: FC<BlockEditWrapperProps> = ({
   return (
     <div
       className={clsx(
-        "relative outline-2 outline-zinc-800 rounded-2xl w-full",
-        isEditable && "hover:outline cursor-grab"
+        "relative w-full rounded-2xl outline-2 outline-zinc-800",
+        isEditable && "cursor-grab hover:outline"
       )}
     >
       {children}
       {isHovering && isEditable && (
         <div
-          className="absolute w-full flex justify-center h-11 -mt-5 gap-1"
+          className="absolute -mt-5 flex h-11 w-full justify-center gap-1"
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}
         >
-          <div className="flex gap-1 items-center px-2 bg-zinc-800 rounded-lg">
+          <div className="flex items-center gap-1 rounded-lg bg-zinc-800 px-2">
             <div
               onClick={() => handleResize(3)}
               className={clsx(
-                "flex items-center justify-center w-10 h-8 hover:bg-zinc-700 rounded-md cursor-pointer",
+                "flex h-8 w-10 cursor-pointer items-center justify-center rounded-md hover:bg-zinc-700",
                 size === 3 ? "bg-zinc-600" : "bg-transparent"
               )}
             >
-              <div className="border-2 border-white w-5 h-2 rounded-sm"></div>
+              <div className="h-2 w-5 rounded-sm border-2 border-white"></div>
             </div>
             <div
               onClick={() => handleResize(2)}
               className={clsx(
-                "flex items-center justify-center w-10 h-8 hover:bg-zinc-700 rounded-md cursor-pointer",
+                "flex h-8 w-10 cursor-pointer items-center justify-center rounded-md hover:bg-zinc-700",
                 size === 2 ? "bg-zinc-600" : "bg-transparent"
               )}
             >
-              <div className="border-2 border-white w-4 h-4 rounded-sm"></div>
+              <div className="h-4 w-4 rounded-sm border-2 border-white"></div>
             </div>
             <div
               onClick={() => handleResize(1)}
               className={clsx(
-                "flex items-center justify-center w-10 h-8 hover:bg-zinc-700 rounded-md cursor-pointer",
+                "flex h-8 w-10 cursor-pointer items-center justify-center rounded-md hover:bg-zinc-700",
                 size === 1 ? "bg-zinc-600" : "bg-transparent"
               )}
             >
-              <div className="border-2 border-white w-2 h-5 rounded-sm"></div>
+              <div className="h-5 w-2 rounded-sm border-2 border-white"></div>
             </div>
           </div>
           <div
-            className="flex items-center justify-center h-11 w-11 bg-zinc-800 hover:bg-zinc-700 text-white rounded-lg shadow-lg cursor-pointer"
+            className="flex h-11 w-11 cursor-pointer items-center justify-center rounded-lg bg-zinc-800 text-white shadow-lg hover:bg-zinc-700"
             onClick={handleDelete}
           >
             <svg
@@ -82,7 +82,7 @@ export const BlockEditWrapper: FC<BlockEditWrapperProps> = ({
               fill="none"
               stroke="currentColor"
               strokeWidth="1.5"
-              className="w-6 h-6"
+              className="h-6 w-6"
               viewBox="0 0 24 24"
             >
               <path

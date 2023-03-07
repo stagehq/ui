@@ -90,7 +90,7 @@ export const Block = ({
     >
       <div
         className={clsx(
-          "@container flex flex-col gap-12 border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-900 shadow-sm rounded-2xl w-full overflow-hidden",
+          "flex w-full flex-col gap-12 overflow-hidden rounded-2xl border border-zinc-300 bg-white shadow-sm @container dark:border-zinc-600 dark:bg-zinc-900",
           (image || title || actions) && "p-8"
         )}
         onMouseEnter={() => setIsHovering(true)}
@@ -99,16 +99,16 @@ export const Block = ({
         {(image || title || actions) && (
           <div className="flex flex-col gap-4">
             <div className="flex items-center justify-between gap-4">
-              <div className="flex items-center gap-4 flex-grow">
-                {image && <img src={image} alt={imageAlt} className="w-10 h-10 object-cover rounded-md"></img>}
+              <div className="flex flex-grow items-center gap-4">
+                {image && <img src={image} alt={imageAlt} className="h-10 w-10 rounded-md object-cover"></img>}
                 <input
                   type="text"
                   name="title"
                   id="title"
                   className={clsx(
-                    "block text-xl h-10 px-2 w-full rounded-md dark:bg-zinc-900 dark:text-zinc-100 font-semibold placeholder-transparent  border-0 hover:bg-transparent dark:hover:bg-transparent text-zinc-800 fokus:ring-0 fokus:border-none fokus:outline-none cursor-default",
+                    "fokus:ring-0 fokus:border-none fokus:outline-none block h-10 w-full cursor-default rounded-md border-0 px-2  text-xl font-semibold text-zinc-800 placeholder-transparent hover:bg-transparent dark:bg-zinc-900 dark:text-zinc-100 dark:hover:bg-transparent",
                     isEditable &&
-                      "hover:placeholder-zinc-300 dark:hover:placeholder-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 focus:bg-transparent dark:focus:bg-transparent focus:ring-black dark:focus:ring-white cursor-pointer fokus:ring-1",
+                      "fokus:ring-1 cursor-pointer hover:bg-zinc-100 hover:placeholder-zinc-300 focus:bg-transparent focus:ring-black dark:hover:bg-zinc-800 dark:hover:placeholder-zinc-300 dark:focus:bg-transparent dark:focus:ring-white"
                   )}
                   placeholder="Enter title"
                   value={titleInternal}
@@ -117,41 +117,41 @@ export const Block = ({
                   readOnly={!isEditable}
                 />
               </div>
-              {actions && <div className="w-10 h-10">
-                {(actions?.link && <Action.Link {...actions.link} />) ||
-                  (actions?.button && <Action.Button {...actions.button} />)}
-              </div>}
+              {actions && (
+                <div className="h-10 w-10">
+                  {(actions?.link && <Action.Link {...actions.link} />) ||
+                    (actions?.button && <Action.Button {...actions.button} />)}
+                </div>
+              )}
             </div>
-            {enableDescription && <div>
-              <textarea
-                ref={descriptionRef}
-                name="description"
-                id="description"
-                className={clsx(
-                  "block text-sm h-10 px-2 py-2 resize-none w-full rounded-md dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400 font-regular bg-white border-0 fokus:ring-0 fokus:border-none fokus:outline-none cursor-default",
-                  isEditable &&
-                    "placeholder-zinc-400 dark:placeholder-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 focus:bg-transparent dark:focus:bg-transparent focus:ring-black dark:focus:ring-white cursor-pointer fokus:ring-1"
-                )}
-                placeholder="Enter description ..."
-                value={descriptionInternal}
-                onChange={(e) => setDescriptionInternal(e.target.value)}
-                onBlur={() => handleDescriptionChange && handleDescriptionChange(descriptionInternal)}
-                readOnly={!isEditable}
-              />
-            </div>}
+            {enableDescription && (
+              <div>
+                <textarea
+                  ref={descriptionRef}
+                  name="description"
+                  id="description"
+                  className={clsx(
+                    "font-regular fokus:ring-0 fokus:border-none fokus:outline-none block h-10 w-full cursor-default resize-none rounded-md border-0 bg-white px-2 py-2 text-sm text-zinc-600 dark:bg-zinc-900 dark:text-zinc-400",
+                    isEditable &&
+                      "fokus:ring-1 cursor-pointer placeholder-zinc-400 hover:bg-zinc-100 focus:bg-transparent focus:ring-black dark:placeholder-zinc-300 dark:hover:bg-zinc-800 dark:focus:bg-transparent dark:focus:ring-white"
+                  )}
+                  placeholder="Enter description ..."
+                  value={descriptionInternal}
+                  onChange={(e) => setDescriptionInternal(e.target.value)}
+                  onBlur={() => handleDescriptionChange && handleDescriptionChange(descriptionInternal)}
+                  readOnly={!isEditable}
+                />
+              </div>
+            )}
           </div>
         )}
-        {children && (
-          <div className={clsx("flex flex-col", (image || title || actions) && "gap-6")}>{children}</div>
-        )}
+        {children && <div className={clsx("flex flex-col", (image || title || actions) && "gap-6")}>{children}</div>}
       </div>
     </BlockEditWrapper>
   );
 };
 
-const handleDynamicHeight = (
-  myRef: React.RefObject<HTMLTextAreaElement>
-) => {
+const handleDynamicHeight = (myRef: React.RefObject<HTMLTextAreaElement>) => {
   if (myRef.current?.style) {
     myRef.current.style.height = 0 + "px";
     myRef.current.style.height = myRef.current.scrollHeight + "px";

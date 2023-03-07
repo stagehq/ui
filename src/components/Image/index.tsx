@@ -4,5 +4,5 @@ export interface ImageProps {
 }
 
 export const Image = ({ src, alt }: ImageProps) => {
-  return <img className="w-full h-full object-cover overflow-hidden" src={src} alt={alt} />;
+  return <img className="h-full w-full overflow-hidden object-cover" src={src} alt={alt} />;
 };

@@ -17,19 +17,19 @@ export const PageFooter = ({ title, location }: PageFooterProps) => {
   const currentYear = new Date().getFullYear().toString();
 
   return (
-    <footer className="flex flex-col justify-start items-start self-stretch relative gap-6 pb-6 bg-zinc-50 dark:bg-black">
-      <div className="self-stretch h-px bg-zinc-100 max-w-screen-xl mx-auto"></div>
-      <div className="flex flex-col justify-center items-center self-stretch relative gap-6">
-        <div className="flex flex-col justify-center items-center w-[273px] gap-2">
-          <div className="flex justify-start items-start gap-2.5">
-            <div className="flex justify-start items-start relative gap-2 p-2">
+    <footer className="relative flex flex-col items-start justify-start gap-6 self-stretch bg-zinc-50 pb-6 dark:bg-black">
+      <div className="mx-auto h-px max-w-screen-xl self-stretch bg-zinc-100"></div>
+      <div className="relative flex flex-col items-center justify-center gap-6 self-stretch">
+        <div className="flex w-[273px] flex-col items-center justify-center gap-2">
+          <div className="flex items-start justify-start gap-2.5">
+            <div className="relative flex items-start justify-start gap-2 p-2">
               <svg
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-6 h-6 relative"
+                className="relative h-6 w-6"
                 preserveAspectRatio="none"
               >
                 <path
@@ -38,14 +38,14 @@ export const PageFooter = ({ title, location }: PageFooterProps) => {
                 ></path>
               </svg>
             </div>
-            <div className="flex justify-start items-start relative gap-2 p-2">
+            <div className="relative flex items-start justify-start gap-2 p-2">
               <svg
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-6 h-6 relative"
+                className="relative h-6 w-6"
                 preserveAspectRatio="none"
               >
                 <path
@@ -54,14 +54,14 @@ export const PageFooter = ({ title, location }: PageFooterProps) => {
                 ></path>
               </svg>
             </div>
-            <div className="flex justify-start items-start relative gap-2 p-2">
+            <div className="relative flex items-start justify-start gap-2 p-2">
               <svg
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-6 h-6 relative"
+                className="relative h-6 w-6"
                 preserveAspectRatio="none"
               >
                 <path
@@ -70,14 +70,14 @@ export const PageFooter = ({ title, location }: PageFooterProps) => {
                 ></path>
               </svg>
             </div>
-            <div className="flex justify-start items-start relative gap-2 p-2">
+            <div className="relative flex items-start justify-start gap-2 p-2">
               <svg
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-6 h-6 relative"
+                className="relative h-6 w-6"
                 preserveAspectRatio="none"
               >
                 <path
@@ -88,8 +88,8 @@ export const PageFooter = ({ title, location }: PageFooterProps) => {
             </div>
           </div>
         </div>
-        <p className="text-base text-left text-zinc-400">Privacy Policy</p>
-        <p className="text-base text-left text-zinc-400">
+        <p className="text-left text-base text-zinc-400">Privacy Policy</p>
+        <p className="text-left text-base text-zinc-400">
           © {currentYear} | {title} | {location}
         </p>
       </div>

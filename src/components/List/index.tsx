@@ -5,7 +5,7 @@ export interface ListProps {
 }
 
 export const List = ({ children }: ListProps) => {
-  return <div className="flex flex-col gap-4 w-full">{children}</div>;
+  return <div className="flex w-full flex-col gap-4">{children}</div>;
 };
 
 List.Item = ListItem;

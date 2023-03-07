@@ -16,7 +16,7 @@ export const Button = ({ primary, icon, text, url }: ButtonProps) => {
       rel="noopener"
       draggable="false"
       className={clsx(
-        "h-10 font-semibold text-base w-full rounded-lg flex gap-3 justify-center items-center",
+        "flex h-10 w-full items-center justify-center gap-3 rounded-lg text-base font-semibold",
         primary
           ? "bg-zinc-800 text-zinc-50 dark:bg-zinc-700"
           : "bg-zinc-100 text-zinc-800 dark:bg-zinc-800 dark:text-zinc-300"

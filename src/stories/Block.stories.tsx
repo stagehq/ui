@@ -23,11 +23,11 @@ const exampleChangeSize = (size: number) => {
 
 const Template: Story<BlockProps> = (args) => {
   return (
-    <div className="flex flex-col gap-8 max-w-screen-xl px-24 mx-auto">
+    <div className="mx-auto flex max-w-screen-xl flex-col gap-8 px-24">
       <div className="w-full">
         <Block {...args} size={3} />
       </div>
-      <div className="flex gap-8 flex-col md:flex-row">
+      <div className="flex flex-col gap-8 md:flex-row">
         <div className="w-full md:w-[calc((100%_-_32px)_/_2_*_1)] xl:w-[calc((100%_-_64px)_/_3_*_2_+_32px)]">
           <Block {...args} size={2} />
         </div>
@@ -47,7 +47,7 @@ Default.args = {
   handleDelete: () => console.log("delete this block"),
   title: "Title",
   children: (
-    <div className="p-4 bg-zinc-100 border border-zinc-300 flex items-center justify-center rounded-md h-32">Body</div>
+    <div className="flex h-32 items-center justify-center rounded-md border border-zinc-300 bg-zinc-100 p-4">Body</div>
   ),
 };
 
@@ -58,10 +58,9 @@ Funnel.args = {
   handleDelete: () => console.log("delete this block"),
   title: "Hire me!",
   enableDescription: true,
-  description: "I build web apps for startups, businesses and public institutions as a freelance web developer and designer. Let's discuss your needs and see how I can help.",
-  children: (
-    <Button primary icon={"EnvelopeIcon"} text={"Contact me"} url={"https://google.com"}/>
-  ),
+  description:
+    "I build web apps for startups, businesses and public institutions as a freelance web developer and designer. Let's discuss your needs and see how I can help.",
+  children: <Button primary icon={"EnvelopeIcon"} text={"Contact me"} url={"https://google.com"} />,
 };
 
 export const Blogs = Template.bind({});
