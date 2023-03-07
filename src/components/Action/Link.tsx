@@ -10,6 +10,7 @@ export const Link = ({ url }: LinkProps) => {
       rel="noopener"
       draggable="false"
       className="flex items-center w-10 h-10 justify-center rounded-3xl border text-black dark:text-zinc-100 border-zinc-300 dark:border-zinc-500 hover:border-zinc-400 dark:hover:border-zinc-400 bg-white dark:bg-zinc-900 hover:shadow shadow-sm"
+      aria-label="Link with more information"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

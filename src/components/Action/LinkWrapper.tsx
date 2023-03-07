@@ -11,7 +11,7 @@ export interface OpenProps {
 
 export const LinkWrapper = ({ url, children }: LinkWrapperProps) => {
   return (
-    <a href={url} target="_blank" rel="noopener" draggable="false">
+    <a href={url} target="_blank" rel="noopener" draggable="false" aria-label="Link with more information">
       {children}
     </a>
   );
