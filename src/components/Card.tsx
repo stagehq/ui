@@ -14,15 +14,19 @@ export interface CardProps {
   imageAlt?: string;
   icon?: IconEnum;
   actions?: ActionsProps;
+  bordered?: boolean;
 }
 
-export const Card = ({ title, subtitle, image, imageAlt, icon, type, actions }: CardProps) => {
+export const Card = ({ title, subtitle, image, imageAlt, icon, type, actions, bordered = true }: CardProps) => {
   const [isHovering, setIsHovering] = useState(false);
 
   if (type === "vertical") {
     return withLink(
       <div
-        className="relative flex w-full flex-col items-start overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-500/40"
+        className={clsx(
+          "relative flex w-full flex-col items-start overflow-hidden rounded-2xl",
+          bordered && "border border-zinc-200 dark:border-zinc-500/40"
+        )}
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
       >
@@ -61,7 +65,10 @@ export const Card = ({ title, subtitle, image, imageAlt, icon, type, actions }: 
   if (type === "horizontal") {
     return withLink(
       <div
-        className="flex items-center gap-6 overflow-hidden rounded-2xl border border-zinc-200 pr-6 dark:border-zinc-500/40"
+        className={clsx(
+          "relative flex items-center gap-6 overflow-hidden rounded-2xl pr-6",
+          bordered && "border border-zinc-200 dark:border-zinc-500/40"
+        )}
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
       >
@@ -104,7 +111,10 @@ export const Card = ({ title, subtitle, image, imageAlt, icon, type, actions }: 
   if (type === "small") {
     return withLink(
       <div
-        className="flex items-center gap-6 overflow-hidden rounded-2xl border border-zinc-200 px-6 dark:border-zinc-500/40"
+        className={clsx(
+          "relative flex items-center gap-6 overflow-hidden rounded-2xl px-6",
+          bordered && "border border-zinc-200 dark:border-zinc-500/40"
+        )}
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
       >
@@ -143,7 +153,10 @@ export const Card = ({ title, subtitle, image, imageAlt, icon, type, actions }: 
   if (type === "big") {
     return withLink(
       <div
-        className="relative flex h-[400px] flex-col items-start overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-500/40"
+        className={clsx(
+          "relative flex h-[400px] flex-col items-start overflow-hidden rounded-2xl",
+          bordered && "border border-zinc-200 dark:border-zinc-500/40"
+        )}
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
       >

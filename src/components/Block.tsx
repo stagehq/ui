@@ -50,8 +50,10 @@ export const Block = ({
   const descriptionRef = useRef<HTMLTextAreaElement>(null);
 
   //style variables
-  const removeFokusState = "focus-visible:ring-0 focus-visible:border-none focus-visible:outline-none focus:ring-0 focus:border-none focus:outline-none cursor-default";
-  const addFokusState = "focus-visible:ring-zinc-900 focus-visible:ring-1 focus-visible:ringfocus-visible:border-none focus-visible:outline-none focus:ring-1 focus:ring-zinc-900 focus:border-none focus:outline-none cursor-default focus:bg-transparent focus:hover:bg-transparent dark:focus:ring-white !cursor-text";
+  const removeFocusState =
+    "focus-visible:ring-0 focus-visible:border-none focus-visible:outline-none focus:ring-0 focus:border-none focus:outline-none cursor-default";
+  const addFocusState =
+    "focus-visible:ring-zinc-900 focus-visible:ring-1 focus-visible:ringfocus-visible:border-none focus-visible:outline-none focus:ring-1 focus:ring-zinc-900 focus:border-none focus:outline-none cursor-default focus:bg-transparent focus:hover:bg-transparent dark:focus:ring-white !cursor-text";
 
   //controlled inputs
   useEffect(() => {
@@ -113,9 +115,12 @@ export const Block = ({
                   id={id}
                   className={clsx(
                     "font-semibold block h-10 w-full rounded-md border-0 bg-white px-2 text-xl text-zinc-800 dark:bg-zinc-900 dark:text-zinc-100",
-                    !isEditable 
-                    ? removeFokusState
-                    : clsx(addFokusState, "hover:bg-zinc-100 placeholder-zinc-400 dark:hover:bg-zinc-800 dark:placeholder-zinc-300")
+                    !isEditable
+                      ? removeFocusState
+                      : clsx(
+                          addFocusState,
+                          "hover:bg-zinc-100 placeholder-zinc-400 dark:hover:bg-zinc-800 dark:placeholder-zinc-300"
+                        )
                   )}
                   placeholder="Enter title"
                   value={titleInternal}
@@ -139,9 +144,12 @@ export const Block = ({
                   id="description"
                   className={clsx(
                     "font-regular block h-10 w-full resize-none rounded-md border-0 bg-white px-2 py-2 text-sm text-zinc-600 dark:bg-zinc-900 dark:text-zinc-400",
-                    !isEditable 
-                    ? removeFokusState
-                    : clsx(addFokusState, "hover:bg-zinc-100 placeholder-zinc-400 dark:hover:bg-zinc-800 dark:placeholder-zinc-300")
+                    !isEditable
+                      ? removeFocusState
+                      : clsx(
+                          addFocusState,
+                          "hover:bg-zinc-100 placeholder-zinc-400 dark:hover:bg-zinc-800 dark:placeholder-zinc-300"
+                        )
                   )}
                   placeholder="Enter description ..."
                   value={descriptionInternal}
