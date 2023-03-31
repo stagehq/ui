@@ -1,3 +1,4 @@
+import { XMarkIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
 import { FC } from "react";
 import { BlockProps } from "./Block";
@@ -8,6 +9,7 @@ interface BlockEditWrapperProps {
   isHovering: boolean;
   size: blockCols;
   isEditable: boolean;
+  breakpoint: "sm" | "lg";
   setIsHovering: (value: boolean) => void;
   handleSizeChange?: (size: blockCols) => void;
   handleDelete?: () => void;
@@ -18,6 +20,7 @@ export const BlockEditWrapper: FC<BlockEditWrapperProps> = ({
   isHovering,
   size,
   isEditable,
+  breakpoint,
   setIsHovering,
   handleSizeChange,
   handleDelete,
@@ -31,6 +34,7 @@ export const BlockEditWrapper: FC<BlockEditWrapperProps> = ({
   };
 
   return (
+    breakpoint === "lg" ? (
     <div className={clsx("relative w-full rounded-2xl ring-zinc-800", isEditable && "cursor-grab hover:ring-2")}>
       {children}
       {isHovering && isEditable && (
@@ -90,5 +94,22 @@ export const BlockEditWrapper: FC<BlockEditWrapperProps> = ({
         </div>
       )}
     </div>
+    ) : (
+      <div className={"relative w-full rounded-2xl ring-zinc-800 flex"}>
+      {children}
+      {isEditable && (
+        <div
+          className="absolute -mt-5 ml-5 flex h-11 w-full justify-end gap-1"
+        >
+          <div
+            className="flex h-11 w-11 cursor-pointer items-center justify-center rounded-full bg-zinc-800 text-white shadow-lg hover:bg-zinc-700"
+            onClick={handleDelete}
+          >
+            <XMarkIcon className="h-8 w-8" />
+          </div>
+        </div>
+      )}
+    </div>
+    )
   );
 };

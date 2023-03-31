@@ -39,6 +39,7 @@ const argObject = {
         size={2}
         isEditable={true}
         actions={{ link: { url: "https://dev.to" } }}
+        breakpoint="lg"
       >
         <List>
           {blogPosts.map((post, index) => (
@@ -60,6 +61,7 @@ const argObject = {
         size={2}
         isEditable={true}
         actions={{ link: { url: "https://github.com" } }}
+        breakpoint="lg"
       >
         <Pills pills={["react.js", "vue.js", "angular.js", "ember.js", "svelte.js"]} />
         <List>
@@ -82,6 +84,7 @@ const argObject = {
         size={2}
         isEditable={true}
         title="Deployed Projects"
+        breakpoint="lg"
       >
         <List>
           {projects.map((project, index) => (
@@ -103,6 +106,7 @@ const argObject = {
         size={2}
         isEditable={true}
         actions={{ link: { url: "https://spotify.com" } }}
+        breakpoint="lg"
       >
         <Card
           type="horizontal"
@@ -139,6 +143,7 @@ const argObject = {
         size={1}
         isEditable={true}
         actions={{ link: { url: "https://www.google.com" } }}
+        breakpoint="lg"
       >
         <List>
           {experience.map((job, index) => (

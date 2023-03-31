@@ -21,6 +21,7 @@ export interface BlockProps {
   description?: string;
   enableDescription?: boolean;
   isEditable?: boolean;
+  breakpoint: "sm" | "lg";
   handleTitleChange?: (title: string) => void;
   handleDescriptionChange?: (description: string) => void;
   handleSizeChange?: (size: blockCols) => void;
@@ -37,6 +38,7 @@ export const Block = ({
   enableDescription,
   size,
   isEditable,
+  breakpoint,
   handleTitleChange,
   handleDescriptionChange,
   handleSizeChange,
@@ -95,6 +97,7 @@ export const Block = ({
       handleSizeChange={handleSizeChange}
       handleDelete={handleDelete}
       isEditable={isEditable ? isEditable : false}
+      breakpoint={breakpoint}
     >
       <div
         className={clsx(

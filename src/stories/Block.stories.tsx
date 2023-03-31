@@ -24,16 +24,21 @@ const exampleChangeSize = (size: number) => {
 const Template: Story<BlockProps> = (args) => {
   return (
     <div className="mx-auto flex max-w-screen-xl flex-col gap-8 px-24">
+      <span className="text-2xl font-bold">Breakpoint: lg</span>
       <div className="w-full">
-        <Block {...args} size={3} />
+        <Block {...args} size={3} breakpoint={"lg"} />
       </div>
       <div className="flex flex-col gap-8 md:flex-row">
         <div className="w-full md:w-[calc((100%_-_32px)_/_2_*_1)] xl:w-[calc((100%_-_64px)_/_3_*_2_+_32px)]">
-          <Block {...args} size={2} />
+          <Block {...args} size={2} breakpoint={"lg"} />
         </div>
         <div className="w-full md:w-[calc((100%_-_32px)_/_2_*_1)] xl:w-[calc((100%_-_64px)_/_3_*_1)]">
-          <Block {...args} size={1} />
+          <Block {...args} size={1} breakpoint={"lg"} />
         </div>
+      </div>
+      <span className="text-2xl font-bold">Breakpoint: sm</span>
+      <div className="flex flex-col gap-8 md:flex-row">
+        <Block {...args} size={1} breakpoint={"sm"} />
       </div>
     </div>
   );
@@ -49,6 +54,7 @@ Default.args = {
   children: (
     <div className="flex h-32 items-center justify-center rounded-md border border-zinc-300 bg-zinc-100 p-4">Body</div>
   ),
+  breakpoint: "lg",
 };
 
 export const Funnel = Template.bind({});
@@ -61,6 +67,7 @@ Funnel.args = {
   description:
     "I build web apps for startups, businesses and public institutions as a freelance web developer and designer. Let's discuss your needs and see how I can help.",
   children: <Button primary icon={"EnvelopeIcon"} text={"Contact me"} url={"https://google.com"} />,
+  breakpoint: "lg",
 };
 
 export const Blogs = Template.bind({});
@@ -86,6 +93,7 @@ Blogs.args = {
       ))}
     </List>
   ),
+  breakpoint: "lg",
 };
 
 export const ImageBlock = Template.bind({});
@@ -94,6 +102,7 @@ ImageBlock.args = {
   handleSizeChange: exampleChangeSize,
   handleDelete: () => console.log("delete this block"),
   children: <Image src="https://avatars.githubusercontent.com/u/65030610?s=200&v=4" alt="Profile Image" />,
+  breakpoint: "lg",
 };
 
 export const Repos = Template.bind({});
@@ -120,6 +129,7 @@ Repos.args = {
       ))}
     </List>
   ),
+  breakpoint: "lg",
 };
 
 export const WebProjects = Template.bind({});
@@ -146,6 +156,7 @@ WebProjects.args = {
       ))}
     </List>
   ),
+  breakpoint: "lg",
 };
 
 export const Music = Template.bind({});
@@ -182,6 +193,7 @@ Music.args = {
       </List>
     </>
   ),
+  breakpoint: "lg",
 };
 
 export const CV = Template.bind({});
@@ -209,4 +221,5 @@ CV.args = {
       ))}
     </List>
   ),
+  breakpoint: "lg",
 };
